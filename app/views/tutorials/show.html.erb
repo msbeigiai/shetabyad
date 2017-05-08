@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+	<div class="page-header">
+		<h1><%= @tutorial.title %>'s Lesson(s)</h1>
+	</div>
+	<div class="row">
+		<% if @tutorial.lessons.count == 1 %>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="panel-title">
+							<h3><%= link_to find_first.title, find_first %></h3>
+						</div>
+					</div>
+					<div class="panel-body">
+						<%= find_first.description %>
+					</div>
+					<div class="panel-footer">
+						<%= link_to "<i class='fa fa-trash fa-lg'></i>".html_safe, find_first, method: :delete, data: { confirm: "Are you sure?" } %>
+						<%= link_to "<i class='fa fa-pencil fa-lg'></i>".html_safe, edit_lesson_path(find_first), class: "pull-right" %>
+					</div>
+				</div>
+			</div>
+		<% elsif @tutorial.lessons.count > 1 %>
+			<% @tutorial.lessons.each do |tut_lesson| %>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<h3><%= link_to tut_lesson.title, tut_lesson %></h3>
+							</div>
+						</div>
+						<div class="panel-body">
+							<%= tut_lesson.description %>
+						</div>
+						<div class="panel-footer">
+							<%= link_to "<i class='fa fa-trash fa-lg'></i>".html_safe, tut_lesson, method: :delete, data: { confirm: "Are you sure?" } %>
+							<%= link_to "<i class='fa fa-pencil fa-lg'></i>".html_safe, edit_lesson_path(tut_lesson), class: "pull-right" %>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		<% else %>
+			<h3>No lesson in this tutorial</h3>
+		<% end %>
+	</div>
+</div>
+
+
+<% if user_signed_in? && current_user.type == 'AdminUser' %>
+	<%= puts 'This is admin user' %>
+<% else %>
+	<%= puts "This is not admin user" %>
+<% end %>

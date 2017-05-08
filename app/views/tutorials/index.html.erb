@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+	<div class="page-header">
+		<h1>Tutorials</h1>
+	</div>
+	<div class="row">
+		<% @tutorials.each do |tutorial| %>
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="panel-title">
+							<h2><%= link_to tutorial.title, tutorial %></h2>
+						</div>
+					</div>
+					<div class="panel-body">
+						<%= tutorial.description %>
+					</div>
+					<div class="panel-footer">
+						<%= link_to "<i class='fa fa-trash fa-lg'></i>".html_safe, tutorial, method: :delete, data: { confirm: "Are you sure?" } %>
+						<%= link_to "<i class='fa fa-pencil fa-lg'></i>".html_safe, edit_tutorial_path(tutorial), class: "pull-right" %>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	<div class="well">
+		<%= link_to "<i class='fa fa-plus fa-lg'></i>".html_safe, new_tutorial_path %>
+	</div>
+</div>
+

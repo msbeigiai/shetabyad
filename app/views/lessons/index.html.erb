@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+	<div class="page-header">
+		<h1>Lessons</h1>
+	</div>
+	<div class="row">
+		<% @lessons.each do |lesson| %>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="panel-title">
+							<h4><%= link_to lesson.title, lesson %></h4>
+						</div>
+					</div>
+					<div class="panel-body">
+						<%= lesson.description %>
+					</div>
+					<div class="panel-footer">
+						<%= link_to "<i class='fa fa-trash fa-lg'></i>".html_safe, lesson, method: :delete, data: { confirm: "Are you sure?" } %>
+						<span class="label label-default">tutorial id: <%= lesson.tutorial_id %></span>	
+						<%= link_to "<i class='fa fa-pencil fa-lg'></i>".html_safe, edit_lesson_path(lesson), class: "pull-right" %>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	<div class="well">
+		<%= link_to "<i class='fa fa-plus fa-lg'></i>".html_safe, new_lesson_path %>
+	</div>
+</div>		
+
+

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+	<p>
+		<% if @lesson.video? %>
+			<%= video_tag @lesson.video_url, size: "800x400", controls: true, preload: 'none', autobuffer: true %>
+		<% end %>
+	</p>
+
+	<p>
+	  <strong>Title:</strong>
+	  <%= @lesson.title %>
+	</p>
+
+	<p>
+	  <strong>Description:</strong>
+	  <%= @lesson.description %>
+	</p>
+
+	<p>
+	  <strong>Tutorial id:</strong>
+	  <%= @lesson.tutorial.id %>
+	</p>
+
+	<p>
+	  <strong>Tutorial Title:</strong>
+	  <%= @lesson.tutorial.title %>
+	</p>
+
+	<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+	<%= link_to 'Back', tutorials_path %>
+	
+</div>
