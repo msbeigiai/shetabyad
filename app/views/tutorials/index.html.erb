@@ -13,7 +13,7 @@
 						</div>
 					</div>
 					<div class="panel-body">
-						<%= tutorial.description %>
+						<%= raw markdown(tutorial.description) %>
 					</div>
 					<div class="panel-footer">
 						<%= link_to "<i class='fa fa-trash fa-lg'></i>".html_safe, tutorial, method: :delete, data: { confirm: "Are you sure?" } %>
