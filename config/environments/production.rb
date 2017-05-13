@@ -84,6 +84,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 	
+	config.action_mailer.default_url_options = { host: 'shetab-yad.herokuapp.com' }
+	
 	ActionMailer::Base.smtp_settings = {
 		:user_name => 'apikey',
 		:password => Rails.application.secrets.sendgrid_api_key_production,
