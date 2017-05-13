@@ -17,9 +17,17 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+@font-face {
+	font-family: BYekan;
+	src: asset-url("BYekan.ttf");
+}
+
 body {
 	background-color: #FAFBFB;
+	font-family: BYekan, sans-serif;
 }
+
+
 
 .navbar {
 	padding: 10px 0;
