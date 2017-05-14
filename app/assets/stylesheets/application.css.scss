@@ -31,31 +31,6 @@ p {
 	font-size: 16px;
 }
 
-.panel {
-	box-shadow: 0 0 30px #d1d1d1;
-	.panel-heading {
-		text-align: center;
-		background-color: #fff;
-		border-bottom: none;
-	}
-}
-
-.panel-footer {
-	background-color: #fff;
-}
-
-.form-control {
-	border: 1px solid #d1d1d1;
-	border-radius: 0;
-	outline: none;
-	padding: 0.7em;
-	height: 40px;
-	&:focus {
-		border: solid 1px #D18317;
-		box-shadow: 0 0 3px #D18317;
-	}
-}
-
 .navbar {
 	padding: 10px 0;
 	margin-bottom: 0;
@@ -83,14 +58,42 @@ p {
 }
 
 .jumbotron {
-	padding: 120px 0;
+	padding: 120px 0 0 0;
 	background: #011627;
 	color: #FDFFFC;
 	h1 {
 		font-size: 55px;
 	}
+	h2 {
+		text-align: center;
+	}
+	p {
+		text-align: center;
+		font-size: 18px;
+		line-height: 30px;
+	}
 	.btn-success {
 		margin-top: 30px;
+	}
+	.row {
+		border-top: solid 2px #FDFFFC;
+		margin: 70px 0 20px 0;
+		background-color: #3CD5C1;
+		hr {
+			width: 50%;
+		}
+		.hero-para {
+			border-right: solid 2px #FDFFFC;
+			border-left: solid 2px #FDFFFC;
+		}
+		.col-md-3 {
+			padding: 20px;
+			transition: .2s background-color ease;
+			background-color: #3CD5C1;
+			&:hover {
+				background-color: #36C0AE;
+			}
+		}
 	}
 }
 
@@ -132,7 +135,7 @@ p {
 
 #about {
 	padding: 80px 0;
-	background-color: #D18317;
+	background-color: #E8911A;
 	color: #FDFFFC;
 	a {
 		color: #FDFFFC;
@@ -161,6 +164,30 @@ p {
 #form-devise {
 	padding: 80px 0;
 	background-color: #FDFFFC;
+	.panel {
+		box-shadow: 0 0 30px #d1d1d1;
+		.panel-heading {
+			text-align: center;
+			background-color: #fff;
+			border-bottom: none;
+		}
+	}
+
+	.panel-footer {
+		background-color: #fff;
+	}
+
+	.form-control {
+		border: 1px solid #d1d1d1;
+		border-radius: 0;
+		outline: none;
+		padding: 0.7em;
+		height: 40px;
+		&:focus {
+			border: solid 1px #D18317;
+			box-shadow: 0 0 3px #D18317;
+		}
+	}
 }
 
 
