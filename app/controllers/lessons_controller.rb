@@ -42,7 +42,7 @@ class LessonsController < ApplicationController
   # PATCH/PUT /lessons/1.json
   def update
     respond_to do |format|
-      if @lesson.update(lesson_params)
+      if @lesson.update_attributes(lesson_params)
         format.html { redirect_to @lesson, notice: 'Lesson was successfully updated.' }
         format.json { render :show, status: :ok, location: @lesson }
       else
@@ -70,6 +70,6 @@ class LessonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lesson_params
-      params.require(:lesson).permit(:title, :description, :tutorial_id, :video)
+      params.require(:lesson).permit(:title, :description, :tutorial_id, :image)
     end
 end

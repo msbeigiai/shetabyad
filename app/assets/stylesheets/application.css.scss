@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -23,49 +24,144 @@
 }
 
 body {
-	background-color: #FAFBFB;
 	font-family: BYekan, sans-serif;
 }
 
+p {
+	font-size: 16px;
+}
 
+.panel {
+	box-shadow: 0 0 30px #d1d1d1;
+	.panel-heading {
+		text-align: center;
+		background-color: #fff;
+		border-bottom: none;
+	}
+}
+
+.panel-footer {
+	background-color: #fff;
+}
+
+.form-control {
+	border: 1px solid #d1d1d1;
+	border-radius: 0;
+	outline: none;
+	padding: 0.7em;
+	height: 40px;
+	&:focus {
+		border: solid 1px #D18317;
+		box-shadow: 0 0 3px #D18317;
+	}
+}
 
 .navbar {
 	padding: 10px 0;
 	margin-bottom: 0;
 	border-radius: 0;
 	border: none;
-	background: #272D2D;
+	background: #011627;
 }
 
 .navbar-header > .navbar-nav > li > a {
-	color: #F6F8FF;
+	color: #FDFFFC;
+}
+.navbar-header {
+	img {
+		margin-top: 8px;
+	}
+	font-size: 30px;
 }
 
 .navbar-header > .navbar-brand {
-	color: #F6F8FF;
+	color: #FDFFFC;
 }
 
 .navbar-nav > .navbar-text {
-	color: #50514F;
+	color: #FDFFFC;
 }
 
 .jumbotron {
-	padding: 200px 0;
-	background: #272D2D;
-	color: #F6F8FF;
+	padding: 120px 0;
+	background: #011627;
+	color: #FDFFFC;
+	h1 {
+		font-size: 55px;
+	}
+	.btn-success {
+		margin-top: 30px;
+	}
 }
 
-.btn-success {
-	background-color: #23CE6B;
-	border-color: #23CE6B;
+.btn {
+	background-color: #F71735;
+	border-color: #F71735;
+	border-radius: 0;
+	&:hover {
+		background-color: darken(#F71735, 10%);
+		border-color:  darken(#F71735, 10%);
+	}
+	&:focus {
+		background-color: darken(#F71735, 10%);
+		border-color:  darken(#F71735, 10%);
+	}
 }
 
-.btn-primary {
-	background-color: #A846A0;
-	border-color: #A846A0;
+#first {
+	padding: 70px 0;
+	background-color: #FDFFFC;
+	h2 {
+		color: #011627;
+		margin: 0;
+	}
+	.row {
+		margin-top: 80px;
+		.glyphicon {
+			font-size: 2.5em;
+		}
+	}
+	p {
+		margin-top: 30px;
+	}
+	.divider {
+		border-right: solid 1px #d1d1d1;
+		border-left: solid 1px #d1d1d1;
+	}
 }
 
+#about {
+	padding: 80px 0;
+	background-color: #D18317;
+	color: #FDFFFC;
+	a {
+		color: #FDFFFC;
+		&:hover {
+			color: #FDFFFC;
+		}
+	}
+	h3 {
+		font-size: 20px;
+		line-height: 32px;
+		margin-bottom: 30px;
+	}
+	.more {
+		padding: 15px 20px;
+		border: 1px solid #fff;
+		margin-top: 30px;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+			background-color: #fff;
+			color: #000;
+		}
+	}
+}
 
+#form-devise {
+	padding: 80px 0;
+	background-color: #FDFFFC;
+}
 
 
 

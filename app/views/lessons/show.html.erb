@@ -2,8 +2,8 @@
 
 <div class="container">
 	<p>
-		<% if @lesson.video? %>
-			<%= video_tag @lesson.video_url, size: "800x400", controls: true, preload: 'none', autobuffer: true %>
+		<% if @lesson.image? %>
+			<%= image_tag @lesson.image_url %>
 		<% end %>
 	</p>
 

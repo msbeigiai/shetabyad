@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20170509061713) do
     t.integer  "tutorial_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "video"
+    t.string   "image"
     t.index ["tutorial_id"], name: "index_lessons_on_tutorial_id", using: :btree
   end
 
