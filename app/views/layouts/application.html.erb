@@ -13,12 +13,16 @@
 
 	  <div class="container">
 		  <% if notice %>
-		  	<p class="notice"><%= notice %></p>
+<!--		  	<p class="notice"><%#= notice %></p>-->
+				<%= js add_gritter(flash[:notice], title: "پیام شما") %>
 		  <% end %>
 		  <% if alert %>
-		  	<p class="alert"><%= alert %></p>
+<!--		  	<p class="alert"><%#= alert %></p>-->
+		  	<%= js add_gritter(flash[:alert], title: "پیام شما") %>
 		  <% end %>
-	 </div>
+		 </div>
 	 <%= yield %>
+	 
+	 
   </body>
 </html>

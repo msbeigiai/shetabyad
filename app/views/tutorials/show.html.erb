@@ -46,10 +46,3 @@
 		<% end %>
 	</div>
 </div>
-
-
-<% if user_signed_in? && current_user.type == 'AdminUser' %>
-	<%= puts 'This is admin user' %>
-<% else %>
-	<%= puts "This is not admin user" %>
-<% end %>

@@ -9,7 +9,7 @@ en:
     failure:
       already_authenticated: "شما قبلا وارد شده اید."
       inactive: "اکانت شما هنوز فعال نشده است."
-      invalid: "Invalid %{authentication_keys} or password."
+      invalid: "ایمیل یا رمز عبور اشتباه است."
       locked: "Your account is locked."
       last_attempt: "You have one more attempt before your account is locked."
       not_found_in_database: "Invalid %{authentication_keys} or password."

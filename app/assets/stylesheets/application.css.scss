@@ -17,7 +17,9 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "gritter";
 
+//GLOBALS
 @font-face {
 	font-family: BYekan;
 	src: asset-url("BYekan.ttf");
@@ -31,6 +33,42 @@ p {
 	font-size: 16px;
 }
 
+#error_explanation {
+	background-color: #E8911A;
+	color: #fff;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	h2 {
+		font-size: 20px;
+		margin: 0;
+		padding: 5px 0;
+	}
+	p {
+		margin: 0;
+	}
+}
+
+.alert {
+	//display: none;
+}
+
+.gritter-close {
+	display: block;
+}
+
+.gritter-title {
+	font-family: BYekan, sans-serif;
+	font-size: 18px;
+}
+
+.gritter-without-image {
+	p {
+		font-family: BYekan, sans-serif;
+	}
+}
+
+//LOCALS
 .navbar {
 	padding: 10px 0;
 	margin-bottom: 0;
@@ -79,6 +117,7 @@ p {
 		border-top: solid 2px #FDFFFC;
 		margin: 70px 0 20px 0;
 		background-color: #3CD5C1;
+		box-shadow: 0 3px 3px #d8d8d8;
 		hr {
 			width: 50%;
 		}

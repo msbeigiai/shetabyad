@@ -28,6 +28,16 @@
 	</p>
 
 	<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-	<%= link_to 'Back', tutorials_path %>
+	<%= link_to 'Back', lessons_path %>
 	
+	<%= link_to like_lesson_path(@lesson), method: :put, class: "btn btn-default" do %>
+		<span class="glyphicon glyphicon-thumbs-up"></span>
+		<%= @lesson.get_upvotes.size %>
+	<% end %>
 </div>
+
+
+
+
+
+

@@ -19,6 +19,7 @@
 						<%= link_to "<i class='fa fa-trash fa-lg'></i>".html_safe, lesson, method: :delete, data: { confirm: "Are you sure?" } %>
 						<span class="label label-default">tutorial id: <%= lesson.tutorial_id %></span>	
 						<%= link_to "<i class='fa fa-pencil fa-lg'></i>".html_safe, edit_lesson_path(lesson), class: "pull-right" %>
+						<span class="glyphicon glyphicon-heart pull-left"><%= lesson.get_upvotes.size %></span>
 					</div>
 				</div>
 			</div>

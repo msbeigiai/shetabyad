@@ -1,11 +1,11 @@
 class LessonsController < ApplicationController
-  before_action :set_lesson, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:show, :index]
+  before_action :set_lesson, only: [:show, :edit, :update, :destroy, :upvote]
+  skip_before_action :authenticate_user!, only: :index
 
   # GET /lessons
   # GET /lessons.json
   def index
-    @lessons = Lesson.all
+    @lessons = Lesson.all.order("created_at DESC")
   end
 
   # GET /lessons/1
@@ -61,6 +61,11 @@ class LessonsController < ApplicationController
       format.json { head :no_content }
     end
   end
+	
+	def upvote
+		@lesson.upvote_by current_user
+		redirect_to :back
+	end
 
   private
     # Use callbacks to share common setup or constraints between actions.

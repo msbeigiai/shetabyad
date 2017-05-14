@@ -38,6 +38,7 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts_as_votable (0.10.0)
     arel (7.1.4)
     autoprefixer-rails (6.7.7.2)
       execjs
@@ -81,6 +82,7 @@ GEM
       sass (>= 3.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    gritter (1.2.0)
     haml (4.0.7)
       tilt
     http-cookie (1.0.3)
@@ -224,6 +226,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_votable (~> 0.10.0)
   bootstrap-sass
   byebug
   carrierwave
@@ -231,6 +234,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   font-awesome-sass
+  gritter (~> 1.2)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
