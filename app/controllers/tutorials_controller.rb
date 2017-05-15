@@ -5,7 +5,7 @@ class TutorialsController < ApplicationController
   # GET /tutorials
   # GET /tutorials.json
   def index
-    @tutorials = Tutorial.all
+    @tutorials = Tutorial.all.order("created_at DESC")
   end
 
   # GET /tutorials/1
@@ -70,6 +70,6 @@ class TutorialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tutorial_params
-      params.require(:tutorial).permit(:title, :description)
+      params.require(:tutorial).permit(:title, :description, :images)
     end
 end

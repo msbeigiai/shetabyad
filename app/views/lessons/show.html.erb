@@ -1,41 +1,27 @@
-<p id="notice"><%= notice %></p>
-
 <div class="container">
-	<p>
-		<% if @lesson.image? %>
-			<%= image_tag @lesson.image_url %>
-		<% end %>
-	</p>
+	<div class="col-md-10 col-md-offset-1">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<% if @lesson.image? %>
+					<%= image_tag @lesson.image_url %>
+				<% end %>
+				<%= @lesson.title %>
+			</div>
+			<div class="panel-body">
+				<%= @lesson.description %>
+			</div>
+			<div class="panel-footer">
+				<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+				<%= link_to 'Back', lessons_path %>
 
-	<p>
-	  <strong>Title:</strong>
-	  <%= @lesson.title %>
-	</p>
-
-	<p>
-	  <strong>Description:</strong>
-	  <%= @lesson.description %>
-	</p>
-
-	<p>
-	  <strong>Tutorial id:</strong>
-	  <%= @lesson.tutorial.id %>
-	</p>
-
-	<p>
-	  <strong>Tutorial Title:</strong>
-	  <%= @lesson.tutorial.title %>
-	</p>
-
-	<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-	<%= link_to 'Back', lessons_path %>
-	
-	<%= link_to like_lesson_path(@lesson), method: :put, class: "btn btn-default" do %>
-		<span class="glyphicon glyphicon-thumbs-up"></span>
-		<%= @lesson.get_upvotes.size %>
-	<% end %>
+				<%= link_to like_lesson_path(@lesson), method: :put, class: "btn btn-default" do %>
+					<span class="glyphicon glyphicon-thumbs-up"></span>
+					<%= @lesson.get_upvotes.size %>
+				<% end %>
+			</div>
+		</div>
+	</div>
 </div>
-
 
 
 

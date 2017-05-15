@@ -18,6 +18,8 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "gritter";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 //GLOBALS
 @font-face {
@@ -229,8 +231,123 @@ p {
 	}
 }
 
+#tutorial-index {
+	.well {
+//		border: 1px solid #d1d1d1;
+		border: none;
+		background-color: #FDFFFC;
+		box-shadow: 0 0px 3px rgba(0,0,0,0.15);
+		transition: box-shadow 0.3s ease-in-out;
+		a {
+			color: #011627;
+			&:hover {
+				text-decoration: none;
+			}
+			&:focus {
+				text-decoration: none;
+			}
+		}
+		img {
+			margin-top: 20px;
+		}
+		&:hover {
+			box-shadow: 0 0px 15px rgba(0,0,0,0.3);
+		}
+		&:after {
+			box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+}
 
-
+#lessons-index {
+	.lessons-index-hero {
+		padding: 120px 0;
+		background: -moz-linear-gradient(top, rgba(54,192,174,1) 0%, rgba(54,192,174,0.57) 100%); 
+		background: -webkit-linear-gradient(top, rgba(54,192,174,1) 0%,rgba(54,192,174,0.57) 100%); 
+		background: linear-gradient(to bottom, rgba(54,192,174,1) 0%,rgba(54,192,174,0.57) 100%); 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36c0ae', endColorstr='#9136c0ae',GradientType=0 );
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		h1 {
+			color: #FDFFFC;
+			margin-right: 30px;
+		}
+		p {
+			margin-top: 30px;
+			color: #FDFFFC;
+			font-size: 20px;
+			margin-right: 10px;
+		}
+		.fa {
+			color: #F71735;
+			margin-left: 10px;
+		}
+	}
+	.row {
+		padding: 50px 0;
+	}
+	.col-md-4 {
+		padding-bottom: 50px;
+	}
+	.panel {
+		padding: 0;
+		margin: 0;
+		border: none;
+		box-shadow: 0 0px 3px rgba(0,0,0,0.15);
+		transition: box-shadow 0.3s ease-in-out;
+		transition: transform 0.3s ease-in-out;
+		&:hover {
+			box-shadow: 0 0px 15px rgba(0,0,0,0.3);
+			transform: scale(1.01, 1.01)
+		}
+		&:after {
+			box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+	.panel-footer {
+		background-color: #FDFFFC;
+		border: none;
+		position: relative;
+		.fa {
+			color: #F71735;
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+		}
+		span {
+			position: absolute;
+			bottom: 10px;
+			left: 40px;
+		}
+	}
+	.panel-heading {
+		padding: 0;
+		position: relative;
+		border: none;
+		a {
+			color: #FDFFFC;
+			position: absolute;
+			z-index: 1000;
+			bottom: 15px;
+			right: 15px;
+			&:hover {
+				text-decoration: none;
+			}
+			&:focus {
+				text-decoration: none;
+			}
+		}
+	}
+}
 
 
 

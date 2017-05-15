@@ -2,7 +2,7 @@
 
 <div class="container">
 	<div class="page-header">
-		<h1><%= @tutorial.title %>'s Lesson(s)</h1>
+		<h1><%= @tutorial.title %></h1>
 	</div>
 	<div class="row">
 		<% if @tutorial.lessons.count == 1 %>
@@ -14,11 +14,12 @@
 						</div>
 					</div>
 					<div class="panel-body">
-						<%= markdown(find_first.description) %>
+						<%= markdown(sanitize(find_first.description[0, 300] + '...')) %>
 					</div>
 					<div class="panel-footer">
 						<%= link_to "<i class='fa fa-trash fa-lg'></i>".html_safe, find_first, method: :delete, data: { confirm: "Are you sure?" } %>
 						<%= link_to "<i class='fa fa-pencil fa-lg'></i>".html_safe, edit_lesson_path(find_first), class: "pull-right" %>
+						<i class="fa fa-heart fa-lg pull-left"></i><span class="like-number pull-left"><%= find_first.get_upvotes.size %></span>
 					</div>
 				</div>
 			</div>
@@ -32,17 +33,18 @@
 							</div>
 						</div>
 						<div class="panel-body">
-							<%= tut_lesson.description %>
+							<%= markdown(sanitize(tut_lesson.description[0, 300] + '...')) %>
 						</div>
 						<div class="panel-footer">
 							<%= link_to "<i class='fa fa-trash fa-lg'></i>".html_safe, tut_lesson, method: :delete, data: { confirm: "Are you sure?" } %>
 							<%= link_to "<i class='fa fa-pencil fa-lg'></i>".html_safe, edit_lesson_path(tut_lesson), class: "pull-right" %>
+							<i class="fa fa-heart fa-lg pull-left"></i><span class="like-number pull-left"><%= tut_lesson.get_upvotes.size %></span>
 						</div>
 					</div>
 				</div>
 			<% end %>
 		<% else %>
-			<h3>No lesson in this tutorial</h3>
+			<h3>هنوز درسی برای این دسته ارائه نشده است.</h3>
 		<% end %>
 	</div>
 </div>

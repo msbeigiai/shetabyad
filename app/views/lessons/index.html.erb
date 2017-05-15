@@ -1,30 +1,40 @@
-<p id="notice"><%= notice %></p>
-<div class="container">
-	<div class="page-header">
-		<h1>آموزش ها</h1>
-	</div>
-	<div class="row">
-		<% @lessons.each do |lesson| %>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<div class="panel-title">
-							<h4><%= link_to lesson.title, lesson %></h4>
-						</div>
-					</div>
-					<div class="panel-body">
-						<%= lesson.description %>
-					</div>
-					<div class="panel-footer">
-						<%= link_to "<i class='fa fa-trash fa-lg'></i>".html_safe, lesson, method: :delete, data: { confirm: "Are you sure?" } %>
-						<span class="label label-default">tutorial id: <%= lesson.tutorial_id %></span>	
-						<%= link_to "<i class='fa fa-pencil fa-lg'></i>".html_safe, edit_lesson_path(lesson), class: "pull-right" %>
-						<span class="glyphicon glyphicon-heart pull-left"><%= lesson.get_upvotes.size %></span>
-					</div>
+<section id="lessons-index">
+	<div class="lessons-index-hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 pull-right">
+					<h1>همه آموزش ها</h1>
+				</div>
+				<div class="col-md-6">
+					<% sum = 0 %>
+					<% @lessons.each do |lesson| %>
+						<% sum += lesson.get_upvotes.size %>
+					<% end %>
+					<p><i class="fa fa-heart fa-lg"></i> <%= sum %> بار پسندیده شده</p>
 				</div>
 			</div>
-		<% end %>
+		</div>
 	</div>
-</div>		
-
-
+	<div class="container">
+		<div class="row pull-right">
+			<% @lessons.each do |lesson| %>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<% if lesson.image? %>
+								<%= image_tag lesson.image_url(:thumbnail), class: "img-responsive" %>
+							<% end %>
+							<h4><%= link_to lesson.title, lesson %></h4>
+						</div>
+						<div class="panel-body">
+							<%= markdown(sanitize(lesson.description[0, 200] + '...')) %>
+						</div>
+						<div class="panel-footer">
+							<i class="fa fa-heart fa-lg pull-left"></i><span class="like-number pull-left"><%= lesson.get_upvotes.size %></span>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>		
+</section>
