@@ -1,0 +1,6 @@
+fa:
+  activerecord:
+    errors:
+      models:
+        user:
+          blank: "ایمیل نمیتواند خالی باشد."

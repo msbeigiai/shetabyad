@@ -1,50 +1,60 @@
-<p id="notice"><%= notice %></p>
-
-<div class="container">
-	<div class="page-header">
-		<h1><%= @tutorial.title %></h1>
-	</div>
-	<div class="row">
-		<% if @tutorial.lessons.count == 1 %>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<div class="panel-title">
-							<h3><%= link_to find_first.title, find_first %></h3>
-						</div>
-					</div>
-					<div class="panel-body">
-						<%= markdown(sanitize(find_first.description[0, 300] + '...')) %>
-					</div>
-					<div class="panel-footer">
-						<%= link_to "<i class='fa fa-trash fa-lg'></i>".html_safe, find_first, method: :delete, data: { confirm: "Are you sure?" } %>
-						<%= link_to "<i class='fa fa-pencil fa-lg'></i>".html_safe, edit_lesson_path(find_first), class: "pull-right" %>
-						<i class="fa fa-heart fa-lg pull-left"></i><span class="like-number pull-left"><%= find_first.get_upvotes.size %></span>
-					</div>
+<section id="lessons-index">
+	<div class="lessons-index-hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 pull-right">
+					<h1><%= @tutorial.title %></h1>
 				</div>
 			</div>
-		<% elsif @tutorial.lessons.count > 1 %>
-			<% @tutorial.lessons.each do |tut_lesson| %>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row pull-right">
+			<% if @tutorial.lessons.count == 1 %>
 				<div class="col-md-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<div class="panel-title">
-								<h3><%= link_to tut_lesson.title, tut_lesson %></h3>
-							</div>
+							<% if find_first.thumbnail_image? %>
+								<%= image_tag find_first.thumbnail_image_url(:thumbnail), class: "img-responsive" %>
+							<% end %>
+							<h3><%= link_to find_first.title, find_first %></h3>
 						</div>
 						<div class="panel-body">
-							<%= markdown(sanitize(tut_lesson.description[0, 300] + '...')) %>
+							<%= markdown(sanitize(find_first.description[0, 300] + '...')) %>
 						</div>
 						<div class="panel-footer">
-							<%= link_to "<i class='fa fa-trash fa-lg'></i>".html_safe, tut_lesson, method: :delete, data: { confirm: "Are you sure?" } %>
-							<%= link_to "<i class='fa fa-pencil fa-lg'></i>".html_safe, edit_lesson_path(tut_lesson), class: "pull-right" %>
-							<i class="fa fa-heart fa-lg pull-left"></i><span class="like-number pull-left"><%= tut_lesson.get_upvotes.size %></span>
+							<i class="fa fa-heart fa-lg pull-left"></i><span class="like-number pull-left"><%= find_first.get_upvotes.size %></span>
 						</div>
 					</div>
 				</div>
+			<% elsif @tutorial.lessons.count > 1 %>
+				<% @tutorial.lessons.each do |tut_lesson| %>
+					<div class="col-md-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<% if tut_lesson.thumbnail_image? %>
+									<%= image_tag tut_lesson.thumbnail_image_url(:thumbnail), class: "img-responsive" %>
+								<% end %>
+								<h3><%= link_to tut_lesson.title, find_first %></h3>
+							</div>
+							<div class="panel-body">
+								<%= markdown(sanitize(tut_lesson.description[0, 300] + '...')) %>
+							</div>
+							<div class="panel-footer">
+								<i class="fa fa-heart fa-lg pull-left"></i><span class="like-number pull-left"><%= tut_lesson.get_upvotes.size %></span>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			<% else %>
+				<h3>هنوز درسی برای این دسته ارائه نشده است.</h3>
 			<% end %>
-		<% else %>
-			<h3>هنوز درسی برای این دسته ارائه نشده است.</h3>
-		<% end %>
-	</div>
-</div>
+		</div>
+	</div>		
+</section>
+
+
+
+
+<!--*******************************************************-->
+

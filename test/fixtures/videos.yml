@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aparat_embed: MyString
+  aparat_id: MyString
+  youtube_embed: MyString
+
+two:
+  aparat_embed: MyString
+  aparat_id: MyString
+  youtube_embed: MyString

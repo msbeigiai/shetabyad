@@ -16,7 +16,10 @@
     <%= f.text_field :title %>
   </div>
 	<div class="field">
-		<%= f.file_field :video, accept: 'image/jpg,image/png' %>
+		<%= f.file_field :image, accept: 'image/jpg,image/png' %>
+	</div>
+	<div class="field">
+		<%= f.file_field :thumbnail_image, accept: 'image/jpg,image/png' %>
 	</div>
   <div class="field">
     <%= f.label :description %>
@@ -24,8 +27,9 @@
   </div>
 
   <div class="field">
-    <%= f.label :tutorial_id %>
-    <%= f.text_field :tutorial_id %>
+  	<%= f.text_field :aparat_id %>
+  	<%= f.text_field :aparat_embed %>
+  	<%= f.text_field :youtube_embed %>
   </div>
 
   <div class="actions">

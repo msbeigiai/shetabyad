@@ -6,11 +6,12 @@
 					<h1>همه آموزش ها</h1>
 				</div>
 				<div class="col-md-6">
-					<% sum = 0 %>
+					<% sum_like = 0 %>
 					<% @lessons.each do |lesson| %>
-						<% sum += lesson.get_upvotes.size %>
+						<% sum_like += lesson.get_upvotes.size %>
 					<% end %>
-					<p><i class="fa fa-heart fa-lg"></i> <%= sum %> بار پسندیده شده</p>
+					<p><i class="fa fa-heart fa-lg"></i> [<%= sum_like %>] بار پسندیده شده</p>
+					<p><i class="fa fa-play fa-lg"></i> [<%= Video.count %>] ویدئو</p>
 				</div>
 			</div>
 		</div>
@@ -21,8 +22,11 @@
 				<div class="col-md-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<% if lesson.image? %>
-								<%= image_tag lesson.image_url(:thumbnail), class: "img-responsive" %>
+							<% if lesson.thumbnail_image? %>
+								<%= image_tag lesson.thumbnail_image_url(:thumbnail), class: "img-responsive" %>
+								<% unless lesson.video.nil? %>
+									<i class="fa fa-play fa-2x pull-right play"></i>
+								<% end %>
 							<% end %>
 							<h4><%= link_to lesson.title, lesson %></h4>
 						</div>
@@ -38,3 +42,17 @@
 		</div>
 	</div>		
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

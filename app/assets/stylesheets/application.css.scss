@@ -72,11 +72,20 @@ p {
 
 //LOCALS
 .navbar {
+	font-size: 18px;
 	padding: 10px 0;
 	margin-bottom: 0;
 	border-radius: 0;
 	border: none;
 	background: #011627;
+	.navbar-left {
+		li > a {
+			color: #FDFFFC;
+			&:hover {
+				color: darken(#FDFFFC, 10%);
+			}
+		}
+	}
 }
 
 .navbar-header > .navbar-nav > li > a {
@@ -91,6 +100,10 @@ p {
 
 .navbar-header > .navbar-brand {
 	color: #FDFFFC;
+	font-size: 25px;
+	&:hover {
+		color: darken(#FDFFFC, 10%);
+	}
 }
 
 .navbar-nav > .navbar-text {
@@ -114,10 +127,12 @@ p {
 	}
 	.btn-success {
 		margin-top: 30px;
+		padding: 12px 20px;
+		font-size: 18px;
 	}
 	.row {
 		border-top: solid 2px #FDFFFC;
-		margin: 70px 0 20px 0;
+		margin: 100px 0 20px 0;
 		background-color: #3CD5C1;
 		box-shadow: 0 3px 3px #d8d8d8;
 		hr {
@@ -271,7 +286,7 @@ p {
 		background: -webkit-linear-gradient(top, rgba(54,192,174,1) 0%,rgba(54,192,174,0.57) 100%); 
 		background: linear-gradient(to bottom, rgba(54,192,174,1) 0%,rgba(54,192,174,0.57) 100%); 
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36c0ae', endColorstr='#9136c0ae',GradientType=0 );
-		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 		h1 {
 			color: #FDFFFC;
 			margin-right: 30px;
@@ -333,12 +348,21 @@ p {
 		padding: 0;
 		position: relative;
 		border: none;
+		.play {
+			color: #FF9F1C;
+			position: absolute;
+			bottom: 20px;
+			left: 15px;
+		}
 		a {
+			padding: 15px;
+			margin: 0;
+			width: 100%;
+			background-color: rgba(0,0,0,.3);
 			color: #FDFFFC;
 			position: absolute;
 			z-index: 1000;
 			bottom: 15px;
-			right: 15px;
 			&:hover {
 				text-decoration: none;
 			}
@@ -349,8 +373,18 @@ p {
 	}
 }
 
-
-
+//LESSON SHOW
+#lesson-show {
+	.panel {
+		border: none;
+	}
+	.panel-heading {
+		background-color: #000;
+		border: none;
+		border-radius: 0;
+		color: #FDFFFC;
+	}
+}
 
 
 
