@@ -2,25 +2,43 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<div class="container">
-				<% unless @lesson.video.nil? %>
-					<div id="<%= @lesson.video.aparat_id %>"><script type="text/JavaScript" src="https://www.aparat.com/embed/<%= @lesson.video.aparat_embed %>?data[rnddiv]=<%= @lesson.video.aparat_id %>&data[responsive]=yes"></script></div>
-				<% end %>
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<% unless @lesson.video.nil? %>
+							<div id="<%= @lesson.video.aparat_id %>"><script type="text/JavaScript" src="https://www.aparat.com/embed/<%= @lesson.video.aparat_embed %>?data[rnddiv]=<%= @lesson.video.aparat_id %>&data[responsive]=yes"></script></div>
+						<% end %>
+					</div>
+				</div>
 			</div>
 			<% if @lesson.image? %>
-				<%= image_tag @lesson.image_url, class: "img-responsive" %>
 				<div class="container">
 					<div class="col-md-10 col-md-offset-1">
-						
+						<%= image_tag @lesson.image_url, class: "img-responsive" %>
 					</div>
 				</div>
 			<% end %>
-			<%= @lesson.title %>
 		</div>
-		<div class="panel-body">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1">
-						<%= @lesson.description %>
+		<div class="container">
+			<div class="row title">
+				<div class="col-md-10 col-md-offset-1">
+					<h4><em>دسته:</em> <%= @lesson.tutorial.title %></h4>
+					<div class="col-md-6 pull-right">
+						<h1><%= @lesson.title %></h1>
+					</div>
+					<div class="col-md-6">
+						<%= link_to like_lesson_path(@lesson), method: :put, class: "fa fa-heart fa-2x" do %>
+	<!--				<i class="fa fa-heart fa-2x"></i>-->
+							<span class="like-number"><%= @lesson.get_upvotes.size %></span>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="panel-body">
+						<p><%= markdown(@lesson.description) %></p>
 					</div>
 				</div>
 			</div>
@@ -29,10 +47,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-0ffset-1">
-						<%= link_to like_lesson_path(@lesson), method: :put, class: "btn btn-default" do %>
-						<span class="glyphicon glyphicon-thumbs-up"></span>
-							<%= @lesson.get_upvotes.size %>
-						<% end %>
+						
 					</div>
 				</div>
 			</div>

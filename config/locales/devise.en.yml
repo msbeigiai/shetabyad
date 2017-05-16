@@ -4,7 +4,7 @@ en:
   devise:
     confirmations:
       confirmed: "ایمیل شما با موفقیت تایید گردید."
-      send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
+      send_instructions: "یک ایمیل حاوی دستورالعمل فعال سازی اکانت، برای شما ظرف چند دقیقه آینده، ارسال خواهد شد."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
     failure:
       already_authenticated: "شما قبلا وارد شده اید."
@@ -34,15 +34,15 @@ en:
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
       send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password has been changed successfully. You are now signed in."
-      updated_not_active: "Your password has been changed successfully."
+      updated: "رمز عبور شما با موفقیت تغییر کرد. شما وارد شدید."
+      updated_not_active: "رمز عبور شما با موفقیت تغییر کرد."
     registrations:
       destroyed: "اکانت شما حذف گردید. امیدواریم خیلی زود ببینیمتون."
       signed_up: "خوش آمدید، شما با موفقیت ثبت نام کردید."
       signed_up_but_inactive: "شما با موفقیت ثبت نام کردید . لطفا برای ادامه ایمیل خود را فعال  کنید."
       signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
       signed_up_but_unconfirmed: "یک پیام حاوی لینک فعال سازی به ایمیل شما ارسال گردید. لطفا لینک را دنبال کنید تا اکانت شما فعال گردد."
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
+      update_needs_confirmation: "شما با موفقیت اکانت خود را به روز رسانی نمودید. لطفا ایمیل خود را چک کنید و از طریق دستورالعمل فعال سازی ایمیل جدید را فعال کنید."
       updated: "اکانت شما با موفقیت به روز رسانی شد."
     sessions:
       signed_in: "شما با موفقیت وارد شدید."

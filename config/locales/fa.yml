@@ -3,4 +3,6 @@ fa:
     errors:
       models:
         user:
-          blank: "ایمیل نمیتواند خالی باشد."
+          attributes:
+            email:
+              blank: "لااااااا"

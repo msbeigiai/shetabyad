@@ -70,6 +70,16 @@ p {
 	}
 }
 
+.highlight {
+	pre {
+		direction: ltr;
+	}
+	span {
+		font-size: 16px;
+		font-family: Menlo, Monaco, Consolas, "Courier New", monospace;	
+	}
+}
+
 //LOCALS
 .navbar {
 	font-size: 18px;
@@ -375,8 +385,39 @@ p {
 
 //LESSON SHOW
 #lesson-show {
+	h1 {
+		padding: 0;
+		margin: 0;
+	}
+	h4 {
+		color: #b6b6b6;
+		margin-right: 10px;
+	}
+	.fa {
+		color: #F71735;
+		padding-top: 10px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.like-number {
+		font-family: BYekan, sans-serif;
+		font-size: 40px;
+		padding-bottom: 10px;
+	}
+	.title {
+		padding-top: 15px;
+	}
 	.panel {
 		border: none;
+	}
+	.panel-body {
+		margin: 20px 0;
+		background: #FDFFFC;
+		box-shadow: 0 0 10px #E6E8E6;
+		padding: 30px;
+		font-size: 16px;
+		line-height: 32px;
 	}
 	.panel-heading {
 		background-color: #000;
