@@ -71,3 +71,46 @@
 		</div>
 	</div>
 </section>
+
+<section id="last-lessons">
+	<% number = 3 %>
+	<% models = last_models(number) %>
+	<div class="container">
+		<div class="row">
+			<% if models.nil? %>
+				nothing
+			<% else %>
+				<% models.each do |model| %>
+					<div class="col-md-4 pull-right">
+						<%= link_to model.title, model %>
+						<% puts models.count %>
+					</div> 
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+	
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

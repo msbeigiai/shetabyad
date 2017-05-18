@@ -6,11 +6,13 @@ Rails.application.routes.draw do
   devise_for :admins, path: 'admin'
   resources :tutorials, only: [:show, :index]
 	resources :lessons, only: [:show, :index]
+	
 	authenticate :user do 
 		resources :lessons, only: [:show, :index] do 
 			member do
-				put 'like', to: "lessons#upvote"
+				get 'like'
 			end
+			resources :comments
 		end
 		
 	end

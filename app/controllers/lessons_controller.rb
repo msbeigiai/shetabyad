@@ -1,5 +1,5 @@
 class LessonsController < ApplicationController
-  before_action :set_lesson, only: [:show, :edit, :update, :destroy, :upvote]
+  before_action :set_lesson, only: [:show, :edit, :update, :destroy, :like]
   skip_before_action :authenticate_user!, only: :index
 
   # GET /lessons
@@ -62,9 +62,13 @@ class LessonsController < ApplicationController
     end
   end
 	
-	def upvote
-		@lesson.upvote_by current_user
-		redirect_to :back
+	def like
+		if @lesson.liked_by current_user
+			respond_to do |format|
+				format.html { redirect_to :back }
+				format.js
+			end
+		end
 	end
 
   private

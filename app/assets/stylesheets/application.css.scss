@@ -22,6 +22,10 @@
 @import "font-awesome";
 
 //GLOBALS
+* {
+	box-sizing: border-box;	
+}
+
 @font-face {
 	font-family: BYekan;
 	src: asset-url("BYekan.ttf");
@@ -120,6 +124,7 @@ p {
 	color: #FDFFFC;
 }
 
+//HOME PAGE 
 .jumbotron {
 	padding: 120px 0 0 0;
 	background: #011627;
@@ -227,6 +232,12 @@ p {
 	}
 }
 
+#last-lessons {
+	padding: 100px 0;
+	background-color: #FDFFFC;
+}
+
+//LOGIN AND SIGNUP PAGES
 #form-devise {
 	padding: 80px 0;
 	background-color: #FDFFFC;
@@ -256,9 +267,10 @@ p {
 	}
 }
 
+//TUTORIAL INDEX
 #tutorial-index {
+	padding: 40px 0;
 	.well {
-//		border: 1px solid #d1d1d1;
 		border: none;
 		background-color: #FDFFFC;
 		box-shadow: 0 0px 3px rgba(0,0,0,0.15);
@@ -289,14 +301,11 @@ p {
 	}
 }
 
+//LESSON INDEX
 #lessons-index {
 	.lessons-index-hero {
-		padding: 120px 0;
-		background: -moz-linear-gradient(top, rgba(54,192,174,1) 0%, rgba(54,192,174,0.57) 100%); 
-		background: -webkit-linear-gradient(top, rgba(54,192,174,1) 0%,rgba(54,192,174,0.57) 100%); 
-		background: linear-gradient(to bottom, rgba(54,192,174,1) 0%,rgba(54,192,174,0.57) 100%); 
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36c0ae', endColorstr='#9136c0ae',GradientType=0 );
-		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+		padding: 80px 0;
+		background: #011627;
 		h1 {
 			color: #FDFFFC;
 			margin-right: 30px;
@@ -399,6 +408,9 @@ p {
 		&:hover {
 			text-decoration: none;
 		}
+		&:focus {
+			text-decoration: none;
+		}
 	}
 	.like-number {
 		font-family: BYekan, sans-serif;
@@ -427,7 +439,17 @@ p {
 	}
 }
 
-
+//FOOTER
+footer {
+	padding: 40px 0;
+	background: #E8911A;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	color: #FDFFFC;
+	display: block;
+}
 
 
 
