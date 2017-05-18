@@ -37,7 +37,7 @@ class CommentsController < ApplicationController
 	private
 	
 	def set_lesson
-		@lesson = Comment.lesson(lesson_id)
+		@lesson = Comment.find(params[:lesson_id])
 	end
 	
 	def params_comment
