@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
 				format.js
 			end
 		else
-			flash[:alert] = "نظر خود را روباره چک بفرمایید. احتمالا مشکلی پیش آمده."
+			flash[:alert] = "نظر خود را دوباره چک بفرمایید. احتمالا مشکلی پیش آمده."
 			render root_path
 		end
 	end
@@ -37,7 +37,7 @@ class CommentsController < ApplicationController
 	private
 	
 	def set_lesson
-		@lesson = Comment.find(params[:lesson_id])
+		@lesson = Lesson.find(params[:lesson_id])
 	end
 	
 	def params_comment

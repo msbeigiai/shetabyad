@@ -1,2 +1,2 @@
-$('#comments_<%= @lesson.id %>').html("<%= j render @lesson.comments, post: @lesson, comment: @comment %>");
+$('#comments_<%= @lesson.id %>').html("<%= j render @lesson.comments, lesson: @lesson, comment: @comment %>");
 Append.comment_count -= 1;

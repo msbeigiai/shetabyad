@@ -27,7 +27,7 @@ $( document ).ready(function() {
   DestroyComments();
   $('.comment_content').click (function(){
   	Append.id = this;
-  	Append.lesson_id = $(this).data("post-id");
+  	Append.lesson_id = $(this).data("lesson-id");
   	if (Append.comment_count == undefined){ Append.comment_count = $(this).data("value"); }
   	if(Append.comment_count < 4){ Append.comment = true; Append.link = false; } 
   	else if(Append.comment_count == 4){ Append.comment = false; Append.link = true; } 
