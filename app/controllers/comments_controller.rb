@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
 		if @comment.save
 			respond_to do |format|
 				format.html { redirect_to root_path }
-				format.js
+				format.js {}
 			end
 		else
 			flash[:alert] = "نظر خود را دوباره چک بفرمایید. احتمالا مشکلی پیش آمده."
@@ -27,10 +27,13 @@ class CommentsController < ApplicationController
 	
 	def destroy
 		@comment = @lesson.comments.find(params[:id])
-		@comment.destroy
-		respond_to do |format|
-			format.html { redirect_to root_path }
-			format.js
+		
+		if @comment.user_id == current_user.id
+			@comment.destroy
+			respond_to do |format|
+				format.html { redirect_to root_path }
+				format.js {}
+			end
 		end
 	end
 	

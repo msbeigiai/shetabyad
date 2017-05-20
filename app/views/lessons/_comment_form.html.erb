@@ -1,0 +1,23 @@
+<div class="comments" id="comments_<%= lesson.id %>">
+	<% if lesson.comments.any? %>
+		<%= render lesson.comments.first(4), lesson: lesson %>
+		<% unless lesson.comments.count <= 4 %>
+			<div class="paginator" id="#comments-paginator-<%= lesson.id %>">
+				<%= link_to "همه #{lesson.comments.count} نظر رو ببینید...", lesson_comments_path(lesson), remote: true, class: 'more-comments', id: "more_comments_#{lesson.id}", data: {lesson_id: "#{lesson.id}", type: "html", value: "#{lesson.comments.count}"} %>
+			</div>
+		<% end %>
+	<% end %>
+</div>
+<hr />
+<div class="comment-form col-sm-11">
+	<%= form_for([lesson, lesson.comments.build], remote: true) do |f| %>
+		<div class="form-group">
+			<%= f.text_field :content, placeholder: 'Add a comment...', class: "comment_content form-control",
+			id: "comment_content_#{lesson.id}",
+			data: { lesson_id: "#{lesson.id}",
+			value: "#{lesson.comments.count}" } %>
+		</div>
+		<%= f.submit 'New Comment', class: 'comment-submit-button' %>
+	<% end %>
+</div>
+

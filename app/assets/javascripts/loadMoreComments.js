@@ -6,7 +6,7 @@ function ClickableCommentsLink(){
       event.preventDefault();
       var lessonId = $(this).data("lesson-id");
       $("#comments_" + lessonId).html(data);
-      $("#comments-paginator-" + lessonId).html("<a id='more-comments' data-lesson-id=" + lessonId + "data-type='html' data-remote='true' href='/lessons/" + lessonId + "/comments>show morecomments</a>");
+      $("#comments-paginator-" + lessonId).html("<a id='more-comments' data-lesson-id=" + lessonId + "data-type='html' data-remote='true' href='/lessons/" + lessonId + "/comments>show more comments</a>");
       Append.open = true;
       Append.comment = true; 
       Append.link = false;  

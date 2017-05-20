@@ -351,16 +351,27 @@ p {
 		background-color: #FDFFFC;
 		border: none;
 		position: relative;
-		.fa {
+		.fa-like {
 			color: #F71735;
 			position: absolute;
 			bottom: 15px;
 			left: 15px;
 		}
-		span {
+		.fa-comment {
+			color: #F71735;
+			position: absolute;
+			bottom: 15px;
+			right: 15px;
+		}
+		.like-number {
 			position: absolute;
 			bottom: 10px;
 			left: 40px;
+		}
+		.comment-number {
+			position: absolute;
+			bottom: 10px;
+			right: 40px;
 		}
 	}
 	.panel-heading {
