@@ -85,6 +85,8 @@ p {
 }
 
 //LOCALS
+
+//NAVBAR
 .navbar {
 	font-size: 18px;
 	padding: 10px 0;
@@ -96,9 +98,50 @@ p {
 		li > a {
 			color: #FDFFFC;
 			&:hover {
-				color: darken(#FDFFFC, 10%);
+				color: #d1d1d1;
 			}
 		}
+	}
+	.dropdown {
+		background-color: #011627;
+		.dropdown-menu {
+			background-color: #182B3A;
+			li > a {
+				color: #FDFFFC;
+				text-align: right;
+				&:hover {
+					color: #d1d1d1;
+				}
+			}
+			.fa {
+				padding: 8px 0 0px 8px;
+			}
+		}
+	}
+}
+
+ul.nav.navbar-nav .dropdown .dropdown-toggle {
+	.fa {
+			padding-left: 5px;
+		}
+	.caret {
+		margin-left: 5px;
+	}
+}
+
+ul.nav.navbar-nav .dropdown.open .dropdown-toggle {
+	background-color: #182B3A;
+}
+
+ul.nav.navbar-nav li.dropdown.open ul.dropdown-menu li a:hover {
+	background-color: #182B3A;
+	color: #d1d1d1;
+}
+
+ul.nav.navbar-nav .dropdown .dropdown-toggle {
+	color: #FDFFFC;
+	&:hover {
+		color: #d1d1d1;
 	}
 }
 
@@ -116,13 +159,14 @@ p {
 	color: #FDFFFC;
 	font-size: 25px;
 	&:hover {
-		color: darken(#FDFFFC, 10%);
+		color: #d1d1d1;
 	}
 }
 
 .navbar-nav > .navbar-text {
 	color: #FDFFFC;
 }
+
 
 //HOME PAGE 
 .jumbotron {
