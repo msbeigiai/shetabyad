@@ -138,6 +138,15 @@ ul.nav.navbar-nav li.dropdown.open ul.dropdown-menu li a:hover {
 	color: #d1d1d1;
 }
 
+ul.nav.navbar-nav li.dropdown.open ul.dropdown-menu li a:focus {
+	background-color: #182B3A;
+	color: #d1d1d1;
+}
+
+ul.nav.navbar-nav li.dropdown.open ul.dropdown-menu li.divider {
+	background-color: #adadad;
+}
+
 ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	color: #FDFFFC;
 	&:hover {

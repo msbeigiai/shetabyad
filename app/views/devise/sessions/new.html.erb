@@ -30,7 +30,9 @@
 						<% end %>
 					</div>
 					<div class="panel-footer">
-						<%= render "devise/shared/links" %>
+						<% unless resource_name == :admin %>
+							<%= render "devise/shared/links" %>
+						<% end %>
 					</div>
 				</div>
 			</div>
