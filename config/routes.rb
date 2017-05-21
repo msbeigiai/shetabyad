@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 	
   mount RailsAdmin::Engine => '/user_admin', as: 'rails_admin'
   devise_for :users
-  devise_for :admins, path: 'admin', skip: [:registrations]#, controllers: { registrations: 'admins/registrations' }
+  devise_for :admins, path: 'admin', skip: [:registrations]
   resources :tutorials, only: [:show, :index]
-	resources :lessons, only: [:show, :index]
+	resources :lessons#, only: [:show, :index]
 	
 	authenticate :user do 
 		resources :lessons, only: [:show, :index] do 

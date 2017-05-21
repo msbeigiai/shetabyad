@@ -25,6 +25,22 @@ class CommentsController < ApplicationController
 		end
 	end
 	
+	def edit
+		@comment = @lesson.comments.find(params[:id])
+	end
+	
+	def update
+		respond_to do |format|
+      if @comment.comments.update(params_comment)
+        format.html { redirect_to @comment, notice: 'Lesson was successfully updated.' }
+        format.js
+      else
+        format.html { render :edit }
+        format.js
+      end
+    end
+	end
+	
 	def destroy
 		@comment = @lesson.comments.find(params[:id])
 		

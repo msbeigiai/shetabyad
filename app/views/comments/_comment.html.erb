@@ -1,17 +1,27 @@
 <div id="comment">
-  <div class="user-name">
-    <%= comment.user.username %>
-  </div>
-  <div class="comment-content">
-    <%= comment.content %>
-  </div>
-  <% if comment.user == current_user %>
-    <%= link_to lesson_comment_path(lesson, comment), method: :delete, data: {lesson_id: lesson.id, value: lesson.comments.count, confirm: "Are you sure?" }, remote: true, id: "delete-#{comment.id}", class: "delete-comment" do %>
-    	<div class="fa fa-times fa-lg">
-    		<span class="tooltip">Something...</span>
-    	</div>
-     	
-    <% end %>
-  <% end %>
+	<div class="panel panel-default">
+		<div class="panel-heading user-name">
+			<div class="row">
+				<div class="col-md-4 pull-right">
+					<p><i class="fa fa-user"></i> <%= comment.user.username %></p>
+				</div>
+				<div class="col-md-2 stuff">
+					<% if comment.user == current_user %>
+						<%= link_to lesson_comment_path(lesson, comment), method: :delete, data: {lesson_id: lesson.id, value: lesson.comments.count, confirm: "Are you sure?" }, remote: true, id: "delete-#{comment.id}", class: "delete-comment" do %>
+							<div class="fa fa-times"></div>
+						<% end %>
+						<%= link_to edit_lesson_comment_path(lesson, comment), remote: true do %>
+							<div class="fa fa-pencil"></div>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+			
+		</div>
+		<div class="panel-body comment-content">
+			<p><%= markdown(comment.content) %></p>
+		</div>
+	</div>
+  
 </div>
 <hr/>

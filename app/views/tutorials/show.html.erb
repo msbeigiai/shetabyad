@@ -23,7 +23,8 @@
 							<%= markdown(sanitize(find_first.description[0, 300] + '...')) %>
 						</div>
 						<div class="panel-footer">
-							<i class="fa fa-heart fa-lg pull-left"></i><span class="like-number pull-left"><%= find_first.get_upvotes.size %></span>
+							<i class="fa fa-heart fa-lg fa-like"></i><span class="like-number"><%= find_first.get_upvotes.size %></span>
+							<i class="fa fa-comments fa-lg fa-comment"></i><span class="comment-number"><%= find_first.comments.count %></span>
 						</div>
 					</div>
 				</div>
@@ -41,7 +42,8 @@
 								<%= markdown(sanitize(tut_lesson.description[0, 300] + '...')) %>
 							</div>
 							<div class="panel-footer">
-								<i class="fa fa-heart fa-lg pull-left"></i><span class="like-number pull-left"><%= tut_lesson.get_upvotes.size %></span>
+								<i class="fa fa-heart fa-lg fa-like"></i><span class="like-number"><%= tut_lesson.get_upvotes.size %></span>
+								<i class="fa fa-comments fa-lg fa-comment"></i><span class="comment-number"><%= tut_lesson.comments.count %></span>
 							</div>
 						</div>
 					</div>

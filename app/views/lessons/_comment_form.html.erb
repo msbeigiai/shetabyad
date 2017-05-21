@@ -14,6 +14,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 pull-right">
+				<div class="well well-sm explaine">
+					<p><i class="fa fa-question-circle"></i> برای یادگیری نحوه ارسال نظرات به این قسمت مراجعه فرمایید.</p>
+				</div>
 				<%= form_for([lesson, lesson.comments.build], remote: true) do |f| %>
 					<div class="form-group">
 						<%= f.text_area :content, placeholder: 'نظر خود را اضافه کنید...', class: "comment_content form-control",
