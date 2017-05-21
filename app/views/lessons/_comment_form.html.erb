@@ -2,22 +2,29 @@
 	<% if lesson.comments.any? %>
 		<%= render lesson.comments.first(4), lesson: lesson %>
 		<% unless lesson.comments.count <= 4 %>
-			<div class="paginator" id="#comments-paginator-<%= lesson.id %>">
-				<%= link_to "همه #{lesson.comments.count} نظر رو ببینید...", lesson_comments_path(lesson), remote: true, class: 'more-comments', id: "more_comments_#{lesson.id}", data: {lesson_id: "#{lesson.id}", type: "html", value: "#{lesson.comments.count}"} %>
+			<div class="well">
+				<div class="paginator" id="#comments-paginator-#{lesson.id}">
+				<%= link_to "همه #{lesson.comments.count} نظر را ببینید...", lesson_comments_path(lesson), remote: true, class: 'more-comments', id: "more_comments_#{lesson.id}", data: {lesson_id: "#{lesson.id}", type: "html", value: "#{lesson.comments.count}"} %>
+			</div>
 			</div>
 		<% end %>
 	<% end %>
 </div>
-<hr />
-<div class="comment-form col-sm-11">
-	<%= form_for([lesson, lesson.comments.build], remote: true) do |f| %>
-		<div class="form-group">
-			<%= f.text_field :content, placeholder: 'Add a comment...', class: "comment_content form-control",
-			id: "comment_content_#{lesson.id}",
-			data: { lesson_id: "#{lesson.id}",
-			value: "#{lesson.comments.count}" } %>
+<div class="comment-form">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 pull-right">
+				<%= form_for([lesson, lesson.comments.build], remote: true) do |f| %>
+					<div class="form-group">
+						<%= f.text_area :content, placeholder: 'نظر خود را اضافه کنید...', class: "comment_content form-control",
+						id: "comment_content_#{lesson.id}",
+						data: { lesson_id: "#{lesson.id}",
+						value: "#{lesson.comments.count}" } %>
+					</div>
+					<%= f.submit 'نظر جدید', class: 'comment-submit-button btn btn-success' %>
+				<% end %>
+			</div>
 		</div>
-		<%= f.submit 'New Comment', class: 'comment-submit-button' %>
-	<% end %>
+	</div>
 </div>
 

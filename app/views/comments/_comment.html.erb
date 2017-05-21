@@ -1,13 +1,17 @@
 <div id="comment">
   <div class="user-name">
-    <%= comment.user.email %>
+    <%= comment.user.username %>
   </div>
   <div class="comment-content">
     <%= comment.content %>
   </div>
   <% if comment.user == current_user %>
     <%= link_to lesson_comment_path(lesson, comment), method: :delete, data: {lesson_id: lesson.id, value: lesson.comments.count, confirm: "Are you sure?" }, remote: true, id: "delete-#{comment.id}", class: "delete-comment" do %>
-      <span class="glyphicon glyphicon-remove delete-comment-icon"></span>
+    	<div class="fa fa-times fa-lg">
+    		<span class="tooltip">Something...</span>
+    	</div>
+     	
     <% end %>
   <% end %>
 </div>
+<hr/>

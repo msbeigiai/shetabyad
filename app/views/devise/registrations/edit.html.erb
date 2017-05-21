@@ -1,43 +1,54 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<section id="form-devise">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h2>حساب کاربری شما</h2>
+					</div>
+					<div class="panel-body">
+						<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+							<%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+							<div class="form-group">
+								<%= f.email_field :email, autofocus: true, placeholder: 'ایمیل', class: "form-control" %>
+							</div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+							<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+								<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+							<% end %>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+							<div class="form-group">
+								<%= f.password_field :password, autocomplete: "off", placeholder: 'رمز عبور جدید', class: "form-control" %>
+							</div>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
+							<div class="form-group">
+								<%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'تکرار رمز عبور جدید', class: "form-control" %>
+							</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+							<div class="form-group">
+								<i>(رمز عبور فعلی  شما برای تایید رمز عبور جدید لازم است.)</i>
+								<%= f.password_field :current_password, autocomplete: "off", placeholder: "رمز عبور فعلی", class: "form-control" %>
+							</div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
+							<div class="form-group">
+								<%= f.submit "به روز رسانی", class: "btn btn-block btn-success" %>
+							</div>
+						<% end %>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
+						<h3>حذف اکانت شما</h3>
 
-<h3>Cancel my account</h3>
+						<p>خوشحال نیستید؟ <%= button_to "حذف اکانت", registration_path(resource_name), data: { confirm: "آیا اطمینان دارید؟" }, method: :delete %></p>
+					</div>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+					<div class="panel-footer">
+						<%= link_to "برگشت", :back %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-<%= link_to "Back", :back %>
+
+

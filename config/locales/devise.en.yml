@@ -12,7 +12,7 @@ en:
       invalid: "ایمیل یا رمز عبور اشتباه است."
       locked: "Your account is locked."
       last_attempt: "You have one more attempt before your account is locked."
-      not_found_in_database: "Invalid %{authentication_keys} or password."
+      not_found_in_database: "ایمیل یا رمز عبور اشتباه است."
       timeout: "Your session expired. Please sign in again to continue."
       unauthenticated: "شما برای ادامه نیاز به ثبت نام دارید و یا به حساب خود وارد شوید."
       unconfirmed: "برای ادامه دادن نیاز به فعال سازی ایمیل خود دارید."

@@ -1,13 +1,13 @@
-$('#comment_content_<%= @lesson.id %>').val('')
+$('#comment_content_<%= @lesson.id %>').val('');
 $('#comment_content_<%= @lesson.id %>').blur();
-Append.comment_count += 1
+Append.comment_count += 1;
 $(Append.id).attr('data-value', Append.comment_count);
 
-if (Append.comment || Append.open ){ $('#comments_<%= @lesson.id %>').append("<%=j render 'comments/comment', lesson: @lesson, comment: @comment %>"); }
-
-else if ((Append.comment && Append.open) === false && Append.link === true) { 
-	$('#comments_' + Append.lesson_id).append("<div class='paginator' id='#comments-paginator-" + Append.lesson_id + "'><a class='more-comments' id='more_comments_" + Append.lesson_id + "' data-lesson-id='" + Append.lesson_id + "' data-type='html' data-remote='true' data-value='" + Append.comment_count + "' href='/lessons/" + Append.lesson_id + "/comments'>همه " + Append.comment_count + " نظر را ببینید...</a></div>");
-	ClickableCommentsLink(); 
+if (Append.comment || Append.open) {
+	$('#comments_<%= @lesson.id %>').append("<%=j render 'comments/comment', lesson: @lesson, comment: @comment %>");
+} else if ((Append.comment && Append.open) === false && Append.link === true) {
+	$('#comments_' + Append.lesson_id).append("<div class='paginator' id='#comments-paginator-" + Append.lesson_id + "'><a class='more-comments' id='more_comments_" + Append.lesson_id + "' data-lesson-id='" + Append.lesson_id + "' data-type='html' data-remote='true' data-value='" + Append.comment_count + "' href='/lessons/" + Append.lesson_id + "/comments'>همه " + Append.comment_count + " نظر را ببینید ...</a></div>");
+	ClickableCommentsLink();
+} else if ((Append.comment && Append.open && Append.link) === false) {
+	$('#more_comments_<%= @lesson.id %>').html("همه <%= @lesson.comments.count %> نظر را ببینید...");
 }
-
-else if ((Append.comment && Append.open && Append.link) === false) { $('#more_comments_<%= @lesson.id %>').html("همه <%= @lesson.comments.count %> نظر را ببینید..."); }
