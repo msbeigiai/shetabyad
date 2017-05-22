@@ -17,17 +17,8 @@
 				<div class="well well-sm explaine">
 					<p><i class="fa fa-question-circle"></i> برای یادگیری نحوه ارسال نظرات به این قسمت مراجعه فرمایید.</p>
 				</div>
-				<%= form_for([lesson, lesson.comments.build], remote: true) do |f| %>
-					<div class="form-group">
-						<%= f.text_area :content, placeholder: 'نظر خود را اضافه کنید...', class: "comment_content form-control",
-						id: "comment_content_#{lesson.id}",
-						data: { lesson_id: "#{lesson.id}",
-						value: "#{lesson.comments.count}" } %>
-					</div>
-					<%= f.submit 'نظر جدید', class: 'comment-submit-button btn btn-success' %>
-				<% end %>
+				<%= render partial: "comments/form", locals: { lesson: @lesson, comment: @comment } %>
 			</div>
 		</div>
 	</div>
 </div>
-

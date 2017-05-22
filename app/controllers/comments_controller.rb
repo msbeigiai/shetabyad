@@ -30,14 +30,16 @@ class CommentsController < ApplicationController
 	end
 	
 	def update
+		@comment = @lesson.comments.find(params[:id])
+		@comment = @lesson.comments.update(params_comment)
 		respond_to do |format|
-      if @comment.comments.update(params_comment)
+      #if @comment.comments.update(params_comment)
         format.html { redirect_to @comment, notice: 'Lesson was successfully updated.' }
         format.js
-      else
-        format.html { render :edit }
-        format.js
-      end
+      #else
+        #format.html { render :edit }
+        #format.js
+      #end
     end
 	end
 	
