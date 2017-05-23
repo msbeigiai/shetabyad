@@ -1,0 +1,59 @@
+<section id="lessons-index">
+	<div class="lessons-index-hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 pull-right">
+					<h1>همه آموزش ها</h1>
+				</div>
+				<div class="col-md-6">
+					<% sum_like = 0 %>
+					<% lessons.each do |lesson| %>
+						<% sum_like += lesson.get_upvotes.size %>
+					<% end %>
+					<p><i class="fa fa-heart fa-lg"></i> [<%= sum_like %>] بار پسندیده شده</p>
+					<p><i class="fa fa-play fa-lg"></i> [<%= Video.count %>] ویدئو</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row pull-right">
+			<% lessons.each do |lesson| %>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<% if lesson.thumbnail_image? %>
+								<%= image_tag lesson.thumbnail_image_url(:thumbnail), class: "img-responsive" %>
+								<% unless lesson.video.nil? %>
+									<i class="fa fa-play fa-2x pull-right play"></i>
+								<% end %>
+							<% end %>
+							<h4><%= link_to lesson.title, lesson %></h4>
+						</div>
+						<div class="panel-body">
+							<%= markdown(sanitize(lesson.description[0, 200] + '...')) %>
+						</div>
+						<div class="panel-footer">
+							<i class="fa fa-heart fa-lg fa-like"></i><span class="like-number"><%= lesson.get_upvotes.size %></span>
+							<i class="fa fa-comments fa-lg fa-comment"></i><span class="comment-number"><%= lesson.thread.comments.count %></span>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>		
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

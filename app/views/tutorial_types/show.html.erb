@@ -5,5 +5,4 @@
   <%= @tutorial_type.title %>
 </p>
 
-<%= link_to 'Edit', edit_tutorial_type_path(@tutorial_type) %> |
-<%= link_to 'Back', tutorial_types_path %>
+<%= render 'tutorials/tutorials_index', tutorials: @tutorial_type.tutorials %>

@@ -1,22 +1,10 @@
 <section id="tutorial-index">
 	<div class="container">
-	<div class="page-header">
-		<h1>دسته ها</h1>
-	</div>
+		<div class="page-header">
+			<h1>دسته ها</h1>
+		</div>
 		<div class="row">
-			<% @tutorials.each do |tutorial| %>
-					<div class="col-md-8 col-md-offset-2 well">
-						<div class="col-md-3 pull-right">
-							<% if tutorial.images? %>
-								<%= image_tag tutorial.images_url(:thumb) %>
-							<% end %>
-						</div>
-						<div class="col-md-9">
-							<h2><%= link_to tutorial.title, tutorial %></h2>
-							<p><%= markdown(tutorial.description) %></p>
-						</div>
-					</div>
-			<% end %>
+			<%= render 'tutorials_index', tutorials: @tutorials %>
 		</div>
 	</div>
 </section>
