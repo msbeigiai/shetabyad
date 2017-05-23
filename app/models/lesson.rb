@@ -4,5 +4,6 @@ class Lesson < ApplicationRecord
 	mount_uploader :thumbnail_image, ImageUploader
   belongs_to :tutorial
 	has_one :video
-	has_many :comments, dependent: :destroy
+	#has_many :comments, dependent: :destroy
+	acts_as_commontable
 end

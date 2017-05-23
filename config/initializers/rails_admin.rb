@@ -29,7 +29,9 @@ RailsAdmin.config do |config|
     new
     export
     bulk_delete
-    show
+    show do
+			only ['Lesson', 'Tutorial', 'Admin', 'User']
+		end
     edit
     delete
     show_in_app
@@ -39,12 +41,18 @@ RailsAdmin.config do |config|
     # history_show
   end
   
-  RailsAdmin.config do |config|
-    config.authenticate_with do
-      warden.authenticate! scope: :admin
+  
+	config.authenticate_with do
+		warden.authenticate! scope: :admin
+	end
+	config.current_user_method(&:current_admin)
+	
+	config.model 'Lesson' do
+    list do # or edit or export
+      exclude_fields :commontator_thread
     end
-    config.current_user_method(&:current_admin)
   end
+  
 end
 
 

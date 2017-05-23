@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require commontator/application
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -357,7 +358,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 //LESSON INDEX
 #lessons-index {
 	.lessons-index-hero {
-		padding: 80px 0;
+		padding: 50px 0;
 		background: #011627;
 		h1 {
 			color: #FDFFFC;
@@ -477,6 +478,16 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 			text-decoration: none;
 		}
 	}
+	.user {
+		color: #011627;
+		padding-top: 10px;
+		&:hover {
+			text-decoration: none;
+		}
+		&:focus {
+			text-decoration: none;
+		}
+	}
 	.like-number {
 		font-family: BYekan, sans-serif;
 		font-size: 40px;
@@ -520,38 +531,6 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 			&:hover {
 				text-decoration: none;
 				color: darken(#FFA730, 10%);
-			}
-		}
-		.fa {
-			color: red;
-		}
-	}
-	#comment {
-		.user-name {
-			margin: 0;
-			padding: 5px 10px;
-			background-color: #E8911A;
-			p {
-				margin-top: 5px;
-				font-size: 16px;
-				color: #FDFFFC;
-			}
-			.stuff {
-				margin: 0;
-				padding-top: 6px;
-			}
-			.fa {
-				color: #FDFFFC;
-				padding: 5px;
-			}
-		}
-		.comment-content {
-			margin: 0;
-			box-shadow: none;
-			border-top: none;
-			padding: 15px 30px;
-			p {
-				font-size: 15px;
 			}
 		}
 	}

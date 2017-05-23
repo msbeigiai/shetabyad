@@ -64,6 +64,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commontator (4.11.1)
+      jquery-rails
+      rails (>= 3.1)
     concurrent-ruby (1.0.5)
     devise (4.2.1)
       bcrypt (~> 3.0)
@@ -124,6 +127,7 @@ GEM
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
+    parsi-date (0.3.1)
     pg (0.20.0)
     puma (3.8.2)
     pygments.rb (1.1.2)
@@ -235,6 +239,7 @@ DEPENDENCIES
   carrierwave
   cloudinary
   coffee-rails (~> 4.2)
+  commontator
   devise
   font-awesome-sass
   gritter (~> 1.2)
@@ -243,6 +248,7 @@ DEPENDENCIES
   jquery-turbolinks
   listen (~> 3.0.5)
   mini_magick
+  parsi-date
   pg (~> 0.18)
   puma (~> 3.0)
   pygments.rb
