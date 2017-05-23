@@ -1,0 +1,2 @@
+module TutorialTypesHelper
+end

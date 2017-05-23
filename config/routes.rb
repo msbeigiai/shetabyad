@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tutorial_types
 	mount RailsAdmin::Engine => '/user_admin', as: 'rails_admin'
 	mount Commontator::Engine => '/commontator'
 	

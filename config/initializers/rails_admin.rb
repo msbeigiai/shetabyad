@@ -30,7 +30,7 @@ RailsAdmin.config do |config|
     export
     bulk_delete
     show do
-			only ['Lesson', 'Tutorial', 'Admin', 'User']
+			only ['Lesson', 'Tutorial', 'Admin', 'User', 'TutorialType']
 		end
     edit
     delete

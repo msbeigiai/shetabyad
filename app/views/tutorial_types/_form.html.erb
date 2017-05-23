@@ -1,0 +1,22 @@
+<%= form_for(tutorial_type) do |f| %>
+  <% if tutorial_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tutorial_type.errors.count, "error") %> prohibited this tutorial_type from being saved:</h2>
+
+      <ul>
+      <% tutorial_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
