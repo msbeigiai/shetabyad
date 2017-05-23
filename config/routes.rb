@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 	root 'welcome#index'
 	
 	resources :tutorial_types, path: "", only: [:show]
-  
+	
   resources :tutorials, only: [:show, :index]
 	resources :lessons#, only: [:show, :index]
 	

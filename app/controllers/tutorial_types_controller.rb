@@ -64,11 +64,11 @@ class TutorialTypesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tutorial_type
-      @tutorial_type = TutorialType.find(params[:id])
+      @tutorial_type = TutorialType.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tutorial_type_params
-      params.require(:tutorial_type).permit(:title)
+      params.require(:tutorial_type).permit(:title, :title_url)
     end
 end
