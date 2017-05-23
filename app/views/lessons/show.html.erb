@@ -21,7 +21,7 @@
 		<div class="container">
 			<div class="row title">
 				<div class="col-md-10 col-md-offset-1">
-					<h4><em>دسته:</em> <%= @lesson.tutorial.title %></h4>
+					<h4><em>دسته:</em> <%= link_to @lesson.tutorial.title, @lesson.tutorial %></h4>
 					<div class="col-md-6 pull-right">
 						<h1><%= @lesson.title %></h1>
 					</div>

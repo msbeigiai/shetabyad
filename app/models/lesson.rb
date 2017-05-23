@@ -6,4 +6,13 @@ class Lesson < ApplicationRecord
 	has_one :video
 	#has_many :comments, dependent: :destroy
 	acts_as_commontable
+
+	extend FriendlyId
+  friendly_id :title_url, use: :slugged
+
+  def slug=(value)
+    if value.present?
+      write_attribute(:slug, value)
+    end
+  end
 end
