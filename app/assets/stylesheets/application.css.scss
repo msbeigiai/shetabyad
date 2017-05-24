@@ -197,11 +197,19 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		text-align: center;
 		font-size: 18px;
 		line-height: 30px;
+		a {
+			color: #FDFFFC;
+			font-size: 18px;
+			&:hover {
+				color: #FDFFFC;
+			}
+		}
 	}
-	.btn-success {
+	.navbar-btn {
 		margin-top: 30px;
 		padding: 12px 20px;
 		font-size: 18px;
+		//background-color: #F71735;
 	}
 	.row {
 		border-top: solid 2px #FDFFFC;
@@ -226,15 +234,21 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	}
 }
 
-.btn {
+.btn-custom {
 	background-color: #F71735;
 	border-color: #F71735;
 	border-radius: 0;
+	margin-top: 30px;
+	padding: 10px 25px;
 	&:hover {
 		background-color: darken(#F71735, 10%);
 		border-color:  darken(#F71735, 10%);
 	}
 	&:focus {
+		background-color: darken(#F71735, 10%);
+		border-color:  darken(#F71735, 10%);
+	}
+	&:active {
 		background-color: darken(#F71735, 10%);
 		border-color:  darken(#F71735, 10%);
 	}
