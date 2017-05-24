@@ -292,7 +292,7 @@ a {
 </style>
 </head>
 
-<body itemscope itemtype="http://schema.org/EmailMessage">
+<body dir="rtl" itemscope itemtype="http://schema.org/EmailMessage">
 
 <table class="body-wrap">
 	<tr>
@@ -318,7 +318,7 @@ a {
 								</tr>
 								<tr>
 									<td class="content-block" itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
-										<p><%= link_to 'فعال سازی ایمیل', confirmation_url(@resource, confirmation_token: @token) %></p>
+										<p><%= link_to 'فعال سازی ایمیل', confirmation_url(@resource, confirmation_token: @token), class="btn-primary" itemprop="url" %></p>
 									</td>
 								</tr>
 								<tr>
