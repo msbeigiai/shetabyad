@@ -1,0 +1,13 @@
+<div class="panel panel-default panel-list">
+  <div class="panel-heading">آخرین آموزش ها</div>
+    <% lessons.each do |lesson| %>
+      <div class="panel-body">
+        <% if lesson.tutorial.sign == "R" %>
+          <%= content_tag :h3, lesson.tutorial.title, class: "new-title" %>
+        <% elsif lesson.tutorial.sign == "I" %>
+          <%= content_tag :h3, lesson.tutorial.title, class: "new-title" %>
+        <% end %>
+        <%= link_to lesson.title, lesson %>
+      </div>
+  <% end %>
+</div>

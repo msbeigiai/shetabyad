@@ -17,6 +17,10 @@ module LessonsHelper
 	end
 	
 	private
+
+	def all_lessons
+		Lesson.last(4)
+	end
 	
 	def list_likers(votes)
 		emails = []

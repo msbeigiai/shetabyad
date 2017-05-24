@@ -1,8 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @tutorial_type.title %>
-</p>
-
-<%= render 'tutorials/tutorials_index', tutorials: @tutorial_type.tutorials %>
+<section id="tutorial-index">
+	<div class="container">
+		<div class="page-header">
+			<h1>دسته ها</h1>
+		</div>
+		<div class="row">
+      <%= render 'tutorials/tutorials_index', tutorials: @tutorial_type.tutorials %>
+    </div>
+  </div>
+</section>

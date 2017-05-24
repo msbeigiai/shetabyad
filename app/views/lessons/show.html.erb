@@ -20,15 +20,16 @@
 		</div>
 		<div class="container">
 			<div class="row title">
-				<div class="col-md-10 col-md-offset-1">
-					<h4><em>دسته:</em> <%= link_to @lesson.tutorial.title, @lesson.tutorial %></h4>
+				<div class="col-md-10 col-md-offset-2">
+					<h4><em>دسته:</em> <%= link_to @lesson.tutorial.title, @lesson.tutorial, class: "to-tutorial",
+						data: { toggle: 'tooltip', placement: 'left', title: "برگشت به #{@lesson.tutorial.title}" } %></h4>
 					<div class="col-md-6 pull-right">
 						<h1><%= @lesson.title %></h1>
 					</div>
 					<div class="col-md-6">
 							<%#= render 'lessons/likes', lessson: @lesson %>
 							<%= link_to '', like_lesson_path(@lesson.id), remote: true, id: "like_#{@lesson.id}",
-								class: "fa fa-heart fa-2x #{liked_lesson @lesson}" %>
+								class: "fa fa-heart fa-2x #{liked_lesson @lesson}", data: { toggle: 'tooltip', placement: 'left', title: "علاقه مندید؟" } %>
 							<span class="like-number"><%#= @lesson.get_upvotes.size %></span>
 						<%# end %>
 					</div>
@@ -37,7 +38,10 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
+				<div class="col-md-2 pull-right">
+					<%= render 'list_lessons', lessons: all_lessons %>
+				</div>
+				<div class="col-md-10">
 					<div class="panel-body">
 						<p><%= markdown(@lesson.description) %></p>
 					</div>
@@ -46,7 +50,7 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
+				<div class="col-md-10">
 					<div class="panel-footer">
 						<%= commontator_thread(@lesson) %>
 					</div>
@@ -55,4 +59,9 @@
 		</div>
 	</div>
 </section>
-		
+
+<script>
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+</script>

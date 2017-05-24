@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170523124102) do
+ActiveRecord::Schema.define(version: 20170524073516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -117,6 +117,7 @@ ActiveRecord::Schema.define(version: 20170523124102) do
     t.integer  "tutorial_type_id"
     t.string   "title_url"
     t.string   "slug"
+    t.string   "sign"
     t.index ["slug"], name: "index_tutorials_on_slug", unique: true, using: :btree
     t.index ["title_url"], name: "index_tutorials_on_title_url", unique: true, using: :btree
   end
