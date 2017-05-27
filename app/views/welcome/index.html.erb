@@ -38,7 +38,7 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<h3>
-				ریلز یک فریمورک متن باز است که با زبان برنامه نویسی دینامیک و شی گرای روبی توسعه داده شده است.
+				ریلز یک فریمورک متن باز است که با زبان برنامه نویسی دینامیک و شی گرای روبی توسعه داده شده 
 				و بر مبنای معماری MVC <span>(Model, View, Controller)</span>، می باشد.<br />
 				<a href="https://www.twitter.com">توئیتر</a>، <a href="https://www.airbnb.com">ایر-بی-ان-بی</a> و خیلی از سایت های معروف دیگر با روبی-آن-ریلز توسعه یافت اند. 
 		این تکنولوژی روز به روز در حال پیشرفت است و بسیاری از سایت ها با آن توسعه می یابند.
@@ -71,12 +71,107 @@
 			<% end %>
 		</div>
 	</div>
-	
+</section>
+
+<section id="subjects">
+	<h3 class="text-center">مباحثی که ما آموزش می دهیم</h3>
+	<div id="html" class="tabcontent">
+		<div class="container">
+				<div class="row">
+					<div class="col-md-6 pull-right">
+						<h3>اچ تی ام ال و سی اس اس</h3>
+						<p>آموزش اچ تی ام ال و سی اس اس</p>
+					</div>
+					<div class="col-md-6">
+						<%= image_tag 'html.svg', size: "100x100" %>
+					</div>
+				</div>
+			</div>
+		
+	</div>
+
+	<div id="javascript" class="tabcontent">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 pull-right">
+					<h3>جاوا اسکریپت</h3>
+					<p>آموزش برنامه نویسی جاوا اسکریپت</p>
+				</div>
+				<div class="col-md-6">
+					<%= image_tag 'javascript.svg', size: "100x100" %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="swift" class="tabcontent">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 pull-right">
+					<h3>سوئیفت</h3>
+					<p>زبان برنامه نویسی سوئیفت و قابلیت های آن، شرط ها، عبارات شرطس و شی گرایی و همچنین مباحث مهم دیگر در این زمینه</p> 
+				</div>
+				<div class="col-md-6">
+					<%= image_tag 'swift.svg', size: "100x100" %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="ios" class="tabcontent">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 pull-right">
+					<h3>آی او اس</h3>
+					<p>آموزش برنامه نویسی iOS، کار با گوگل مپس، فایر بیس و فریمورک های دیگر...</p>
+				</div>
+				<div class="col-md-6">
+					<%= image_tag 'ios.svg', size: "100x100" %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="ruby-on-rails" class="tabcontent">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 pull-right">
+					<h3>روبی آن ریلز</h3>
+					<p>Oslo is the capital of Norway.</p>
+				</div>
+				<div class="col-md-6">
+					<%= image_tag 'rubyonrails.svg', size: "100x100" %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button class="tablink" onclick="openCity('html', this, '#747F89')">اچ تی ام ال و سی اس اس</button>
+	<button class="tablink" onclick="openCity('swift', this, '#3CD5C1')">سوئیفت</button>
+	<button class="tablink" onclick="openCity('ios', this, '#F71735')">آی او اس</button>
+	<button class="tablink" onclick="openCity('ruby-on-rails', this, '#011627')">روبی آن ریلز</button>
+	<button class="tablink" onclick="openCity('javascript', this, '#FF9F1C')" id="defaultOpen">جاوا اسکریپت</button>
 </section>
 
 
 
+<script>
+	function openCity(skillName,elmnt,color) {
+			var i, tabcontent, tablinks;
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+						tabcontent[i].style.display = "none";
+				}
+				tablinks = document.getElementsByClassName("tablink");
+				for (i = 0; i < tablinks.length; i++) {
+						tablinks[i].style.backgroundColor = "";
+				}
+				document.getElementById(skillName).style.display = "block";
+				elmnt.style.backgroundColor = color;
 
+		}
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+</script>
 
 
 

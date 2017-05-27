@@ -11,7 +11,7 @@ class ContactsController < ApplicationController
     if @contact.deliver
       flash.now[:notice] = "پیا شما با موفقیت ارسال شد."
       #sleep(30.0)
-      #redirect_to root_path
+      render :new
     else
       flash.now[:error] = "متاسفانه ارسال پیام شما با مشکلاتی مواجه شده است. لطفاْ مجدداْ تلاش کنید."
       render :new
