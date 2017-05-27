@@ -1,55 +1,33 @@
 <div class="jumbotron">
 	<div class="container">
-		<h1 class="text-center"> آموزش روبی آن ریلز  </h1>
-		<p class="text-center">توسعه وب اپلیکیشن و وب سایت ها</p>
-		<p class="text-center"><%= link_to 'ثبت نام کنید', new_user_registration_path, class: "btn btn-custom" %></p>
-	</div>
-	<div class="row">
-		<div class="col-md-3">
-			<div>
-				<h2>ریلز</h2>
-				<hr/>
-				<p>آموزش مباحث فریمورک ریلز، کتابخانه ها و دستورات مربوطه</p>
+		<div class="row">
+			<div class="col-md-6 pull-right">
+				<h2> آموزش تخصصی برنامه نویسی</h2>
+				<h1>روبی آن ریلز و آی او اس</h1>
+				<p>آموزش توسعه وب اپلیکیشن ها، وب سایت ها و اپلیکیشن های موبایل</p>
 			</div>
-		</div>
-		<div class="col-md-3 hero-para">
-			<div>
-				<h2>روبی</h2>
-				<hr/>
-				<p>آموزش زبان برنامه نویسی روبی، دستورات، شرط ها، حلقه ها و هش ها</p>
-			</div>
-		</div>
-		<div class="col-md-3 hero-para">
-			<div>
-				<h2>اچ تی ام ال</h2>
-				<hr/>
-				<p>آموزش تگ های اچ تی ام ال، استفاده از روبی در اچ تی ام ال (ای-روبی)</p>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div>
-				<h2>سی اس اس</h2>
-				<hr/>
-				<p>آموزش سی اس اس، بوتسترپ، دستورات و طراحی وب اپلیکیشن ها</p>
+			<div class="col-md-6">
+				<p>برای دیدن آموزش های ما:</p>
+				<p><%= link_to 'ثبت نام کنید', new_user_registration_path, class: "btn btn-custom" %></p>
 			</div>
 		</div>
 	</div>
 </div>
 <section id="first">
 	<div class="container text-center">
-		<h2>اولین وبسایت آموزش تخصصی روبی آن ریلز در ایران</h2>
+		<h2>اولین وبسایت آموزش تخصصی روبی آن ریلز و آی او اس در ایران</h2>
 		<div class="row">
 			<div class="col-md-4">
-				<span class="glyphicon glyphicon-check"></span>
+				<span class="fa fa-play fa-4x"></span>
 				<p>آموزش های دوره ای ما را دنبال کنید. هر هفته با آموزش های جدید. مقالات و ویدئوهای به روز. </p>
 			</div>
 			<div class="col-md-4 divider">
-				<span class="glyphicon glyphicon-check"></span>
+				<span class="fa fa-check-square-o fa-4x"></span>
 				<p>همه آنچه شما نیاز دارید برای توسعه وب سایت ها و وب اپلیکیشن های مدرن، در وب سایت ما هست.</p>
 			</div>
 			<div class="col-md-4">
-				<span class="glyphicon glyphicon-check"></span>
-				<p>لینک های مفید، سورس برنامه ها، جم های کاربردی و همه آنچه که نیاز است برای توسعه وب سایت ها در دستان شماست.</p>
+				<span class="fa fa-link fa-4x"></span>
+				<p>لینک های مفید، سورس برنامه ها، جم های کاربردی و همه آنچه که نیاز است برای توسعه وب سایت ها در اختیار شماست.</p>
 			</div>
 		</div>
 	</div>
@@ -65,7 +43,7 @@
 				<a href="https://www.twitter.com">توئیتر</a>، <a href="https://www.airbnb.com">ایر-بی-ان-بی</a> و خیلی از سایت های معروف دیگر با روبی-آن-ریلز توسعه یافت اند. 
 		این تکنولوژی روز به روز در حال پیشرفت است و بسیاری از سایت ها با آن توسعه می یابند.
 		توسعه راحت، سریع و مطابق با تکنولوژی های روز با روبی-آن-ریلز امکان پذیر است.
-			</h3>
+				</h3>
 				<p><a class="more" href="https://prograils.com/posts/top-10-famous-sites-built-with-ruby-on-rails" target="_blank">اطلاعات بیشتر</a></p>
 			</div>
 		</div>
@@ -76,14 +54,18 @@
 	<% number = 3 %>
 	<% models = last_models(number) %>
 	<div class="container">
-		<div class="row">
+		<h2 class="text-center">آخرین آموزش ها</h2>
+		<div class="row">	
 			<% if models.nil? %>
 				nothing
 			<% else %>
 				<% models.each do |model| %>
 					<div class="col-md-4 pull-right">
-						<%= link_to model.title, model %>
-						<% puts models.count %>
+						<div class="well">
+							<h3>دسته: <%= model.tutorial.title %></h3>
+							<%= image_tag model.thumbnail_image, size: "360x200", class: "img-responsive" %>
+							<%= link_to model.title, model, class: "model-title" %>
+						</div>
 					</div> 
 				<% end %>
 			<% end %>
