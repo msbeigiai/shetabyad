@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   
 	root 'welcome#index'
-
+	
+	get 'about-us', to: :about_us, controller: 'welcome'
+	match '/contacts', path: 'contact-us', to: 'contacts#new', via: 'get'
+	resources 'contacts', path: 'contact-us', only: [:new, :create]
+	
 	mount RailsAdmin::Engine => '/user_admin', as: 'rails_admin'
 	mount Commontator::Engine => '/commontator'
 	

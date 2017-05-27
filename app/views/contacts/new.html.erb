@@ -1,0 +1,28 @@
+<section id="contact-us">
+  <!-- <div class="path"></div> -->
+  <div class="container">
+    <div class="row">
+      <%= form_for @contact do |f| %>
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= f.text_field :name, placeholder: "نام و نام خانوادگی*", required: true, class:"form-control"  %>
+          </div>
+          <div class="form-group">
+            <%= f.telephone_field :tel, placeholder: "شماره موبایل*", required: true, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.text_field :email, type: "email", placeholder: "ایمیل*", required: true, class:'form-control' %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= f.text_area :message, placeholder: "پیام شما*", required: true, class:'form-control text-area' %>
+          </div>
+          <div class="form-group">
+            <%= f.button 'ارسال پیام',  class:'btn btn-success', data:{ disable_with: "<i class: 'fa fa-spinner fa-spin'>در حال ارسال...</i>" } %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
