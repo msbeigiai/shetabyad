@@ -74,31 +74,39 @@
 </section>
 
 <section id="subjects">
-	<h3 class="text-center">مباحثی که ما آموزش می دهیم</h3>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<h2 class="text-center title">مباحثی که خواهید آموخت</h2>
+			</div>
+		</div>
 	<div id="html" class="tabcontent">
 		<div class="container">
 				<div class="row">
-					<div class="col-md-6 pull-right">
-						<h3>اچ تی ام ال و سی اس اس</h3>
-						<p>آموزش اچ تی ام ال و سی اس اس</p>
-					</div>
-					<div class="col-md-6">
-						<%= image_tag 'html.svg', size: "100x100" %>
+					<div class="col-md-8 col-md-offset-2">
+						<div class="col-md-6 pull-right">
+							<h3 class="text-right">اچ تی ام ال (HTML)</h3>
+							<p class="text-right">آموزش اچ تی ام ال، ساختار وب سایت ها و وب اپلیکیشن ها، تلفیق روبی و اچ تی ام ال (Embedded Ruby)</p>
+						</div>
+						<div class="col-md-6">
+							<%= image_tag 'html.svg', size: "120x120" %>
+						</div>
 					</div>
 				</div>
 			</div>
-		
 	</div>
 
 	<div id="javascript" class="tabcontent">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 pull-right">
-					<h3>جاوا اسکریپت</h3>
-					<p>آموزش برنامه نویسی جاوا اسکریپت</p>
-				</div>
-				<div class="col-md-6">
-					<%= image_tag 'javascript.svg', size: "100x100" %>
+				<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-6 pull-right">
+						<h3 class="text-right">جاوا اسکریپت (Javascript)</h3>
+						<p class="text-right">آموزش برنامه نویسی جاوا اسکریپت و استفاده آن در طراحی وب اپلیکیشن ها با روبی آن ریلز</p>
+					</div>
+					<div class="col-md-6">
+						<%= image_tag 'javascript.svg', size: "120x120" %>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -107,12 +115,14 @@
 	<div id="swift" class="tabcontent">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 pull-right">
-					<h3>سوئیفت</h3>
-					<p>زبان برنامه نویسی سوئیفت و قابلیت های آن، شرط ها، عبارات شرطس و شی گرایی و همچنین مباحث مهم دیگر در این زمینه</p> 
-				</div>
-				<div class="col-md-6">
-					<%= image_tag 'swift.svg', size: "100x100" %>
+				<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-6 pull-right">
+						<h3 class="text-right">سوئیفت (Swift)</h3>
+						<p class="text-right">زبان برنامه نویسی سوئیفت و قابلیت های آن، عبارات شرطی و شی گرایی و همچنین مباحث مهم دیگر...   </p> 
+					</div>
+					<div class="col-md-6">
+						<%= image_tag 'swift.svg', size: "120x120" %>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -121,56 +131,104 @@
 	<div id="ios" class="tabcontent">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 pull-right">
-					<h3>آی او اس</h3>
-					<p>آموزش برنامه نویسی iOS، کار با گوگل مپس، فایر بیس و فریمورک های دیگر...</p>
-				</div>
-				<div class="col-md-6">
-					<%= image_tag 'ios.svg', size: "100x100" %>
+				<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-6 pull-right">
+						<h3 class="text-right">آی او اس (iOS)</h3>
+						<p class="text-right">آموزش برنامه نویسی iOS، کار با گوگل مپس، فایر بیس، Login، Signup، Sketch و UI Design</p>
+					</div>
+					<div class="col-md-6">
+						<%= image_tag 'ios.svg', size: "120x120" %>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	
 	<div id="ruby-on-rails" class="tabcontent">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 pull-right">
-					<h3>روبی آن ریلز</h3>
-					<p>Oslo is the capital of Norway.</p>
-				</div>
-				<div class="col-md-6">
-					<%= image_tag 'rubyonrails.svg', size: "100x100" %>
+				<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-6 pull-right">
+						<h3 class="text-right">روبی آن ریلز (Ruby on Rails)</h3>
+						<p class="text-right">فریمورک جدید ریلز، آموزش زبان برنامه نویسی روبی، کلاس ها و کتابخانه های ریلز (Ruby on Rails)</p>
+					</div>
+					<div class="col-md-6">
+						<%= image_tag 'rubyonrails.svg', size: "120x120" %>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<button class="tablink" onclick="openCity('html', this, '#747F89')">اچ تی ام ال و سی اس اس</button>
-	<button class="tablink" onclick="openCity('swift', this, '#3CD5C1')">سوئیفت</button>
-	<button class="tablink" onclick="openCity('ios', this, '#F71735')">آی او اس</button>
-	<button class="tablink" onclick="openCity('ruby-on-rails', this, '#011627')">روبی آن ریلز</button>
-	<button class="tablink" onclick="openCity('javascript', this, '#FF9F1C')" id="defaultOpen">جاوا اسکریپت</button>
+	
+	<div id="css" class="tabcontent">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-6 pull-right">
+						<h3 class="text-right">سی اس اس (CSS)</h3>
+						<p class="text-right">آموزش سی اس اس و سس (sass)، ایجاد طرح های سی اس اس، انیمیشن ها و مباحث دیگر</p>
+					</div>
+					<div class="col-md-6">
+						<%= image_tag 'css.svg', size: "120x120" %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button class="tablink" onclick="openLesson('css', this, '#F1F2F2', '#010A12')">سی اس اس</button>
+	<button class="tablink" onclick="openLesson('html', this, '#F1F2F2', '#010A12')">اچ تی ام ال </button>
+	<button class="tablink" onclick="openLesson('swift', this, '#F1F2F2', '#010A12')">سوئیفت</button>
+	<button class="tablink" onclick="openLesson('ios', this, '#F1F2F2', '#010A12')">آی او اس</button>
+	<button class="tablink" onclick="openLesson('ruby-on-rails', this, '#F1F2F2', '#010A12')">روبی آن ریلز</button>
+	<button class="tablink" onclick="openLesson('javascript', this, '#F1F2F2', '#010A12')" id="defaultOpen">جاوا اسکریپت</button>
+	</div>
+</section>
+
+<section id="explore">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 divider">
+				<div class="col-md-10">
+					<h3><%= link_to 'از اینجا شروع کنید', new_user_registration_path %><i class="fa fa-arrow-left"></i></h3>
+					<p>ثبت نام کنید تا آموزش های ما را ببینید و از آخرین آموزش های ما با خبر شوید</p>
+				</div>
+				<div class="col-md-2 pull-right">
+					<%= image_tag 'signup.svg', size: "80x80" %>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-10">
+					<h3><%= link_to 'از اینجا شروع کنید', new_user_registration_path %><i class="fa fa-arrow-left"></i></h3>
+					<p>ثبت نام کنید تا آموزش های ما را ببینید و از آخرین آموزش های ما با خبر شوید</p>
+				</div>
+				<div class="col-md-2 pull-right">
+					<%= image_tag 'signup.svg', size: "80x80" %>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 
 
 <script>
-	function openCity(skillName,elmnt,color) {
-			var i, tabcontent, tablinks;
-				tabcontent = document.getElementsByClassName("tabcontent");
-				for (i = 0; i < tabcontent.length; i++) {
-						tabcontent[i].style.display = "none";
-				}
-				tablinks = document.getElementsByClassName("tablink");
-				for (i = 0; i < tablinks.length; i++) {
-						tablinks[i].style.backgroundColor = "";
-				}
-				document.getElementById(skillName).style.display = "block";
-				elmnt.style.backgroundColor = color;
-
-		}
-		// Get the element with id="defaultOpen" and click on it
-		document.getElementById("defaultOpen").click();
+	function openLesson(skillName,elmnt,color,fontColor) {
+		var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablink");
+			for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].style.backgroundColor = "";
+					tablinks[i].style.color = "#A2AAB0";
+			}
+			document.getElementById(skillName).style.display = "block";
+			elmnt.style.backgroundColor = color;
+			elmnt.style.color = fontColor;
+	}
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
 </script>
 
 

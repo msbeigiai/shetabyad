@@ -38,7 +38,7 @@ html {
 }
 
 body {
-	padding-bottom: 60px;
+	padding-bottom: 80px;
 	position: relative;
 	font-family: BYekan, sans-serif;
 	min-height: 100%;
@@ -102,7 +102,7 @@ p {
 
 //NAVBAR
 .navbar {
-	font-size: 18px;
+	font-size: 16px;
 	padding: 10px 0;
 	margin-bottom: 0;
 	border-radius: 0;
@@ -684,8 +684,91 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 //SUBJECTS
 #subjects {
 	padding: 20px 0px 100px 0;
-	background-color: #FDFFFC;
+	background-color: #F1F2F2;
+	p {
+		line-height: 28px;
+	}
+	.title {
+		padding: 20px 0;
+		border-bottom: 1px solid #011424;
+	}
+	.tablink {
+		background-color: #F1F2F2;
+		color: #A2AAB0;
+		float: left;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		padding: 14px 16px;
+		font-size: 17px;
+		width: 16%;
+		transition: all 0.3s;
+	}
+
+	.tablink:hover {
+		color: #010A12;
+		transition: all 0.3s;
+	}
+
+	/* Style the tab content */
+	.tabcontent {
+		color: #011627;
+		display: none;
+		padding: 80px;
+		text-align: center;
+	}
+
+	@-webkit-keyframes fadeEffect {
+		from {opacity: 0.6;}
+		to {opacity: 1;}
+	}
+
+	@keyframes fadeEffect {
+		from {opacity: 0.6;}
+		to {opacity: 1;}
+	}
+
+	#javascript {background-color: #F1F2F2;}
+	#html {background-color: #F1F2F2;}
+	#swift {background-color: #F1F2F2;}
+	#ios {background-color: #F1F2F2;}
+	#ruby-on-rails {background-color: #F1F2F2;}
+
 }
+
+//EXPPLORE
+#explore {
+	padding: 100px 0;
+	.divider {
+		border-right: solid 1px #d7d7d7;
+		padding-right: 20px;
+	}
+	.col-md-2 {
+		padding-top: 20px;
+	}
+	.col-md-10 {
+		padding-right: 30px;
+	}
+	p {
+		font-size: 16px;
+	}
+	.fa {
+		position: absolute;
+		right: 200px;
+		top: 18px;
+	}
+	a {
+		position: relative;
+		color: #011424;
+		&:hover {
+			text-decoration: none;
+			opacity: 0.7;
+		}
+		&:focus {
+			text-decoration: none;
+		}
+	}
+} 
 
 //FOOTER
 footer {
@@ -704,6 +787,14 @@ footer {
 	.panel-list {
 		display: none;
 	}
+	.tabcontent {
+		text-align: center;
+	}
+	#explore {
+		.fa {
+			display: none;
+		}
+	}
 }
 
 @media (max-width: 992px) {
@@ -715,48 +806,5 @@ footer {
 
 
 ///////////////////////
-.tablink {
-	background-color: #D0D1CF;
-	color: #FDFFFC;
-	float: left;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	padding: 14px 16px;
-	font-size: 17px;
-	width: 20%;
-	transition: all 0.3s;
-}
-
-.tablink:hover {
-	background-color: darken(#D0D1CF, 10%);
-	transition: all 0.3s;
-}
-
-/* Style the tab content */
-.tabcontent {
-	-webkit-animation: fadeEffect 1s;
-	animation: fadeEffect 1s;
-	color: #FDFFFC;
-	display: none;
-	padding: 100px;
-	text-align: center;
-}
-
-@-webkit-keyframes fadeEffect {
-	from {opacity: 0.6;}
-	to {opacity: 1;}
-}
-
-@keyframes fadeEffect {
-	from {opacity: 0.6;}
-	to {opacity: 1;}
-}
-
-#javascript {background-color: #FF9F1C;}
-#html {background-color: #747F89;}
-#swift {background-color: #3CD5C1;}
-#ios {background-color: #F71735;}
-#ruby-on-rails {background-color: #011627;}
 
 
