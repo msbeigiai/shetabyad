@@ -280,9 +280,10 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	}
 	a {
 		position: absolute;
-		bottom: 5px;
-		right: 50px;
+		bottom: 2px;
+		right: 40px;
 		color: #d6d6d6;
+		font-size: 12px;
 		transition: all 0.3s ease-in-out;
 		&:hover {
 			color: #fff;
