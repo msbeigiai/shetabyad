@@ -197,7 +197,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 //HOME PAGE 
 .jumbotron {
-	padding: 150px 0 30px 0;
+	padding: 150px 0 100px 0;
 	margin-bottom: 0;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#43aef8+0,15377e+100 */
 	background: rgb(67,174,248); /* Old browsers */
@@ -254,13 +254,28 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		font-size: 18px;
 		//background-color: #F71735;
 	}
+	.iphone {
+		position: absolute;
+		left: 250px;
+		top: -40px;
+		width: 254px;
+		height: 435px;
+		z-index: 1001;
+	}
+	.mac {
+		position: absolute;
+		left: -50px;
+		top: 0px;
+		transform: scale(1.2, 1.2);
+		z-index: 1000;
+	}
 }
 
 .hero-socials {
 	background-color: #15377E;
 	padding: 16px 0;
 	.fa {
-		color: #64B9FA;
+		color: #fff;
 		position: relative;
 	}
 	a {
@@ -312,7 +327,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	}
 	p {
 		color: #a6a6a6;
-		font-size: 20px;
+		font-size: 16px;
 		line-height: 32px;
 		margin-bottom: 30px;
 	}
@@ -324,11 +339,13 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		margin-top: 30px;
 		text-decoration: none;
 		border-radius: 5px;
-		transition: color 0.3s ease-in-out;
+		transition: background-color 0.3s;
 		&:hover {
-			transition: color 0.3s ease-in-out;
+			transition: color 0.3s;
 			text-decoration: none;
-			color: #d7d7d7;
+			background-color: #15377E;
+			border-color: #15377E;
+			color: #fff;
 		}
 	}
 }
@@ -418,8 +435,8 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		padding: 0.7em;
 		height: 40px;
 		&:focus {
-			border: solid 1px #D18317;
-			box-shadow: 0 0 3px #D18317;
+			border: solid 1px #76C4F9;
+			box-shadow: 0 0 3px #76C4F9;
 		}
 	}
 }
@@ -890,7 +907,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 footer {
 	position: absolute;
 	padding: 40px 0;
-	background-color: #15377E;
+	background-color: #434343;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -911,11 +928,21 @@ footer {
 			display: none;
 		}
 	}
+	.jumbotron {
+		.mac, .iphone {
+			display: none;
+		}
+	}
 }
 
 @media (max-width: 992px) {
 	.panel-list {
 		display: none;
+	}
+	.jumbotron {
+		.mac, .iphone {
+			display: none;
+		}
 	}
 }
 
