@@ -17,11 +17,11 @@ Rails.application.routes.draw do
   resources :tutorials, only: [:show, :index]
 	#resources :lessons#, only: [:show, :index]
 	
-	authenticate :user do 
+	#authenticate :user do 
 		resources :lessons, only: [:show, :index] do 
 			member do
 				get 'like'
 			end
 		end
-	end
+	#end
 end

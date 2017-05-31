@@ -1,5 +1,6 @@
 class TutorialTypesController < ApplicationController
   before_action :set_tutorial_type, only: [:show, :edit, :update, :destroy]
+	skip_before_action :authenticate_user!, only: [:show]
 
   # GET /tutorial_types
   # GET /tutorial_types.json

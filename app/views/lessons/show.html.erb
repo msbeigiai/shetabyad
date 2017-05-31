@@ -22,16 +22,21 @@
 			<div class="row title">
 				<div class="col-md-10 col-md-offset-2">
 					<h4><em>دسته:</em> <%= link_to @lesson.tutorial.title, @lesson.tutorial, class: "to-tutorial",
-						data: { toggle: 'tooltip', placement: 'left', title: "برگشت به #{@lesson.tutorial.title}" } %></h4>
+						data: { toggle: 'tooltip', placement: 'left', title: "برگشت به دسته #{@lesson.tutorial.title}" } %></h4>
 					<div class="col-md-6 pull-right">
 						<h1><%= @lesson.title %></h1>
 					</div>
 					<div class="col-md-6">
-							<%#= render 'lessons/likes', lessson: @lesson %>
+						<% unless user_signed_in? %>
 							<%= link_to '', like_lesson_path(@lesson.id), remote: true, id: "like_#{@lesson.id}",
-								class: "fa fa-heart fa-2x #{liked_lesson @lesson}", data: { toggle: 'tooltip', placement: 'left', title: "علاقه مندید؟" } %>
+								class: "fa fa-heart-o fa-2x #{liked_lesson @lesson}", data: { toggle: 'tooltip', placement: 'left', title: "برای پسندیدن این درس نیاز به ورود به سایت دارید" } %>
 							<span class="like-number"><%#= @lesson.get_upvotes.size %></span>
-						<%# end %>
+						<% end %>
+						<%  if user_signed_in? && current_user %>
+							<%= link_to '', like_lesson_path(@lesson.id), remote: true, id: "like_#{@lesson.id}",
+							class: "fa fa-heart fa-2x #{liked_lesson @lesson}", data: { toggle: 'tooltip', placement: 'left', title: "می پسندید؟" } %>
+							<span class="like-number"><%#= @lesson.get_upvotes.size %></span>
+						<% end %>
 					</div>
 				</div>
 			</div>

@@ -6,8 +6,10 @@ module LessonsHelper
 	end
 	
 	def liked_lesson(lesson)
-		return 'fa fa-heart' if current_user.voted_for? lesson
-		'fa fa-heart-o'
+		if user_signed_in?
+			return 'fa fa-heart' if current_user.voted_for? lesson
+			'fa fa-heart-o'
+		end
 	end
 	
 	def last_models(number)
