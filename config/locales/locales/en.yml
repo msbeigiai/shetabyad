@@ -56,14 +56,14 @@ en:
         undelete: بازگرداندن
         update: "ویرایش"
       errors: 
-        already_deleted: "This comment has already been deleted."
-        create: "This comment could not be posted because:"
+        already_deleted: "این نظر قبلا حذف شده است."
+        create: " این نظر بدلیل مشکلات زیر قابل ارسال نیست:"
         double_posted: "is a duplicate of another comment."
-        not_deleted: "This comment is not deleted."
-        update: "This comment could not be modified because:"
+        not_deleted: "این نظر حذف نشده است."
+        update: "ویرایش این نظر بدلیل مشکلات زیر مقدور نیست:"
       status: 
         created_at: "Posted on %{created_at}."
-        deleted_by: "Comment deleted by %{deleter_name}."
+        deleted_by: "این نظر بوسیله %{deleter_name} حذف شد."
         updated_at: "Last modified by %{editor_name} on %{updated_at}."
     email: 
       comment_created: 
@@ -71,7 +71,7 @@ en:
         subject: "%{creator_name} posted a comment on %{commontable_name}"
       thread_link_html: "<a href=\"%{comment_url}\">Click here</a> to view all comments on %{commontable_name}."
       undisclosed_recipients: "Undisclosed Recipients"
-    require_login: "You must login before you can post a comment."
+    require_login: "قبل از ارسال نظر باید عضو شوید"
     subscription: 
       actions: 
         confirm_unsubscribe: "Are you sure you want to unsubscribe from this discussion?"

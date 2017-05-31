@@ -4,8 +4,18 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
+						<% if user_signed_in? && @lesson.lesson_video? %>
+							<video class="afterglow" id="myvideo" width="945" height="576" data-autoresize="fit">
+								<source type="video/mp4" src=<%= @lesson.lesson_video.url%> />
+							</video>
+						<% end %>
 						<% unless @lesson.video.nil? %>
-							<div id="<%= @lesson.video.aparat_id %>"><script type="text/JavaScript" src="https://www.aparat.com/embed/<%= @lesson.video.aparat_embed %>?data[rnddiv]=<%= @lesson.video.aparat_id %>&data[responsive]=yes"></script></div>
+							<% if !user_signed_in? && @lesson.lesson_video? %>
+								<div id="<%= @lesson.video.aparat_id %>"><script type="text/JavaScript" src="https://www.aparat.com/embed/<%= @lesson.video.aparat_embed %>?data[rnddiv]=<%= @lesson.video.aparat_id %>&data[responsive]=yes"></script></div>
+								<div class="well">برای دیدن ویدئو اصلی لطفا ثبت نام کنید و یا به سایت وارد شوید: <%= link_to 'ثبت نام', new_user_registration_path, class: "btn btn-info" %> <%= link_to 'ورود به سایت', new_user_session_path, class: "btn btn-success" %> </div>
+							<% elsif !user_signed_in? && !@lesson.lesson_video? %>
+								<div id="<%= @lesson.video.aparat_id %>"><script type="text/JavaScript" src="https://www.aparat.com/embed/<%= @lesson.video.aparat_embed %>?data[rnddiv]=<%= @lesson.video.aparat_id %>&data[responsive]=yes"></script></div>
+							<% end %>
 						<% end %>
 					</div>
 				</div>
