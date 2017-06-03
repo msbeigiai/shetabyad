@@ -13,6 +13,8 @@ set :deploy_to, "/home/deploy/shetabyad_app"
 set :linked_files, %w{config/database.yml config/secrets.yml config/cloudinary.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
+set :passenger_restart_with_touch, true
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
