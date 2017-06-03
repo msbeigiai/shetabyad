@@ -12,20 +12,20 @@
 							
 							<% unless resource_name == :admin %>
 								<div class="form-group">
-									<%= f.text_field :username, autofocus: true, placeholder: "نام و نام خانوادگی" , class: "form-control" %>
+									<%= f.text_field :username, autofocus: true, placeholder: "نام و نام خانوادگی" , required: true, class: "form-control" %>
 								</div>
 							<% end %>
 							
 							<div class="form-group">
-								<%= f.email_field :email, autofocus: true, placeholder: "ایمیل" , class: "form-control" %>
+								<%= f.email_field :email, autofocus: true, placeholder: "ایمیل" , required: true, class: "form-control" %>
 							</div>
 
 							<div class="form-group">
-								<%= f.password_field :password, autocomplete: "off", placeholder: "رمز عبور", class: "form-control" %>
+								<%= f.password_field :password, autocomplete: "off", placeholder: "رمز عبور", required: true, class: "form-control" %>
 							</div>
 
 							<div class="form-group">
-								<%= f.password_field :password_confirmation, placeholder: "تکرار رمز عبور", autocomplete: "off", class: "form-control" %>
+								<%= f.password_field :password_confirmation, placeholder: "تکرار رمز عبور", required: true, autocomplete: "off", class: "form-control" %>
 							</div>
 
 							<div class="actions form-group">

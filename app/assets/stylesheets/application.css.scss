@@ -70,21 +70,45 @@ p {
 }
 
 .alert {
-	//display: none;
+	margin: 0;
+	border: none;
+	border-radius: 0;	
 }
 
 .gritter-close {
 	display: block;
 }
 
+.alert-info {
+	background-color: #C3B2B6;
+	color: #fff;
+}
+
 .gritter-title {
 	font-family: BYekan, sans-serif;
 	font-size: 18px;
+	color: #333;
+	text-shadow: none;
 }
 
-.gritter-without-image {
-	p {
-		font-family: BYekan, sans-serif;
+.gritter-item p {
+	font-family: BYekan, sans-serif;
+	color: #333;
+}
+
+.gritter-item.gritter-css3 {
+	border: 1px solid #43AEF8;
+  background: #d1d1d1;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  padding-top: 12px;
+  padding-bottom: 16px;
+	&:hover {
+		border: 1px solid #43AEF8;
+	  //padding-top: 12px;
+	  //padding-bottom: 16px;
+		padding: 12px 11px 16px 9px;
 	}
 }
 

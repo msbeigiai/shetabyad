@@ -12,16 +12,57 @@
   <body dir="rtl">
 	  <%= render partial: 'shared/navbar' %>				
 
-	  <div class="container">
-		  <% if notice %>
+	  
+      <%# if notice %>
+        <!-- div class="alert alert-info alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+          <div class="container"><%= notice %></div>
+        </div> -->
+      <%# end %>
+      <%# if alert %>
+        <!-- <div class="alert alert-warning alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+          <div class="container"><%= alert %></div>
+        </div> -->
+      <%# end %>
+		  <%# if notice %>
 <!--		  	<p class="notice"><%#= notice %></p>-->
-				<%= js add_gritter(flash[:notice], title: "پیام شما", time: "4000") %>
-		  <% end %>
-		  <% if alert %>
+				<%#= js add_gritter(flash[:notice], title: "پیام شما", time: "4000") %>
+		  <%# end %>
+		  <%# if alert %>
 <!--		  	<p class="alert"><%#= alert %></p>-->
-		  	<%= js add_gritter(flash[:alert], title: "پیام شما", time: "4000") %>
-		  <% end %>
-		 </div>
+		  	<%#= js add_gritter(flash[:alert], title: "پیام شما", time: "4000") %>
+		  <%# end %>
+				
+				<% if notice %>
+					<script>
+						$.gritter.add({
+			
+						  title: 'پیام شما',
+						
+							text: "<%= flash[:notice] %>",
+							
+							image: 'assets/confirm.png',
+							
+							sticky: true
+						});
+					</script>
+				<% end %>
+				<% if alert %>
+					<script>
+						$.gritter.add({
+			
+						  title: 'پیام شما',
+						
+							text: "<%= flash[:alert] %>",
+							
+							sticky: true
+						});
+					</script>
+				<% end %>
+			
 	 <%= yield %>
 	 
 	 <%= render 'shared/footer' %>
