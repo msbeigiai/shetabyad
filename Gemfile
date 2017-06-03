@@ -53,6 +53,13 @@ gem 'parsi-date'
 gem 'friendly_id'
 gem 'mail_form'
 
+group :development do 
+  gem 'capistrano', '~> 3.8', '>= 3.8.1'
+  gem 'capistrano-rails', '~> 1.2', '>= 1.2.3'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.1'
+  #gem 'capistrano-passenger', '~> 0.2.0'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
