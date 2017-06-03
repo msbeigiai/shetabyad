@@ -16,8 +16,6 @@ Rails.application.routes.draw do
 	
   resources :tutorials, only: [:show, :index]
 	#resources :lessons#, only: [:show, :index]
-  
-  
 	
 	#authenticate :user do 
 		resources :lessons, only: [:show, :index] do 
