@@ -38,7 +38,7 @@ html {
 }
 
 body {
-	padding-bottom: 80px;
+	padding-bottom: 100px;
 	position: relative;
 	font-family: BYekan, sans-serif;
 	min-height: 100%;
@@ -987,6 +987,14 @@ footer {
 	}
 	.inspect:last-of-type {
 		border-right: none;
+	}
+	.first {
+		padding-bottom: 20px;
+	}
+	.fa {
+		color: #fff;
+		width: 30px;
+		height: 30px;
 	}
 }
 
