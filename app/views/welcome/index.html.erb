@@ -10,8 +10,8 @@
 				<%= link_to 'ثبت نام کنید', new_user_registration_path, class: "btn btn-custom" %>
 			</div>
 			<div class="col-md-6" align="left">
-				<%= image_tag 'iphone.png', class: "img-responsive iphone" %>
-				<%= image_tag 'mac.png', class: "img-responsive mac" %>
+				<%= image_tag 'iphone.png', class: "img-responsive iphone wow slideInDown", "data-wow-duration": "0.7s" %>
+				<%= image_tag 'mac.png', class: "img-responsive mac wow fadeIn", "data-wow-duration": "0.7s", "data-wow-delay": "1s" %>
 			</div>
 		</div>
 	</div>
@@ -228,22 +228,13 @@
 <section id="explore">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 divider">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="col-md-2 pull-right" align="center">
+					<%= image_tag 'signup.svg', size: "80x80" %>
+				</div>
 				<div class="col-md-10">
 					<h3><%= link_to 'از اینجا شروع کنید', new_user_registration_path %><i class="fa fa-arrow-left"></i></h3>
 					<p>ثبت نام کنید تا آموزش های ما را ببینید و از آخرین آموزش های ما با خبر شوید</p>
-				</div>
-				<div class="col-md-2 pull-right">
-					<%= image_tag 'signup.svg', size: "80x80" %>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="col-md-10">
-					<h3><%= link_to 'از اینجا شروع کنید', new_user_registration_path %><i class="fa fa-arrow-left"></i></h3>
-					<p>ثبت نام کنید تا آموزش های ما را ببینید و از آخرین آموزش های ما با خبر شوید</p>
-				</div>
-				<div class="col-md-2 pull-right">
-					<%= image_tag 'signup.svg', size: "80x80" %>
 				</div>
 			</div>
 		</div>
@@ -355,6 +346,8 @@
 		slides[slideIndex - 1].style.display = "block";
 		setTimeout(showSlides, 3000);
 	}
+	
+	new WOW().init();
 </script>
 
 
