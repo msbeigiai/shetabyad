@@ -52,7 +52,7 @@ gem 'commontator'
 gem 'parsi-date'
 gem 'friendly_id'
 gem 'mail_form'
-gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy'
+# gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy'
 
 group :development do 
   gem 'capistrano', '~> 3.8', '>= 3.8.1'
