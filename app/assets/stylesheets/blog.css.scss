@@ -1,0 +1,61 @@
+$navbar-default-bg: #DB504A;
+
+.navbar {
+	font-size: 16px;
+	padding: 10px 0;
+	margin-bottom: 0;
+	border-radius: 0;
+	border: none;
+	background-color: #DB504A;
+}
+
+#blog {
+	.blog-hero {
+		padding: 200px 0;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), image-url('blog-hero.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	h1 {
+		color: #fff;
+	}
+	.blog-content {
+		background-color: #f2f2f4;
+		padding: 100px 0;
+		.panel {
+			.panel-heading {
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+			transition: all 0.3s;
+			border: none;
+			border-radius: 0;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			a {
+				color: #43AEF8;
+				padding-bottom: 6px;
+				border-bottom: solid 1px #d1d1d1;
+			}
+			p {
+				margin: 20px 0;
+			}
+			span {
+				color: #d8d8d8;
+			}
+			&:hover {
+				a {
+					transition: all 0.3s;
+					color: #fff;
+					text-decoration: none;
+				}
+				.panel-body {
+					transition: all 0.3s;
+					background-color: #515151;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

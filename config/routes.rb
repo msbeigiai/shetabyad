@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   
 	root 'welcome#index'
-	get '/blog' => redirect("http://blog.shetabyad.com/")
+  
+  resources :blogs, path: "blog", only: [:show, :index]
+  
+	get '/courses', to: redirect("http://courses.shetabyad.com/")
+  
 	get 'about-us', to: :about_us, controller: 'welcome'
 	match '/contacts', path: 'contact-us', to: 'contacts#new', via: 'get'
 	resources 'contacts', path: 'contact-us', only: [:new, :create]

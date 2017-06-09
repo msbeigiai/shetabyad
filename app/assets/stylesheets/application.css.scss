@@ -132,11 +132,11 @@ p {
 	border-radius: 0;
 	border: none;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#43aef8+0,15377e+100 */
-	background: rgb(67,174,248); /* Old browsers */
-	background: -moz-linear-gradient(left, rgba(67,174,248,1) 0%, rgba(21,55,126,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, rgba(67,174,248,1) 0%,rgba(21,55,126,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: rgb(67,174,248) !important; /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(67,174,248,1) 0%, rgba(21,55,126,1) 100%) !important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(67,174,248,1) 0%,rgba(21,55,126,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right, rgba(67,174,248,1) 0%,rgba(21,55,126,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43aef8', endColorstr='#15377e',GradientType=1 ); /* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43aef8', endColorstr='#15377e',GradientType=1 ) !important; /* IE6-9 */
 	.navbar-left {
 		li > a {
 			color: #FDFFFC;

@@ -1,0 +1,27 @@
+<section id="blog">
+	<div class="blog-hero">
+		<div class="container">
+			<h1 class="text-center">وبلاگ شتابیاد</h1>
+		</div>
+	</div>
+	<div class="blog-content">
+		<div class="container">
+			<div class="row">
+				<% @blogs.each do |blog| %>
+					<div class="col-md-3">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<%= image_tag blog.picture.url, class: "img-responsive" if blog.picture? %>
+							</div>
+							<div class="panel-body">
+								<h3><%= link_to blog.title %></h3>
+								<span><%= blog.created_at.to_parsi.strftime "%d %B %Y" %> | توسط: <%#= admin.username %></span>
+								<%= markdown(sanitize(blog.body[0, 350] + '[...]')) %>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</section>
