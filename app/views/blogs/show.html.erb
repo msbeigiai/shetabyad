@@ -1,11 +1,50 @@
-<p id="notice"><%= notice %></p>
+<section id="blog-show">
+	<div class="blog-show-hero">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="well">
+					<h3 class="text-right">عضو شتابیاد شوید <span>و آخرین آموزش های ما را ببینید.</span></h3>
+					<div class="img-signup" align="center">
+						<%= image_tag 'user.svg', size: '130x130', class: "img-responsive" %>
+						<p><%= link_to 'ورود', new_user_session_path %> <%= link_to 'ثبت نام', new_user_registration_path %></p>
+						<p></p>
+					</div>
+				</div>
+				
+				<div class="well">
+					<h3 class="text-right">دوره های شتابیاد <span>را در اینجا ببینید.</span></h3>
+					<div class="img-signup" align="center">
+						<%= image_tag 'video-tutorial.svg', size: '130x130', class: "img-responsive" %>
+						<p><%= link_to 'دوره های شتابیاد', 'http://courses.shetabyad.com' %> </p>
+						<p></p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-8 pull-right">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<%= image_tag @blog.picture.url, class: "img-responsive" if @blog.picture? %>
+						<h1><%= @blog.title %></h1>
+					</div>
+					<div class="panel-body">
+						<div class="meta">
+							<div class="col-md-6 pull-right">
+								<span class="date"><%= @blog.created_at.to_parsi.strftime "%d %B %Y" %></span> | <span class="by"> توسط: <%= current_admin.username %></span>
+							</div>
+							<div class="col-md-4">
+								<div class="addthis_inline_share_toolbox"></div>
+							</div>
+						</div>
+						<%= markdown(@blog.body) %>
+						<div class="col-md-4">
+							<div class="addthis_inline_share_toolbox"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body %>
-</p>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-593a8f56bb059f35"></script> 

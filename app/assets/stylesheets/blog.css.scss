@@ -19,6 +19,7 @@ $navbar-default-bg: #DB504A;
 	}
 	h1 {
 		color: #fff;
+		font-size: 40px;
 	}
 	.blog-content {
 		background-color: #f2f2f4;
@@ -34,12 +35,14 @@ $navbar-default-bg: #DB504A;
 			border-radius: 0;
 			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 			a {
-				color: #43AEF8;
+				color: #666;
 				padding-bottom: 6px;
 				border-bottom: solid 1px #d1d1d1;
 			}
 			p {
 				margin: 20px 0;
+				color: #7a7a7a;
+				line-height: 25px;
 			}
 			span {
 				color: #d8d8d8;
@@ -53,9 +56,120 @@ $navbar-default-bg: #DB504A;
 				.panel-body {
 					transition: all 0.3s;
 					background-color: #515151;
-					color: #fff;
+				}
+				p {
+					color: #f7f7f7;
 				}
 			}
 		}
 	}
 }
+
+#blog-show {
+	background-color: #f2f2f4;
+	padding: 22px 0 200px 0;
+	.blog-show-hero {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	.well {
+		border: none;
+		border-radius: 0;
+		background-color: #15377E;
+		color: #fff;
+		h3 {
+			margin-top: 0px;
+			padding: 10px 0;
+			span {
+				font-size: 14px;
+			}
+		}
+		.img-signup {
+			background-color: #fff;
+			padding: 45px 0;
+			a {
+				width: 100px;
+				padding: 10px 45px;
+				font-size: 18px;
+				background-color: #15377E;
+				top: 0;
+				bottom: 0;
+				color: #fff;
+				border: solid 1px #15377E;
+				&:hover {
+					text-decoration: none;
+					background-color: darken(#15377E, 5%);
+				}
+			}
+			p {
+				margin-top: 30px;
+				color: #43AEF8;
+			}
+		}
+	}
+	.panel {
+		border: none;
+		.panel-heading {
+			position: relative;
+			padding: 0;
+			margin: 0;
+			border: none;
+		}
+		.panel-body {
+			padding: 0 80px 40px 80px;
+			p {
+				color: #7a7a7a;
+				line-height: 33px;
+				margin-top: 25px;
+			}
+			.col-md-6 {
+				padding: 0;
+			}
+			.col-md-4 {
+				padding: 0;
+			}
+			.meta {
+				padding: 30px 0;
+			}
+			span {
+				color: #8b8b8b;
+			}
+			.date {
+				padding-left: 20px;
+			}
+			.by {
+				padding-right: 20px;
+			}
+			
+		}
+	}
+	img.img-responsive {
+		padding: 0;
+		margin: 0;
+	}
+	h1 {
+		margin-bottom: 0;
+		position: absolute;
+		width: 100%;
+		z-index: 1000;
+		bottom: 0px;
+		right: 0px;
+		padding: 60px 40px 40px 0;
+		color: #fff;
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+	}
+	.col-md-10 {
+		padding: 0;
+		margin: 0;
+	}
+	.blog-show-content {
+		padding: 100px 0;
+		
+	}
+}
+
+
+
+
+
+
