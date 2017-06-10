@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170610070210) do
+ActiveRecord::Schema.define(version: 20170610122644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20170610070210) do
     t.string   "slug"
     t.integer  "admin_id"
     t.index ["slug"], name: "index_blogs_on_slug", unique: true, using: :btree
+    t.index ["title_url"], name: "index_blogs_on_title_url", using: :btree
   end
 
   create_table "commontator_comments", force: :cascade do |t|
