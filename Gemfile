@@ -53,6 +53,7 @@ gem 'parsi-date'
 gem 'friendly_id'
 gem 'mail_form'
 # gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy'
+gem 'google-analytics-rails', '1.1.0'
 
 group :development do 
   gem 'capistrano', '~> 3.8', '>= 3.8.1'

@@ -10,6 +10,8 @@
 		
 		<title><%= content_for?(:title) ? yield(:title) : "شتابیاد: آموزش تخصصی برنامه نویسی" %></title>
 		<%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+		
+		<%= analytics_init if GoogleAnalytics.valid_tracker? %>
   </head>
 
   <body dir="rtl">
