@@ -38,7 +38,7 @@ html {
 }
 
 body {
-	padding-bottom: 140px;
+	padding-bottom: 200px;
 	position: relative;
 	font-family: BYekan, sans-serif;
 	min-height: 100%;
@@ -778,12 +778,25 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 //ABOUT US
 #about-us {
-	padding: 130px 0;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), image-url('about-us-hero.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
+	padding-bottom: 40px;
+	background-color: #f2f2f4;
+	.hero {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), image-url('about-us-hero.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		padding: 100px 0;
+	}
+	.about-content {
+		padding: 40px 30px;
+		
+	}
 	h1 {
 		color: #FDFFFC;
+	}
+	p {
+		color: #525353;
+		line-height: 40px;
 	}
 }
 
@@ -979,7 +992,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 //FOOTER
 footer {
 	position: absolute;
-	padding: 40px 0;
+	padding: 30px 0 40px 0;
 	background-color: #434343;
 	bottom: 0;
 	left: 0;
@@ -987,6 +1000,15 @@ footer {
 	width: 100%;
 	margin: 0;
 	color: #cecece;
+	.footer-brand {
+		font-size: 28px;
+		padding-right: 8px;
+	}
+	.title {
+		padding-bottom: 6px;
+		width: 60px;
+		border-bottom: solid 1px #cecece;
+	}
 	.inspect {
 		text-align: center;
 		border-right: solid 1px #6b6b6b;
@@ -996,6 +1018,18 @@ footer {
 	}
 	.first {
 		padding-bottom: 20px;
+	}
+	a {
+		color: #cecece;
+		transition: color 0.3s;
+		&:hover {
+			transition: color 0.3s;
+			color: #fff;
+			text-decoration: none;
+		}
+		&:focus {
+			text-decoration: none;
+		}
 	}
 	.fa {
 		color: #cecece;

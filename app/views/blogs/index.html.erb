@@ -15,7 +15,7 @@
 							</div>
 							<div class="panel-body">
 								<h3><%= link_to blog.title, blog %></h3>
-								<span><%= blog.created_at.to_parsi.strftime "%d %B %Y" %> | توسط: <%= current_admin.username %></span>
+								<span><%= blog.created_at.to_parsi.strftime "%d %B %Y" %> | توسط: <%= blog.admin.username %></span>
 								<%= markdown(sanitize(blog.body[0, 350] + '[...]')) %>
 							</div>
 						</div>

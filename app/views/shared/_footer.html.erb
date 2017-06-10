@@ -2,13 +2,22 @@
 	<div class="container">
 		<div class="row first">
 			<div class="col-md-6 pull-right">
-				<p>&copy; تمام حقوق مادی و معنوی این وبسایت متعلق به شتابیاد می باشد.</p>
+				<%= image_tag 'logo', size: "100x100", class: "img-responsive" %>
+				<p class="footer-brand">شتابیاد</p>
+				<p>&copy; تمام حقوق مادی و معنوی این وبسایت متعلق به شتابیاد می باشد. ۱۳۹۶-۱۳۹۷</p>
 			</div>
 			<div class="col-md-6">
-				<div class="col-md-3 inspect">وبلاگ شتابیاد</div>
-				<div class="col-md-3 inspect">درباره شتابیاد</div>
-				<div class="col-md-3 inspect">درباره ...</div>
-				<div class="col-md-3 inspect">دوره ها</div>
+				<div class="col-md-6">
+					<p class="title">بیاموزید</p>
+					<p><%= link_to 'روبی آن ریلز', TutorialType.last if TutorialType.any? %></p>
+					<p><%= link_to 'آی او اس', TutorialType.first if TutorialType.any? %></p>
+				</div>
+				<div class="col-md-6">
+					<p class="title">درباره</p>
+					<p><%= link_to 'درباره شتابیاد', about_us_path %></p>
+					<p><%= link_to 'وبلاگ شتابیاد', blogs_path %></p>
+					<p><%= link_to 'دوره های شتابیاد', "http://courses.shetabyad.com/" %></p>
+				</div>
 			</div>
 		</div>
 		<div class=row>
