@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   
+	devise_for :users
+  devise_for :admins, path: 'admin', skip: [:registrations]
+	mount RailsAdmin::Engine => '/user_admin', as: 'rails_admin'
+	mount Commontator::Engine => '/commontator'
+  
 	root 'welcome#index'
   
   resources :blogs, path: "blog", only: [:show, :index]
@@ -10,17 +15,9 @@ Rails.application.routes.draw do
 	match '/contacts', path: 'contact-us', to: 'contacts#new', via: 'get'
 	resources 'contacts', path: 'contact-us', only: [:new, :create]
 	
-	mount RailsAdmin::Engine => '/user_admin', as: 'rails_admin'
-	mount Commontator::Engine => '/commontator'
-	
-	devise_for :users
-  devise_for :admins, path: 'admin', skip: [:registrations]
-	
-	resources :tutorial_types, path: "", only: [:show]
-	
   resources :tutorials, only: [:show, :index]
-	#resources :lessons#, only: [:show, :index]
 	
+  
 	#authenticate :user do 
 		resources :lessons, only: [:show, :index] do 
 			member do
@@ -28,4 +25,9 @@ Rails.application.routes.draw do
 			end
 		end
 	#end
+  
+  match "/404", to: "errors#not_found", via: :all
+  match "/500", to: "errors#internal_server_error", via: :all
+  
+  resources :tutorial_types, path: "", only: [:show]
 end

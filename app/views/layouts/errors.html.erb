@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <title><%= content_for?(:title) ? yield(:title) : "شتابیاد: آموزش تخصصی برنامه نویسی" %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		
+		<%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+  <style>
+    #error {
+      direction: rtl;
+      background-color: #f2f2f4;
+      font-size: 14px;
+      font-family: BYekan, Sans-Serif;
+    }
+		#errors h1 {
+			margin: 100px auto 30px auto;
+			padding: 0;
+			font-size: 50px;
+		}
+    #errors h3 {
+      margin: 30px auto 30px auto;
+      color: #383838;
+      font-size: 28px;
+    }
+    a {
+      padding: 20px 50px;
+      color: #5a5b5b;
+      font-size: 20px;
+			margin: 0px auto;
+    }
+    a:hover {
+      text-decoration: none;
+      color: #333;
+    }
+		a:focus {
+			text-decoration: none;
+			color: #333;
+		}
+
+    
+
+  </style>
+</head>
+<body id="error">
+		<%#= render partial: 'shared/navbar' %>
+    <div class="container">
+        <%= yield %>
+    </div>
+
+</body>
+</html>
