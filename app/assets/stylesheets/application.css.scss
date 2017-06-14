@@ -1001,13 +1001,14 @@ footer {
 	margin: 0;
 	color: #cecece;
 	.footer-brand {
-		font-size: 28px;
+		font-size: 28px !important;
 		padding-right: 8px;
 	}
 	.title {
 		padding-bottom: 6px;
-		width: 60px;
-		border-bottom: solid 1px #cecece;
+		width: 100%;
+		font-size: 14px !important;
+		border-bottom: dotted 1px #cecece;
 	}
 	.inspect {
 		text-align: center;
@@ -1016,12 +1017,27 @@ footer {
 	.inspect:last-of-type {
 		border-right: none;
 	}
+	.btn {
+		font-size: 12px;
+	}
+	img {
+		transition: 0.3;
+		filter: grayscale(80%);
+		&:hover {
+			transition: 0.3s;
+			filter: grayscale(100%);
+		}
+	}
 	.first {
 		padding-bottom: 20px;
+		p {
+			font-size: 12px;
+		}
 	}
 	a {
 		color: #cecece;
 		transition: color 0.3s;
+		font-size: 12px;
 		&:hover {
 			transition: color 0.3s;
 			color: #fff;

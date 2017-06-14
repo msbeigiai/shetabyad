@@ -2,29 +2,33 @@
 	<div class="container">
 		<div class="row first">
 			<div class="col-md-6 pull-right">
-				<%= image_tag 'logo.svg', size: "100x100", class: "img-responsive" %>
-				<p class="footer-brand">شتابیاد</p>
+				<%= image_tag 'logo.svg', size: "100x100" %>
+				<%= link_to 'شتابیاد', root_path, class: "footer-brand" %>
+				<!-- <p class="footer-brand">شتابیاد</p> -->
 				<p>&copy; تمام حقوق مادی و معنوی این وبسایت متعلق به شتابیاد می باشد. ۱۳۹۶-۱۳۹۷</p>
+				<div class="footer-socials">
+					<a href="https://www.instagram.com/shetabyad/"><i class="fa fa-instagram fa-lg"></i></a>
+					<a href="https://t.me/shetabyad"><i class="fa fa-telegram fa-lg"></i></a>
+					<a href="https://github.com/shetabyad"><i class="fa fa-github fa-lg"></i></a>
+					<%= link_to (image_tag 'aparat.png', size: "20x20"), "https://www.aparat.com/shetabyad" %>
+				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="col-md-6">
+				<div class="col-md-4">
+					<p class="title">دوره های شتابیاد</p>
+					<p><a href="http://courses.shetabyad.com">وبسایت دوره های شتابیاد</a> پایگاهی برای خرید دوره های تخصصی و کامل آموزش های روبی آن ریلز و آی او اس ما می باشد.<p>
+						<a class="btn btn-success" href="http://courses.shetabyad.com">ورود به دوره های شتابیاد</a>
+				</div>
+				<div class="col-md-4">
 					<p class="title">بیاموزید</p>
 					<p><%= link_to 'روبی آن ریلز', TutorialType.last if TutorialType.any? %></p>
 					<p><%= link_to 'آی او اس', TutorialType.first if TutorialType.any? %></p>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-4">
 					<p class="title">درباره</p>
 					<p><%= link_to 'درباره شتابیاد', about_us_path %></p>
 					<p><%= link_to 'وبلاگ شتابیاد', blogs_path %></p>
-					<p><%= link_to 'دوره های شتابیاد', "http://courses.shetabyad.com/" %></p>
 				</div>
-			</div>
-		</div>
-		<div class=row>
-			<div class="col-md-6 pull-right footer-socials">
-				<a href="https://www.instagram.com/shetabyad/"><i class="fa fa-instagram fa-lg"></i></a>
-				<a href="https://t.me/shetabyad"><i class="fa fa-telegram fa-lg"></i></a>
-				<a href="https://github.com/shetabyad"><i class="fa fa-github fa-lg"></i></a>
 			</div>
 		</div>
 	</div>
