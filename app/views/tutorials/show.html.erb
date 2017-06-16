@@ -9,13 +9,13 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="row pull-right">
+		<div class="row">
 			<% if @tutorial.lessons.count == 1 %>
 				<div class="col-md-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<% if find_first.thumbnail_image? %>
-								<%= image_tag find_first.thumbnail_image_url(:thumbnail), class: "img-responsive" %>
+								<%= image_tag find_first.thumbnail_image.url(:thumbnail), class: "img-responsive" %>
 							<% end %>
 							<h3><%= link_to find_first.title, find_first %></h3>
 						</div>
@@ -34,7 +34,7 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<% if tut_lesson.thumbnail_image? %>
-									<%= image_tag tut_lesson.thumbnail_image_url(:thumbnail), class: "img-responsive" %>
+									<%= image_tag tut_lesson.thumbnail_image.url(:thumbnail), class: "img-responsive" %>
 								<% end %>
 								<h3><%= link_to tut_lesson.title, tut_lesson %></h3>
 							</div>
