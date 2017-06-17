@@ -109,6 +109,8 @@ $navbar-default-bg: #DB504A;
 	}
 	.panel {
 		border: none;
+		box-shadow: 0;
+		border-radius: 0;
 		.panel-heading {
 			position: relative;
 			padding: 0;
@@ -141,6 +143,14 @@ $navbar-default-bg: #DB504A;
 				padding-right: 20px;
 			}
 			
+		}
+		
+		.panel-footer {
+			border: none;
+			border-radius: 0;
+			background-color: #f2f2f4;
+			padding: 20px 20px;
+			box-shadow: none;
 		}
 	}
 	img.img-responsive {
