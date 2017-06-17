@@ -14,7 +14,7 @@ module ApplicationHelper
     renderer = HTMLWithPygments.new(hard_wrap: true, filter_html: false)
     options = {
       autolink: true, 
-      no_intra_emphasis: true, 
+      no_intra_emphasis: true,
       fenced_code_blocks: true, 
       strikethrough: true,
       superscript: true,
