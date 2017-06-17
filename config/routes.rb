@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :courses, only: [:show, :index]
 	devise_for :users
   devise_for :admins, path: 'admin', skip: [:registrations]
 	mount RailsAdmin::Engine => '/user_admin', as: 'rails_admin'
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
   
   resources :blogs, path: "blog", only: [:show, :index]
   
-	get '/courses', to: redirect("http://courses.shetabyad.com/")
+	# get '/courses', to: redirect("http://courses.shetabyad.com/")
   
 	get 'about-us', to: :about_us, controller: 'welcome'
 	match '/contacts', path: 'contact-us', to: 'contacts#new', via: 'get'

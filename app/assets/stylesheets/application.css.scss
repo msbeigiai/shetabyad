@@ -1064,7 +1064,10 @@ footer {
 	}
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+	body {
+		padding-bottom: 500px;
+	}
 	.panel-list {
 		display: none;
 	}
@@ -1087,9 +1090,15 @@ footer {
 			height: 100px;
 		}
 	}
+	footer img.logo-img {
+		display: none;
+	}
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width:992px) {
+	body {
+		padding-bottom: 500px;
+	}
 	.navbar {
 		font-size: 14px;
 	}
@@ -1136,6 +1145,9 @@ footer {
 		.inspect {
 			border-right: none;
 		}
+	}
+	footer img.logo-img {
+		display: none;
 	}
 }
 

@@ -1,0 +1,43 @@
+<section id="course">
+	<div class="course-hero">
+		<div class="container">
+			<h1 class="text-center">دوره های شتابیاد</h1>
+			<p class="text-center">مطمئن، حرفه ای و به روز</p>
+		</div>
+	</div>
+	<div class="course-content">
+		<div class="container">
+			<% if @courses.nil? %>
+				<h1>هنوز دوره ای ارائه نشده است</h1>
+			<% else %>
+				<div class="row">
+					<% @courses.each do |course| %>
+						<div class="col-md-6">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<%= image_tag course.image.url, class: "img-responsive" if course.image? %>
+									<h3><%= link_to course.title, course, class: "title" %></h3>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-md-6">
+											<span><%= course.created_at.to_parsi.strftime "%d %B %Y" %></span>
+										</div>
+										<div class="col-md-6">
+											<span>دسته: <%= course.category %></span>
+										</div>
+									</div>
+									<%= markdown(sanitize(course.body[0, 350] + '[...]')) %>
+								</div>
+								<div class="panel-footer">
+									<%= link_to 'خرید دوره', course.link_address, target: "_blank", class: "btn btn-success btn-block" %>
+									<%= link_to 'توضیحات بیشتر', course, class: "btn btn-default btn-block" %>
+								</div>
+							</div>
+						</div>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</section>
