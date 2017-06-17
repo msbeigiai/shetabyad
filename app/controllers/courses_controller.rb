@@ -65,11 +65,11 @@ class CoursesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course
-      @course = Course.find(params[:id])
+      @course = Course.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:title, :body, :category, :image, :link_address)
+      params.require(:course).permit(:title, :body, :category, :image, :link_address, :title_url)
     end
 end
