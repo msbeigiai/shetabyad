@@ -5,7 +5,7 @@ class LessonsController < ApplicationController
   # GET /lessons
   # GET /lessons.json
   def index
-    @lessons = Lesson.all.order("created_at DESC")
+    @lessons = Lesson.all
   end
 
   # GET /lessons/1

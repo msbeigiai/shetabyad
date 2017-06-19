@@ -11,7 +11,7 @@
 	<div class="container">
 		<div class="row">
 			<% if @tutorial.lessons.count == 1 %>
-				<div class="col-md-4 col-xs-8 col-sm-8">
+				<div class="col-md-4 col-xs-12 col-sm-12">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<% if find_first.thumbnail_image? %>
@@ -30,7 +30,7 @@
 				</div>
 			<% elsif @tutorial.lessons.count > 1 %>
 				<% @tutorial.lessons.each do |tut_lesson| %>
-					<div class="col-md-4 col-xs-12 col-sm-12">
+					<div class="col-md-4 col-xs-6 col-sm-6">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<% if tut_lesson.thumbnail_image? %>

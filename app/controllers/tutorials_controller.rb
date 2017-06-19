@@ -5,7 +5,7 @@ class TutorialsController < ApplicationController
   # GET /tutorials
   # GET /tutorials.json
   def index
-    @tutorials = Tutorial.all.order("created_at DESC")
+    @tutorials = Tutorial.all
   end
 
   # GET /tutorials/1

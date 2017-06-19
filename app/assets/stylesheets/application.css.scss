@@ -1123,12 +1123,23 @@ footer {
 			display: none;
 		}
 		.row {
-			margin-top: 30px;
+			margin-top: 40px;
+		}
+		div.panel-body {
+			display: none;
+		}
+		div.panel-footer {
+			display: none;
 		}
 	}
 	#questions {
 		div.mySlides.fade img {
 			display: none;
+		}
+	}
+	#tutorial-index {
+		img {
+			vertical-align: middle;
 		}
 	}
 }
