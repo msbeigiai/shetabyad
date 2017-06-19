@@ -179,6 +179,20 @@ $navbar-default-bg: #DB504A;
 }
 
 
+@media only screen and (max-width : 768px) {
+	#subjects {
+		display: none;
+	}
+	
+	#blog-show .panel .panel-body {
+		padding: 10px 20px 40px 20px;
+	}
+}
+
+
+
+
+
 
 
 

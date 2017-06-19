@@ -2,7 +2,7 @@
 	<div class="lessons-index-hero">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 pull-right">
+				<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
 					<h1>همه آموزش ها</h1>
 				</div>
 				<div class="col-md-6">
@@ -19,11 +19,11 @@
 	<div class="container">
 		<div class="row pull-right">
 			<% lessons.each do |lesson| %>
-				<div class="col-md-4">
+				<div class="col-md-4 col-xs-8 col-sm-8">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<% if lesson.thumbnail_image? %>
-								<%= image_tag lesson.thumbnail_image_url(:thumbnail), class: "img-responsive" %>
+								<%= image_tag lesson.thumbnail_image.url(:thumbnail), class: "img-responsive" %>
 								<% unless lesson.video.nil? %>
 									<i class="fa fa-play fa-2x pull-right play"></i>
 								<% end %>

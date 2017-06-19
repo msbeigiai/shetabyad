@@ -33,7 +33,7 @@
 				<li><%= link_to 'درباره ما', about_us_path %></li>
         <li><%= link_to 'تماس با ما', contacts_path %></li>
 				<li><%= link_to 'دوره ها', courses_path %></li>
-				<li><%= link_to 'وبلاگ', blogs_path %></li>
+				<li class="blog-navbar"><%= link_to 'وبلاگ', blogs_path %></li>
         <% if TutorialType.any? %>
           <li><%= link_to TutorialType.first.title, TutorialType.first %></li>            
           <li><%= link_to TutorialType.last.title, TutorialType.last %></li> 

@@ -1,9 +1,0 @@
-development:
-  cloud_name: "shetabyad"
-  api_key: "278593753777477"
-  api_secret: "iymQ--L4rXV8CYgm6nx--NiNrzA"
-
-production:
-  cloud_name: "shetabyad"
-  api_key: "278593753777477"
-  api_secret: "iymQ--L4rXV8CYgm6nx--NiNrzA"

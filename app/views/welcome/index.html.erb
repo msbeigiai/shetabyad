@@ -1,7 +1,7 @@
 <div class="jumbotron">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 pull-right">
+			<div class="col-md-6 col-xs-12 col-sm-12 pull-right">
 				<h2> آموزش تخصصی برنامه نویسی</h2>
 				<h1>روبی آن ریلز و آی او اس</h1>
 				<p class="first"><i class="fa fa-dot-circle-o"></i> اولین وبسایت آموزش تخصصی روبی آن ریلز و آی او اس در ایران</p>
@@ -9,7 +9,7 @@
 
 				<%= link_to 'ثبت نام کنید', new_user_registration_path, class: "btn btn-custom" %>
 			</div>
-			<div class="col-md-6" align="left">
+			<div class="col-md-6 col-xs-12 col-sm-12" align="left">
 				<%= image_tag 'iphone.png', class: "img-responsive iphone wow slideInDown", "data-wow-duration": "0.7s" %>
 				<%= image_tag 'mac.png', class: "img-responsive mac wow fadeIn", "data-wow-duration": "0.7s", "data-wow-delay": "1s" %>
 			</div>
@@ -19,14 +19,14 @@
 <div class="hero-socials">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
-				<div class="col-md-3">
+			<div class="col-md-6 col-xs-12 col-sm-12">
+				<div class="col-md-3 col-xs-12 col-sm-12">
 					<i class="fa fa-instagram fa-lg"></i><a href="https://www.instagram.com/shetabyad/">اینستاگرام</a>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 col-xs-12 col-sm-12">
 					<i class="fa fa-telegram fa-lg"></i><a href="https://t.me/shetabyad">تلگرام</a>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 col-xs-12 col-sm-12">
 					<i class="fa fa-github fa-lg"></i><a href="https://github.com/shetabyad">گیت هاب</a>
 				</div>
 			</div>
@@ -35,12 +35,12 @@
 </div>
 <section id="tools">
 	<div class="container">
-		<div class="col-md-6 pull-right">
+		<div class="col-md-6 col-xs-12 col-sm-12 pull-right">
 			<h3 class="text-right">هر آنچه که برای توسعه وب سایت ها و اپلیکیشن های موبایل نیاز است را به شما آموزش می دهیم:</h3>
 			<p>جاوااسکریپت، HTML، CSS، روبی، Ruby on Rails، سوئیفت، iOS، گیت و گیت هاب و تکنولوژی های معتبر و به روز دیگر را در این سایت می توانید بیاموزید.<br>
 			نحوه ارائه اپلیکیشن موبایل iOS در اپ استور را به شما خواهیم آموخت، همچنین یاد خواهیم داد چگونه وب سایت و وب اپلیکیشن خود را در سرور نصب نمایید.</p>
 		</div>
-		<div class="col-md-6 img-row" align="center">
+		<div class="col-md-6 col-xs-12 col-sm-12 img-row" align="center">
 			<%= image_tag 'js-n.svg', size: "140x140", class: "js-img" %>
 			<%= image_tag 'swift-n.svg', size: "140x140", class: "swift-img" %>
 			<%= image_tag 'ruby-n.svg', size: "140x140", class: "ruby-img" %>
@@ -54,17 +54,17 @@
 <section id="first">
 	<div class="container text-center">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-4 col-xs-4 col-sm-4">
 				<span class="fa fa-play fa-4x"></span>
 				<h4>آموزش های دوره ای</h4>
 				<p>با آموزش های دوره ای ما همراه باشید. هر هفته آموزش های جدید. ویدئوها و مقالات کاربردی و به روز. آموزش های روان به همراه نکات کلیدی.</p>
 			</div>
-			<div class="col-md-4 divider">
+			<div class="col-md-4 col-xs-4 col-sm-4 divider">
 				<span class="fa fa-check-square-o fa-4x"></span>
 				<h4>تکنولوژی محور</h4>
 				<p>تکنولوژی ها و مباحث روز مربوط به توسعه وب سایت ها و اپلیکیشن های موبایل درخصوص Ruby on Rails و iOS را با ما دنبال کنید. </p>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 col-xs-4 col-sm-4">
 				<span class="fa fa-link fa-4x"></span>
 				<h4>راهنما</h4>
 				<p> لینک های مفید، سورس برنامه ها، جم های کاربردی و همه آنچه که نیاز است برای توسعه وب سایت ها و اپلیکیشن های موبایل در اختیار شماست.</p>
@@ -76,7 +76,7 @@
 <section id="about">
 	<div class="container text-center">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-xs-offset-0 col-sm-offset-0">
 				<h2>روبی آن ریلز چیست؟</h2>
 				<p>
 				ریلز یک فریمورک متن باز است که با زبان برنامه نویسی دینامیک و شی گرای روبی توسعه داده شده 
@@ -95,13 +95,17 @@
 	<% number = 3 %>
 	<% models = last_models(number) %>
 	<div class="container">
-		<h2 class="text-center">آخرین آموزش ها</h2>
+		<div class=row>
+			<div class="col-md-12 col-xs-12 col-sm-12">
+				<h2 align="center">آخرین آموزش ها</h2>
+			</div>
+		</div>
 		<div class="row">	
 			<% if models.nil? %>
 				nothing
 			<% else %>
 				<% models.each do |model| %>
-					<div class="col-md-4 pull-right">
+					<div class="col-md-4 col-xs-12 col-sm-12" align="center">
 						<div class="well">
 							<h3>دسته: <%= model.tutorial.title %></h3>
 							<%= image_tag model.thumbnail_image, size: "360x200", class: "img-responsive" %>
@@ -117,19 +121,19 @@
 <section id="subjects">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
 				<h2 class="text-center title">مباحثی که خواهید آموخت</h2>
 			</div>
 		</div>
 	<div id="html" class="tabcontent">
 		<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="col-md-6 pull-right">
+					<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
+						<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
 							<h3 class="text-right">اچ تی ام ال (HTML)</h3>
 							<p class="text-right">آموزش اچ تی ام ال، ساختار وب سایت ها و وب اپلیکیشن ها، تلفیق روبی و اچ تی ام ال (Embedded Ruby)</p>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 col-xs-10 col-sm-10">
 							<%= image_tag 'html.svg', size: "110x110", class: "img-responsive" %>
 						</div>
 					</div>
@@ -140,12 +144,12 @@
 	<div id="javascript" class="tabcontent">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-6 pull-right">
+				<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
+					<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
 						<h3 class="text-right">جاوا اسکریپت (Javascript)</h3>
 						<p class="text-right">آموزش برنامه نویسی جاوا اسکریپت و استفاده آن در طراحی وب اپلیکیشن ها با روبی آن ریلز</p>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-xs-10 col-sm-10">
 						<%= image_tag 'javascript.svg', size: "120x120", class: "img-responsive" %>
 					</div>
 				</div>
@@ -156,12 +160,12 @@
 	<div id="swift" class="tabcontent">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-6 pull-right">
+				<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
+					<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
 						<h3 class="text-right">سوئیفت (Swift)</h3>
 						<p class="text-right">زبان برنامه نویسی سوئیفت و قابلیت های آن، عبارات شرطی و شی گرایی و همچنین مباحث مهم دیگر...   </p> 
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-xs-10 col-sm-10">
 						<%= image_tag 'swift.svg', size: "120x120", class: "img-responsive" %>
 					</div>
 				</div>
@@ -172,12 +176,12 @@
 	<div id="ios" class="tabcontent">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-6 pull-right">
+				<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
+					<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
 						<h3 class="text-right">آی او اس (iOS)</h3>
 						<p class="text-right">آموزش برنامه نویسی iOS، کار با گوگل مپس، فایر بیس، Login، Signup، Sketch و UI Design</p>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-xs-10 col-sm-10">
 						<%= image_tag 'ios.svg', size: "120x120", class: "img-responsive" %>
 					</div>
 				</div>
@@ -188,12 +192,12 @@
 	<div id="ruby-on-rails" class="tabcontent">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-6 pull-right">
+				<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
+					<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
 						<h3 class="text-right">روبی آن ریلز (Ruby on Rails)</h3>
 						<p class="text-right">فریمورک جدید ریلز، آموزش زبان برنامه نویسی روبی، کلاس ها و کتابخانه های ریلز (Ruby on Rails)</p>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-xs-10 col-sm-10">
 						<%= image_tag 'rubyonrails.svg', size: "105x105", class: "img-responsive" %>
 					</div>
 				</div>
@@ -204,12 +208,12 @@
 	<div id="css" class="tabcontent">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-6 pull-right">
+				<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
+					<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
 						<h3 class="text-right">سی اس اس (CSS)</h3>
 						<p class="text-right">آموزش سی اس اس و سس (sass)، ایجاد طرح های سی اس اس، انیمیشن ها و مباحث دیگر</p>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-xs-10 col-sm-10">
 						<%= image_tag 'css.svg', size: "110x110", class: "img-responsive" %>
 					</div>
 				</div>
@@ -228,11 +232,11 @@
 <section id="explore">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="col-md-2 pull-right" align="center">
+			<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-xs-offset-0 col-sm-offset-0">
+				<div class="col-md-2 col-xs-8 col-sm-8 pull-right" align="center">
 					<%= image_tag 'signup.svg', size: "80x80" %>
 				</div>
-				<div class="col-md-10">
+				<div class="col-md-10 col-xs-10 col-sm-10">
 					<h3><%= link_to 'از اینجا شروع کنید', new_user_registration_path %><i class="fa fa-arrow-left"></i></h3>
 					<p>ثبت نام کنید تا آموزش های ما را ببینید و از آخرین آموزش های ما با خبر شوید</p>
 				</div>
@@ -244,7 +248,7 @@
 <section id="questions">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-7 pull-right">
+			<div class="col-md-7 col-xs-12 col-sm-12 pull-right">
 				<h2 class="text-right"><i class="fa fa-question-circle-o"></i> سوالات متداول</h2>
 				<button class="accordion">آیا همه مباحث مربوط به توسعه وب سایت و وب اپلیکیشن در سایت شما پوشش داده می شود؟</button>
 				<div class="custom-panel">
@@ -266,7 +270,7 @@
 					<p>در شتابیاد، مباحث کار با فریمورک های گوگل مانند گوگل مپس (Google Maps)، ارتباط با سیستم های سمت سرور و دیتابیس مانند فایر بیس (Firebase) و پارس (Parse)، ساخت اپلیکیشن های با کاربرد ثبت نام و ورود کاربر، سیستم مدیریت فریمورک Cocoapods، کار با XCode 8، کار با فریمورک های فیسبوک و اینستاگرام، طراحی رابط کاربری با نرمم افزار Sketch و بسیاری از مباحث مرتبط با توسعه اپلیکیشن های iOS</p>
 				</div>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-5 col-xs-11 col-sm-11">
 				<div class="slideshow-container">
 					<div class="mySlides fade">
 						<%= image_tag 'ruby-n.svg', size: "150x150" %>
