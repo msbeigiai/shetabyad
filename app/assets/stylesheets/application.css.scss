@@ -1108,9 +1108,15 @@ footer {
 		img {
 			display: none;
 		}
+		h1 {
+			font-size: 30px;
+		}
+		h2 {
+			font-size: 20px;
+		}
 	}
 	div.hero-socials {
-		//display: none;
+		display: none;
 	}
 	li.blog-navbar > a {
 		display: none;
@@ -1120,7 +1126,7 @@ footer {
 	}
 	#lessons-index {
 		img.img-responsive {
-			display: none;
+			//display: none;
 		}
 		.row {
 			margin-top: 40px;
@@ -1131,6 +1137,9 @@ footer {
 		div.panel-footer {
 			display: none;
 		}
+		h3 {
+			font-size: 20px;
+		}
 	}
 	#questions {
 		div.mySlides.fade img {
@@ -1140,7 +1149,38 @@ footer {
 	#tutorial-index {
 		img {
 			vertical-align: middle;
+			width: 80px;
+			height: 80px;
 		}
+		h2 {
+			font-size: 20px;
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+	#tools {
+		img {
+			width: 100px;
+			height: 100px;
+		}
+	}
+	#lesson-show {
+		h1 {
+			font-size: 25px;
+		}
+		.panel-body {
+			margin: 20px 0;
+			border-radius: 0;
+			padding: 10px 20px;
+			p {
+				font-size: 14px;
+				line-height: 40px;
+			}
+		}
+	}
+	#course-show .panel .panel-body {
+		padding: 0 20px 40px 20px;
 	}
 }
 
