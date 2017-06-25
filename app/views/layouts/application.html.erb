@@ -8,7 +8,11 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js"></script>
 		<script src="js/wow.min.js"></script>
 		
-		<title><%= content_for?(:title) ? yield(:title) : "شتابیاد: آموزش تخصصی برنامه نویسی روبی آن ریلز و آی او اس" %></title>
+		<title><%#= content_for?(:title) ? yield(:title) : "شتابیاد: آموزش تخصصی برنامه نویسی روبی آن ریلز و آی او اس" %></title>
+		<title>
+			<%= if content_for?(:title) then yield(:title) + ' | ' end %>
+			شتابیاد: آموزش تخصصی برنامه نویسی روبی آن ریلز و آی اس
+		</title>
 		<%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<%#= analytics_init if GoogleAnalytics.valid_tracker? %>

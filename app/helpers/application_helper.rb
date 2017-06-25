@@ -3,6 +3,10 @@ module ApplicationHelper
   def find_first
     @tutorial.lessons.first 
   end
+  
+  def title(text)
+    content_for :title, text
+  end
 
   class HTMLWithPygments < Redcarpet::Render::HTML
     def block_code(code, language)
