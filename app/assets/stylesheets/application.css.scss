@@ -718,12 +718,27 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		color: #FDFFFC;
 		padding: 0;
 		border-bottom: 1px solid #e6e6e6;
+		position: relative;
 		.well {
 			color: #333;
 			border-radius: 0;
 			border-bottom-right-radius: 5px;
 			border-bottom-left-radius: 5px;
 			border: none;
+		}
+		h1 {
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			z-index: 1000;
+			margin: 0 auto;
+			font-size: 50px;
+			padding: 120px 0;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.9));
+		}
+		img {
+			// width: 2000px;
+			// height: 300px;
 		}
 	}
 	.panel-footer {
@@ -1184,6 +1199,11 @@ footer {
 				line-height: 40px;
 			}
 		}
+		.panel-heading {
+			h1 {
+				font-size: 25px;
+			}
+		}
 	}
 	#course-show .panel .panel-body {
 		padding: 0 20px 40px 20px;
@@ -1194,6 +1214,13 @@ footer {
 @media only screen and (max-width : 768px) {
 	#subjects {
 		display: none;
+	}
+	#lesson-show {
+		.panel-heading {
+			h1 {
+				padding: 40px 0;
+			}
+		}
 	}
 }
 
