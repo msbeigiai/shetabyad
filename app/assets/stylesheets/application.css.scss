@@ -251,7 +251,10 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		margin-bottom: 10px;
 		line-height: 70px;
 		span {
-			font-size: 35px;
+			font-size: 15px;
+		}
+		span.and {
+			font-size: 30px;
 		}
 	}
 	h2 {
@@ -645,6 +648,16 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 			}
 		}
 	}
+	.panel-body {
+		h3 {
+			font-size: 20px;
+			line-height: 30px;
+		}
+		p {
+			font-size: 16px;
+			line-height: 28px;
+		}
+	}
 }
 
 //LESSON SHOW
@@ -707,7 +720,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		padding: 30px 60px;
 		color: #3C3C3C;
 		p {
-			font-size: 15px;
+			font-size: 16px;
 			line-height: 40px;
 		}
 	}
