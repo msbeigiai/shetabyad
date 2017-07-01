@@ -1221,6 +1221,22 @@ footer {
 	#course-show .panel .panel-body {
 		padding: 0 20px 40px 20px;
 	}
+	.navbar {
+		position: relative;
+		img {
+			display: none;
+		}
+		.btn {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			.btn:before {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+		}
+	}
 }
 
 /* Small Devices, Tablets */
@@ -1232,6 +1248,19 @@ footer {
 		.panel-heading {
 			h1 {
 				padding: 40px 0;
+			}
+		}
+	}
+	.navbar {
+		position: relative;
+		.btn {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			.btn:before {
+				position: absolute;
+				top: 10px;
+				left: 10px;
 			}
 		}
 	}
