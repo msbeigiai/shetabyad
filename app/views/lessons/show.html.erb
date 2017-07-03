@@ -39,7 +39,7 @@
 					<div class="col-md-4 col-xs-12 col-sm-12" align="left">
 						<% unless user_signed_in? %>
 							<%= link_to '', like_lesson_path(@lesson.id), remote: true, id: "like_#{@lesson.id}",
-								class: "fa fa-heart-o fa-2x #{liked_lesson @lesson}", data: { toggle: 'tooltip', placement: 'left', title: "برای پسندیدن این درس نیاز به ورود به سایت دارید" } %>
+								class: "fa fa-heart-o fa-2x #{liked_lesson @lesson}", data: { toggle: 'tooltip', placement: 'left', title: "برای پسندیدن این آموزش به سایت وارد شوید." } %>
 							<span class="like-number"><%#= @lesson.get_upvotes.size %></span>
 						<% end %>
 						<%  if user_signed_in? && current_user && !current_user.voted_for?(@lesson) %>
@@ -49,7 +49,7 @@
 						<% end %>
 						<%  if user_signed_in? && current_user && current_user.voted_for?(@lesson) %>
 							<%= link_to '', like_lesson_path(@lesson.id), remote: true, id: "like_#{@lesson.id}",
-							class: "fa fa-heart fa-2x #{liked_lesson @lesson}", data: { toggle: 'tooltip', placement: 'left', title: "قبلا پسندیده اید." } %>
+							class: "fa fa-heart fa-2x #{liked_lesson @lesson}", data: { toggle: 'tooltip', placement: 'left', title: "این آموزش را قبلا پسندیده اید." } %>
 							<span class="like-number"><%#= @lesson.get_upvotes.size %></span>
 						<% end %>
 					</div>

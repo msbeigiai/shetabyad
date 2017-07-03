@@ -9,6 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <%= image_tag 'logo.svg', size:'40x40' %><%= link_to "شتابیاد <span style='font-size:18px;'><em>بتا</em></span>".html_safe, root_path, class: "navbar-brand" %>
+			<%#= link_to (image_tag 'new-logo.png', size: "140x40" ), root_path %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -28,7 +29,7 @@
         
       <ul class="nav navbar-nav navbar-left">
 				<% unless user_signed_in? %>
-          <%= link_to 'ورود', new_user_session_path, class: "btn btn-success navbar-btn pull-left" %>
+          <li><%= link_to 'ورود', new_user_session_path, class: "pull-left signin-link" %></li>
 				<% end %>
 				<li><%= link_to 'درباره ما', about_us_path %></li>
         <li><%= link_to 'تماس با ما', contacts_path %></li>

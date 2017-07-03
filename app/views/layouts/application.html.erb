@@ -27,20 +27,20 @@
 	  <%= render partial: 'shared/navbar' %>				
 
 	  
-      <%# if notice %>
-        <!-- div class="alert alert-info alert-dismissible" role="alert">
+      <% if notice %>
+        <div class="alert alert-info alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span></button>
           <div class="container"><%= notice %></div>
-        </div> -->
-      <%# end %>
-      <%# if alert %>
-        <!-- <div class="alert alert-warning alert-dismissible" role="alert">
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-warning alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span></button>
           <div class="container"><%= alert %></div>
-        </div> -->
-      <%# end %>
+        </div>
+      <% end %>
 		  <%# if notice %>
 <!--		  	<p class="notice"><%#= notice %></p>-->
 				<%#= js add_gritter(flash[:notice], title: "پیام شما", time: "4000") %>
@@ -50,16 +50,16 @@
 		  	<%#= js add_gritter(flash[:alert], title: "پیام شما", time: "4000") %>
 		  <%# end %>
 				
-				<% if notice %>
+				<!-- <% if notice %>
 					<script>
 						$.gritter.add({
-			
+
 						  title: 'پیام شما',
-						
+
 							text: "<%= flash[:notice] %>",
-							
+
 							//image: 'assets-url/confirm.png',
-							
+
 							time: 5000
 						});
 					</script>
@@ -67,15 +67,15 @@
 				<% if alert %>
 					<script>
 						$.gritter.add({
-			
+
 						  title: 'پیام شما',
-						
+
 							text: "<%= flash[:alert] %>",
-							
+
 							time: 5000
 						});
 					</script>
-				<% end %>
+				<% end %> -->
 			
 	 <%= yield %>
 	 
