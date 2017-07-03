@@ -38,7 +38,24 @@
 		</div>
 	</div>
 </div>
-<section id="tools">
+
+<section id="explore">
+	<div class="container">
+		<h2 class="text-center">از اینجا شروع کنید</h2>
+		<div class="row">
+			<div class="col-md-6" align="center">
+				<i class="fa fa-diamond fa-4x fa-ruby"></i>
+				<h3><%= link_to "Ruby on Rails", TutorialType.first %></h3>
+			</div>
+			<div class="col-md-6" align="center">
+				<i class="fa fa-apple fa-4x fa-apple"></i>
+				<h3><%= link_to "iOS", TutorialType.last %></h3>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <section id="tools">
 	<div class="container">
 		<div class="col-md-10 col-xs-12 col-sm-12 text-center col-md-offset-1">
 			<h3>هر آنچه که برای توسعه وب سایت ها و اپلیکیشن های موبایل نیاز است را به شما آموزش می دهیم</h3>
@@ -55,9 +72,10 @@
 			<%#= image_tag 'css-n.svg', size: "140x140", class: "css-img" %>
 		</div>
 	</div>
-</section>
+</section> -->
 <section id="first">
 	<div class="container text-center">
+		<h2>چرا از آموزش های ما استفاده کنید؟</h2>
 		<div class="row">
 			<div class="col-md-4 col-xs-4 col-sm-4">
 				<span class="fa fa-play fa-4x"></span>
@@ -123,7 +141,7 @@
 	</div>
 </section>
 
-<section id="subjects">
+<!-- <section id="subjects">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
@@ -168,7 +186,7 @@
 				<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
 					<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
 						<h3 class="text-right">سوئیفت (Swift)</h3>
-						<p class="text-right">زبان برنامه نویسی سوئیفت و قابلیت های آن، عبارات شرطی و شی گرایی و همچنین مباحث مهم دیگر...   </p> 
+						<p class="text-right">زبان برنامه نویسی سوئیفت و قابلیت های آن، عبارات شرطی و شی گرایی و همچنین مباحث مهم دیگر...   </p>
 					</div>
 					<div class="col-md-6 col-xs-10 col-sm-10">
 						<%= image_tag 'swift.svg', size: "120x120", class: "img-responsive" %>
@@ -193,7 +211,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="ruby-on-rails" class="tabcontent">
 		<div class="container">
 			<div class="row">
@@ -209,7 +227,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="css" class="tabcontent">
 		<div class="container">
 			<div class="row">
@@ -225,30 +243,16 @@
 			</div>
 		</div>
 	</div>
-	<button class="tablink" onclick="openLesson('css', this, '#F1F2F2', '#010A12')">سی اس اس</button>
-	<button class="tablink" onclick="openLesson('html', this, '#F1F2F2', '#010A12')">اچ تی ام ال </button>
-	<button class="tablink" onclick="openLesson('swift', this, '#F1F2F2', '#010A12')">سوئیفت</button>
-	<button class="tablink" onclick="openLesson('ios', this, '#F1F2F2', '#010A12')">آی او اس</button>
-	<button class="tablink" onclick="openLesson('ruby-on-rails', this, '#F1F2F2', '#010A12')">روبی آن ریلز</button>
-	<button class="tablink" onclick="openLesson('javascript', this, '#F1F2F2', '#010A12')" id="defaultOpen">جاوا اسکریپت</button>
+	<button class="tablink" onclick="openLesson('css', this, '#E3E4FF', 'rgb(84, 90, 210)')">سی اس اس</button>
+	<button class="tablink" onclick="openLesson('html', this, '#E3E4FF', 'rgb(84, 90, 210)')">اچ تی ام ال </button>
+	<button class="tablink" onclick="openLesson('swift', this, '#E3E4FF', 'rgb(84, 90, 210)')">سوئیفت</button>
+	<button class="tablink" onclick="openLesson('ios', this, '#E3E4FF', 'rgb(84, 90, 210)')">آی او اس</button>
+	<button class="tablink" onclick="openLesson('ruby-on-rails', this, '#E3E4FF', 'rgb(84, 90, 210)')">روبی آن ریلز</button>
+	<button class="tablink" onclick="openLesson('javascript', this, '#E3E4FF', 'rgb(84, 90, 210)')" id="defaultOpen">جاوا اسکریپت</button>
 	</div>
-</section>
+</section> -->
 
-<section id="explore">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-xs-offset-0 col-sm-offset-0">
-				<div class="col-md-2 col-xs-8 col-sm-8 pull-right" align="center">
-					<%= image_tag 'signup.svg', size: "80x80" %>
-				</div>
-				<div class="col-md-10 col-xs-10 col-sm-10">
-					<h3><%= link_to 'از اینجا شروع کنید', new_user_registration_path %><i class="fa fa-arrow-left"></i></h3>
-					<p>ثبت نام کنید تا آموزش های ما را ببینید و از آخرین آموزش های ما با خبر شوید</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+
 
 <section id="questions">
 	<div class="container">
@@ -355,8 +359,6 @@
 		slides[slideIndex - 1].style.display = "block";
 		setTimeout(showSlides, 3000);
 	}
-	
-	new WOW().init();
 </script>
 
 
