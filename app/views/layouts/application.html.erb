@@ -8,9 +8,9 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js"></script>
 		<script src="js/wow.min.js"></script>
 		
-		<meta name="description" content="آموزش Ruby on Rails و طراحی وب سایت" />
-		<meta name="keywords" content="Ruby on Rails, روبی آن ریلز, برنامه نویسی روبی, طراحی وب سایت, برنامه نویسی Ruby, Rails, ریلز, وب اپلیکیشن" />
-		<meta name="robots" content="index, follow" />
+		<meta name="description" content="<%= yield(:description) %>" />
+		<meta name="keywords" content="<%= yield(:keywords) %>" />
+		<meta name="robots" content="<%= yield(:robots) %>" />
 		
 		<!-- <title> --><%#= content_for?(:title) ? yield(:title) : "شتابیاد: آموزش تخصصی برنامه نویسی روبی آن ریلز و آی او اس" %><!-- </title> -->
 		<title>
