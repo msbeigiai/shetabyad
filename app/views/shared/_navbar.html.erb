@@ -35,6 +35,7 @@
         <li><%= link_to 'تماس با ما', contacts_path %></li>
 				<li><%= link_to 'دوره ها', courses_path %></li>
 				<li class="blog-navbar"><%= link_to 'وبلاگ', blogs_path %></li>
+				<li <li class="blog-navbar"><%= link_to 'انجمن شتابیاد', "http://forum.shetabyad.com", target: "_blank" %></li>
         <% if TutorialType.any? %>
           <li><%= link_to TutorialType.first.title, TutorialType.first %></li>            
           <li><%= link_to TutorialType.last.title, TutorialType.last %></li> 
