@@ -6,20 +6,20 @@
 <div class="jumbotron">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 col-xs-12 col-sm-12">
-				<h1 class="text-center">مدرسه شتابیاد</h1>
-				<h2 class="text-center"> آموزش تخصصی برنامه نویسی، طراحی و توسعه وب سایت با </h2>
-				<h1 class="text-center"><span>Ruby on Rails</span></h1>
-				<!-- <p class="first text-center"><i class="fa fa-dot-circle-o"></i> اولین وبسایت آموزش تخصصی روبی آن ریلز و آی او اس در ایران</p> -->
-				<div align="center">
-					
-					<%= link_to 'برای شروع ثبت نام کنید', new_user_registration_path, class: "btn btn-custom" %>
-				</div>
+			<div class="col-md-5 col-xs-12 col-sm-12 pull-right">
+				<h1 class="text-right">مدرسه شتابیاد</h1>
+				<h2 class="text-right"> آموزش تخصصی برنامه نویسی </h2>
+				<h1 class="text-right"><span>روبی آن ریلز</span></h1>
+
+				<%= link_to 'برای شروع ثبت نام کنید', new_user_registration_path, class: "btn btn-custom text-center" %>
+			</div>
+			<div class="col-md-7 col-xs-12 col-sm-12 pull-center">
+				<%= image_tag 'page.png', class: "img-responsive" %>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="hero-socials">
+<!-- <div class="hero-socials">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-xs-12 col-sm-12">
@@ -38,25 +38,48 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
+
+<section id="first">
+	<div class="container text-center">
+		<h2>ویژگی های ما</h2>
+		<div class="row">
+			<div class="col-md-4 col-xs-4 col-sm-4">
+				<span class="fa fa-compass fa-5x fa-ruby"></span>
+				<h4>آموزش های دوره ای</h4>
+				<p>با آموزش های دوره ای ما همراه باشید. هر هفته آموزش های جدید. ویدئوها و مقالات کاربردی و به روز. آموزش های روان به همراه نکات کلیدی.</p>
+			</div>
+			<div class="col-md-4 col-xs-4 col-sm-4 divider">
+				<span class="fa fa-check-square-o fa-5x fa-ruby"></span>
+				<h4>تکنولوژی محور</h4>
+				<p>تکنولوژی ها و مباحث روز مربوط به توسعه وب سایت ها درخصوص Ruby on Rails را با ما دنبال کنید. </p>
+			</div>
+			<div class="col-md-4 col-xs-4 col-sm-4">
+				<span class="fa fa-info fa-5x fa-ruby"></span>
+				<h4>راهنما</h4>
+				<p> لینک های مفید، سورس برنامه ها، جم های کاربردی و همه آنچه که نیاز است برای توسعه وب سایت ها   در اختیار شماست.</p>
+			</div>
+		</div>
+	</div>
+</section>
 
 <section id="explore">
 	<div class="container">
 		<h2 class="text-center">چرا ما؟</h2>
 		<h3 class="text-center">بهترین منبع برای شروع طراحی وب سایت با Ruby on Rails ما هستیم.</h3>
 		<div class="row">
-			<div class="col-md-4 col-xs-6 col-sm-6" align="center">
-				<i class="fa fa-github fa-3x fa-ruby"></i>
+			<div class="col-md-4 col-xs-4 col-sm-4" align="center">
+				<i class="fa fa-github fa-5x fa-ruby"></i>
 				<p>آموزش گیت و گیت هاب، نشر و گسترش اپلیکیشن Rails</p>
 			</div>
 			
-			<div class="col-md-4 col-xs-6 col-sm-6" align="center">
-				<i class="fa fa-html5 fa-3x fa-ruby"></i>
+			<div class="col-md-4 col-xs-4 col-sm-4" align="center">
+				<i class="fa fa-html5 fa-5x fa-ruby"></i>
 				<p>آموزش HTML، CSS، Javascript و کتابخانه های آن </p>
 			</div>
 			
-			<div class="col-md-4 col-xs-6 col-sm-6" align="center">
-				<i class="fa fa-diamond fa-3x fa-ruby"></i>
+			<div class="col-md-4 col-xs-4 col-sm-4" align="center">
+				<i class="fa fa-diamond fa-5x fa-ruby"></i>
 				<p>آموزش زبان برنامه نویسی روبی از سطح مقدماتی تا پیشرفته</p>
 			</div>
 		</div>
@@ -81,28 +104,6 @@
 		</div>
 	</div>
 </section> -->
-<section id="first">
-	<div class="container text-center">
-		<h2>ویژگی های ما</h2>
-		<div class="row">
-			<div class="col-md-4 col-xs-4 col-sm-4">
-				<span class="fa fa-play fa-4x"></span>
-				<h4>آموزش های دوره ای</h4>
-				<p>با آموزش های دوره ای ما همراه باشید. هر هفته آموزش های جدید. ویدئوها و مقالات کاربردی و به روز. آموزش های روان به همراه نکات کلیدی.</p>
-			</div>
-			<div class="col-md-4 col-xs-4 col-sm-4 divider">
-				<span class="fa fa-check-square-o fa-4x"></span>
-				<h4>تکنولوژی محور</h4>
-				<p>تکنولوژی ها و مباحث روز مربوط به توسعه وب سایت ها درخصوص Ruby on Rails را با ما دنبال کنید. </p>
-			</div>
-			<div class="col-md-4 col-xs-4 col-sm-4">
-				<span class="fa fa-link fa-4x"></span>
-				<h4>راهنما</h4>
-				<p> لینک های مفید، سورس برنامه ها، جم های کاربردی و همه آنچه که نیاز است برای توسعه وب سایت ها   در اختیار شماست.</p>
-			</div>
-		</div>
-	</div>
-</section>
 
 <!-- <section id="about">
 	<div class="container text-center">
@@ -136,7 +137,7 @@
 				nothing
 			<% else %>
 				<% models.each do |model| %>
-					<div class="col-md-4 col-xs-8 col-sm-10 col-xs-offset-2 col-sm-offset-1 col-md-offset-0" align="center">
+					<div class="col-md-4 col-xs-8 col-sm-10 col-xs-offset-2 col-sm-offset-1 col-md-offset-0 col-last" align="center">
 						<div class="well">
 							<h3>دسته: <%= model.tutorial.title %></h3>
 							<%= image_tag model.thumbnail_image, size: "360x200", class: "img-responsive" %>
@@ -148,175 +149,6 @@
 		</div>
 	</div>
 </section>
-
-<!-- <section id="subjects">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
-				<h2 class="text-center title">مباحثی که خواهید آموخت</h2>
-			</div>
-		</div>
-	<div id="html" class="tabcontent">
-		<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
-						<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
-							<h3 class="text-right">اچ تی ام ال (HTML)</h3>
-							<p class="text-right">آموزش اچ تی ام ال، ساختار وب سایت ها و وب اپلیکیشن ها، تلفیق روبی و اچ تی ام ال (Embedded Ruby)</p>
-						</div>
-						<div class="col-md-6 col-xs-10 col-sm-10">
-							<%= image_tag 'html.svg', size: "110x110", class: "img-responsive" %>
-						</div>
-					</div>
-				</div>
-			</div>
-	</div>
-
-	<div id="javascript" class="tabcontent">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
-					<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
-						<h3 class="text-right">جاوا اسکریپت (Javascript)</h3>
-						<p class="text-right">آموزش برنامه نویسی جاوا اسکریپت و استفاده آن در طراحی وب اپلیکیشن ها با روبی آن ریلز</p>
-					</div>
-					<div class="col-md-6 col-xs-10 col-sm-10">
-						<%= image_tag 'javascript.svg', size: "120x120", class: "img-responsive" %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="swift" class="tabcontent">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
-					<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
-						<h3 class="text-right">سوئیفت (Swift)</h3>
-						<p class="text-right">زبان برنامه نویسی سوئیفت و قابلیت های آن، عبارات شرطی و شی گرایی و همچنین مباحث مهم دیگر...   </p>
-					</div>
-					<div class="col-md-6 col-xs-10 col-sm-10">
-						<%= image_tag 'swift.svg', size: "120x120", class: "img-responsive" %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="ios" class="tabcontent">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
-					<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
-						<h3 class="text-right">آی او اس (iOS)</h3>
-						<p class="text-right">آموزش برنامه نویسی iOS، کار با گوگل مپس، فایر بیس، Login، Signup، Sketch و UI Design</p>
-					</div>
-					<div class="col-md-6 col-xs-10 col-sm-10">
-						<%= image_tag 'ios.svg', size: "120x120", class: "img-responsive" %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="ruby-on-rails" class="tabcontent">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
-					<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
-						<h3 class="text-right">روبی آن ریلز (Ruby on Rails)</h3>
-						<p class="text-right">فریمورک جدید ریلز، آموزش زبان برنامه نویسی روبی، کلاس ها و کتابخانه های ریلز (Ruby on Rails)</p>
-					</div>
-					<div class="col-md-6 col-xs-10 col-sm-10">
-						<%= image_tag 'rubyonrails.svg', size: "105x105", class: "img-responsive" %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="css" class="tabcontent">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
-					<div class="col-md-6 col-xs-10 col-sm-10 pull-right">
-						<h3 class="text-right">سی اس اس (CSS)</h3>
-						<p class="text-right">آموزش سی اس اس و سس (sass)، ایجاد طرح های سی اس اس، انیمیشن ها و مباحث دیگر</p>
-					</div>
-					<div class="col-md-6 col-xs-10 col-sm-10">
-						<%= image_tag 'css.svg', size: "110x110", class: "img-responsive" %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<button class="tablink" onclick="openLesson('css', this, '#E3E4FF', 'rgb(84, 90, 210)')">سی اس اس</button>
-	<button class="tablink" onclick="openLesson('html', this, '#E3E4FF', 'rgb(84, 90, 210)')">اچ تی ام ال </button>
-	<button class="tablink" onclick="openLesson('swift', this, '#E3E4FF', 'rgb(84, 90, 210)')">سوئیفت</button>
-	<button class="tablink" onclick="openLesson('ios', this, '#E3E4FF', 'rgb(84, 90, 210)')">آی او اس</button>
-	<button class="tablink" onclick="openLesson('ruby-on-rails', this, '#E3E4FF', 'rgb(84, 90, 210)')">روبی آن ریلز</button>
-	<button class="tablink" onclick="openLesson('javascript', this, '#E3E4FF', 'rgb(84, 90, 210)')" id="defaultOpen">جاوا اسکریپت</button>
-	</div>
-</section> -->
-
-
-
-<!-- <section id="questions">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-7 col-xs-12 col-sm-12 pull-right">
-				<h2 class="text-right"><i class="fa fa-question-circle-o"></i> سوالات متداول</h2>
-				<button class="accordion">آیا همه مباحث مربوط به توسعه وب سایت و وب اپلیکیشن در سایت شما پوشش داده می شود؟</button>
-				<div class="custom-panel">
-					<p>بله، شما برای توسعه وب سایت ها و وب اپلیکیشن ها نیاز به آموختن تکنولوژی ها و زبان های برنامه نویسی مختلفی از قبیل: HTML، CSS، Javascrip، jQuery، AJAX و همچنین تکنولوژی های جدیدتر مانند Vue.js دارید. استفاده از این تکنولوژی ها در کنار زبان برنامه نویسی Ruby و فریمورک Rails شما را در ساختن وب سایت های پیشرفته کمک خواهد کرد. ما در شتابیاد شما را گام به گام و به صورت تخصصی کمک خواهیم کرد تا موارد عنوان شده بالا را بیاموزید و به توسعه وب سایت های حرفه ای بپردازید.  </p>
-				</div>
-
-				<button class="accordion">شما چه مباحثی از برنامه نویسی روبی آن ریلز (Ruby on Rails) را پوشش می دهید؟ </button>
-				<div class="custom-panel">
-					<p>ما انواع جم های (Gems) کاربردی را به شما معرفی می کنیم و نحوه استفاده از آنها را به شما می آموزیم. ایجاد وب سایت هایی با امکانات تبادل کاربر، ارسال ایمیل، کار با فریمورک های تبادل مالی مانند استرایپ (Stripe)، ساخت وب سایت های ای-کامرس (e-commerce)، استفاده از AJAX، jQuery، Javascript و فریمورک های معروف دیگر در توسعه وب سایت ها در روبی آن ریلز، کار با دیتابیس، Backend و Front-End و بسیاری موارد مهم و کاربردی در توسعه وب سایت ها در شتابیاد آموزش داده خواهد شد. </p>
-				</div>
-
-				<button class="accordion"> برنامه نویسی iOS را از کجا شروع کنم؟</button>
-				<div class="custom-panel">
-					<p>همانطور که می دانید iOS و فریمورک های مربوط به توسعه اپلیکیشن های iOS بسیار فرار هستند. بهتر است برای شروع برنامه نویسی iOS زبان برنامه نویسی جدید اپل یعنی سوئیفت (Swift) را بیاموزید و بعد از آشنایی با این زبان شروع به یادگیری توسعه اپلیکیشن های iOS بنمایید. ما در شتابیاد به صورت گام به گام شما را با سوئیفت آشنا خواهیم کرد و با توسعه اپلیکیشن های مختلف برنامه نویسی iOS را خواهید آموخت. همچنین در شتابیاد ما شما را با مفاهیم طراحی رابط کاربری (UI & UX Design) آشنا خواهیم کرد و با ارائه مثال ها و آموزش تکنیک های مختلف شما  را در توسعه هرچه بهتر و حرفه ای تر اپلیکیشن های iOS یاری خواهیم داد.</p>
-				</div>
-
-				<button class="accordion">چه مباحثی از برنامه نویسی iOS را پوشش می دهید؟</button>
-				<div class="custom-panel">
-					<p>در شتابیاد، مباحث کار با فریمورک های گوگل مانند گوگل مپس (Google Maps)، ارتباط با سیستم های سمت سرور و دیتابیس مانند فایر بیس (Firebase) و پارس (Parse)، ساخت اپلیکیشن های با کاربرد ثبت نام و ورود کاربر، سیستم مدیریت فریمورک Cocoapods، کار با XCode 8، کار با فریمورک های فیسبوک و اینستاگرام، طراحی رابط کاربری با نرمم افزار Sketch و بسیاری از مباحث مرتبط با توسعه اپلیکیشن های iOS</p>
-				</div>
-			</div>
-			<div class="col-md-5 col-xs-11 col-sm-11">
-				<div class="slideshow-container">
-					<div class="mySlides fade">
-						<%= image_tag 'ruby-n.svg', size: "150x150" %>
-					</div>
-
-					<div class="mySlides fade">
-						<%= image_tag 'css-n.svg', size: "150x150" %>
-					</div>
-
-					<div class="mySlides fade">
-						<%= image_tag 'html-n.svg', size: "150x150" %>
-					</div>
-
-					<div class="mySlides fade">
-						<%= image_tag 'ios-n.svg', size: "150x150" %>
-					</div>
-
-					<div class="mySlides fade">
-						<%= image_tag 'js-n.svg', size: "150x150" %>
-					</div>
-
-					<div class="mySlides fade">
-						<%= image_tag 'swift-n.svg', size: "150x150" %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
 
 <script>
 	function openLesson(skillName,elmnt,color,fontColor) {

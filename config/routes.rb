@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
-  
+  root 'welcome#index'
   resources :courses, only: [:show, :index]
-	devise_for :users
+	devise_for :users, controllers: { registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords", confirmations: "users/confirmations" }
   devise_for :admins, path: 'admin', skip: [:registrations]
 	mount RailsAdmin::Engine => '/user_admin', as: 'rails_admin'
 	mount Commontator::Engine => '/commontator'
-  
-	root 'welcome#index'
   
   resources :blogs, path: "blog", only: [:show, :index]
   

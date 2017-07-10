@@ -39,8 +39,8 @@ html {
 }
 
 body {
-	padding-bottom: 250px;
-	position: relative;
+	padding: 0px !important;
+//	position: relative;
 	font-family: BYekan, sans-serif;
 	min-height: 100%;
 	margin: 0;
@@ -50,17 +50,24 @@ p {
 	font-size: 16px;
 }
 
+form#new_user.new_user {
+	input {
+		padding: 28px 10px;
+		font-size: 16px;
+	}
+}
+
 .btn {
-	border-radius: 0;
+	border-radius: 3px;
 }
 
 button.btn-block.btn-success {
-	background-color: #178086;
-	border-color: #178086;
-	padding: 10px 0;
+	background-color: #0cb863;
+	border-color: #0cb863;
+	padding: 15px 0;
 	&:hover {
-		background-color: #115a5e;
-		border-color: #115a5e;
+		background-color: #128b4b;
+		border-color: #128b4b;
 	}
 }
 
@@ -90,6 +97,7 @@ button.btn-block.btn-success {
 	border: none;
 	border-radius: 0;	
 	//box-shadow: 0px 5px #338D95;
+	text-align: center;
 }
 
 //.gritter-close {
@@ -107,34 +115,6 @@ button.btn-block.btn-success {
 	//azimuthbox-shadow: 0 5px #8E834D;
 }
 
-//.gritter-title {
-//	font-family: BYekan, sans-serif;
-//	font-size: 18px;
-//	color: #333;
-//	text-shadow: none;
-//}
-//
-//.gritter-item p {
-//	font-family: BYekan, sans-serif;
-//	color: #333;
-//}
-//
-//.gritter-item.gritter-css3 {
-//	border: 1px solid #43AEF8;
-//  background: #fff;
-//  -webkit-border-radius: 0px;
-//  -moz-border-radius: 0px;
-//  border-radius: 0px;
-//  padding-top: 12px;
-//  padding-bottom: 16px;
-//	&:hover {
-//		border: 1px solid #43AEF8;
-//	  //padding-top: 12px;
-//	  //padding-bottom: 16px;
-//		padding: 12px 11px 16px 9px;
-//	}
-//}
-
 .highlight {
 	pre {
 		direction: ltr;
@@ -145,46 +125,48 @@ button.btn-block.btn-success {
 	}
 }
 
+input[type="text"] {
+	padding: 10px 0px;
+}
+
 //LOCALS
 
 //NAVBAR
 .navbar {
-	font-size: 14px;
-	padding: 10px 0;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+	color: #7F7F7F;
+	font-size: 16px;
+	padding: 20px 0;
 	margin-bottom: 0;
 	border-radius: 0;
 	border: none;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#43aef8+0,15377e+100 */
-	//background: rgb(67,174,248) !important; /* Old browsers */
-//	background: -moz-linear-gradient(left, rgba(67,174,248,1) 0%, rgba(21,55,126,1) 100%) !important; /* FF3.6-15 */
-//	background: -webkit-linear-gradient(left, rgba(67,174,248,1) 0%,rgba(21,55,126,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
-//	background: linear-gradient(to right, rgba(67,174,248,1) 0%,rgba(21,55,126,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43aef8', endColorstr='#15377e',GradientType=1 ) !important; /* IE6-9 */
-	background-color: #464BB0;
+	background-color: #fff;
 	.navbar-left {
 		li > a {
-			color: #FDFFFC;
+			color: #5b5b5b;
 			transition: color 0.3s;
 			&:hover {
 				transition: color 0.3s;
-				color: #dddfdf;
+				color: #3d3d3d;
 			}
 		}
 	}
+	a.btn.btn-default {
+		padding: 13px 25px;
+		margin-right: 40px;
+	}
 	.dropdown {
-		background-color: #464BB0;
-		//transition: background-color 0.3s;
-		//box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+		background-color: #fff;
 		border-radius: 0px;
-		border-color: #464BB0;
+		border-color: #0cb863;
 		&:hover {
 			//transition: background-color 0.3s;
 //			background-color: #64B9FA;
 		}
 		.dropdown-menu {
-			background-color: #464BB0;
+			background-color: #fff;
 			li > a {
-				color: #FDFFFC;
+				color: #7f7f7f;
 				text-align: right;
 				&:hover {
 					color: #d1d1d1;
@@ -208,27 +190,27 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 }
 
 ul.nav.navbar-nav .dropdown.open .dropdown-toggle {
-	background-color: #464BB0;
+	background-color: #fff;
 }
 
 ul.nav.navbar-nav li.dropdown.open ul.dropdown-menu li a:hover {
-	background-color: #31357A;
-	color: #fff;
+	background-color: #fff;
+	color: #3d3d3d;
 }
 
 ul.nav.navbar-nav li.dropdown.open ul.dropdown-menu li a:focus {
-	background-color: #464BB0;
-	color: #fff;
+	background-color: #fff;
+	color: #7f7f7f;
 }
 
 ul.nav.navbar-nav li.dropdown.open ul.dropdown-menu li.divider {
-	background-color: #9EA7AC;
+	background-color: #fff;
 }
 
 ul.nav.navbar-nav .dropdown .dropdown-toggle {
-	color: #FDFFFC;
+	color: #7f7f7f;
 	&:hover {
-		color: #fff;
+		color: #3d3d3d;
 	}
 }
 
@@ -248,14 +230,14 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 }
 
 .navbar-header > .navbar-brand {
-	color: #FDFFFC;
+	color: #5b5b5b;
 	padding-top: 18px;
 	padding-right: 10px;
 	font-size: 30px;
 	transition: color 0.3s;
 	&:hover {
 		transition: color 0.3s;
-		color: #dddfdf;
+		color: #3d3d3d;
 	}
 }
 
@@ -277,25 +259,26 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 //HOME PAGE 
 .jumbotron {
+	//position: relative;
+//	z-index: 1001;
 	padding: 100px 0 120px 0;
 	margin-bottom: 0;
-	///* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#43aef8+0,15377e+100 */
-//	background: rgb(67,174,248); /* Old browsers */
-//	background: -moz-linear-gradient(left, rgba(67,174,248,1) 0%, rgba(21,55,126,1) 100%); /* FF3.6-15 */
-//	background: -webkit-linear-gradient(left, rgba(67,174,248,1) 0%,rgba(21,55,126,1) 100%); /* Chrome10-25,Safari5.1-6 */
-//	background: linear-gradient(to right, rgba(67,174,248,1) 0%,rgba(21,55,126,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43aef8', endColorstr='#15377e',GradientType=1 ); /* IE6-9 */
+	background: #56CCF2;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	color: #fff;
-	background-color: #464BB0;
+	//background-color: #464BB0;
+	img {
+		box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+		width: 800px;
+	}
 	h1 {
-		font-size: 55px;
-		padding: 10px 0 0 0;
+		font-size: 46px;
 		margin-bottom: 40px;
-		line-height: 70px;
 		span {
-			font-size: 100px;
-			font-family: 'Roboto Condensed', sans-serif;
+			font-size: 80px;
 			font-weight: bold;
+			line-height: 100px;
 		}
 		span.and {
 			font-size: 30px;
@@ -304,8 +287,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	}
 	h2 {
 		margin: 0;
-		text-align: center;
-		font-size: 25px;
+		font-size: 18px;
 	}
 	p.first {
 		color: #f1f1f1;
@@ -319,20 +301,18 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		line-height: 30px;
 	}
 	a {
-			color: #464BB0;
+			color: #56CCF2;
 			font-size: 18px;
 			background-color: #fff;
-			border-color: #fff;
+			border: 2px solid #fff;
 			margin-top: 14px;
-			padding: 10px 30px;
-			box-shadow: 0 1px 5px rgba(0,0,0,0.15);
-			//transition: color 0.3s ease-in-out;
+			padding: 14px 30px;
+			border-radius: 5px;
 			transition: all 0.3s ease-in-out;
 			&:hover {
-				color: #545AD8;
-				//transition: color 0.3s ease-in-out;
+				color: #56CCF2;
 				transition: all 0.3s ease-in-out;
-				box-shadow: 0, 0, 15px, rgba(0, 0, 0, 0.3);
+				background-color: #E2F2ED;
 			}
 			&:focus {
 				background-color: darken(#fff, 10%);
@@ -409,23 +389,24 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 //FIRST
 #first {
 	padding: 70px 0;
-	background-color: #E3E4FF;
+	background-color: #fff;
+	border-bottom: solid 1px #f1f1f1;
 	h2 {
-		color: #2b31ad;
+		color: #5b5b5b;
 		margin: 0;
 	}
 	.row {
 		margin-top: 80px;
 		.fa {
-			color: #464BB0;
+			color: #fff;
 		}
 	}
 	h4 {
 		margin-top: 20px;
-		color: #2b31ad;
+		color: #5b5b5b;
 	}
 	p {
-		color: rgb(84, 90, 210);
+		color: #8e8e93;
 		margin-top: 20px;
 		line-height: 30px;
 	}
@@ -472,22 +453,30 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 }
 
 #last-lessons {
-	padding: 0px 0 50px 0;
-	background-color: #fff;
+	padding: 0px 0 200px 0;
+	//background-color: #fff;
+	background: #C9D6FF;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #fbfbfb, #FFFFFF);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #fbfbfb, #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		
+	.col-last {
+		padding: 0;
+		margin: 0;
+	}
 	.row > .col-md-4 > .well {
 		border-radius: 5px;
 		padding: 5px;
 		position: relative;
 		border-radius: 0;
 		background-color: #fff;
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-		transition: box-shadow 0.3s ease-in-out;
+		//box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+//		transition: box-shadow 0.3s ease-in-out;
 		&:hover {
 			transition: box-shadow 0.3s ease-in-out;
-			box-shadow: 0 0px 15px rgba(0,0,0,0.3);
+			box-shadow: 0 0px 4px rgba(0,0,0,0.3);
 		}
 		&:after {
-			box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+			box-shadow: 0 5px 4px rgba(0,0,0,0.3);
 			opacity: 0;
 			transition: opacity 0.3s ease-in-out;
 		}
@@ -499,8 +488,8 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		margin-top: 80px;
 	}
 	h2 {
-		color: #2b31ad;
-		//padding: 20px 0px 10px 0;
+		color: #5b5b5b;
+		margin: 0;
 	}
 	h3 {
 		width: 100%;
@@ -531,11 +520,30 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 }
 
 //LOGIN AND SIGNUP PAGES
-#form-devise {
-	padding: 80px 0;
-	background-color: #FDFFFC;
+#form-devise-signin {
+	min-height: 100%;
+	padding: 80px 0 220px 0;
+}
+#form-devise-signup {
+	min-height: 100%;
+	padding: 80px 0 135px 0;
+}
+#form-devise-password {
+	min-height: 100%;
+	padding: 80px 0 340px 0;
+}
+#form-devise-confirmation {
+	min-height: 100%;
+	padding: 80px 0 340px 0;
+}
+.devise-form {
+	background: #56CCF2;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera */
 	.panel {
-		box-shadow: 0 0 30px #d1d1d1;
+		//box-shadow: 0 0 30px #d1d1d1;
+		border: none;
+		border-radius: 0;
 		.panel-heading {
 			text-align: center;
 			background-color: #fff;
@@ -546,12 +554,14 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	.panel-footer {
 		background-color: #fff;
 	}
-
+	.panel-body {
+		padding: 20px 40px;
+	}
 	.form-control {
 		border: 1px solid #d1d1d1;
-		border-radius: 0;
+		border-radius: 3px;
 		outline: none;
-		padding: 0.7em;
+		padding: 0.9em;
 		height: 40px;
 		&:focus {
 			border: solid 1px #76C4F9;
@@ -562,7 +572,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 //TUTORIAL INDEX
 #tutorial-index {
-	padding: 40px 0;
+	padding: 40px 0 300px 0;
 	.well {
 		border: none;
 		background-color: #FDFFFC;
@@ -596,9 +606,15 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 //LESSON INDEX
 #lessons-index {
+	padding-bottom: 100px;
 	.lessons-index-hero {
-		padding: 50px 0;
-		background: #011627;
+		padding: 100px 0;
+		background: #0575E6;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to top, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		img {
+			border: none;
+		}
 		h1 {
 			color: #FDFFFC;
 			margin-right: 30px;
@@ -708,7 +724,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 //LESSON SHOW
 #lesson-show {
-	padding-bottom: 40px;
+	padding-bottom: 200px;
 	h1 {
 		padding: 0;
 		margin: 0;
@@ -963,9 +979,17 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 }
 
 //EXPPLORE
+.fa.fa-ruby {
+	background: #56CCF2;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #2F80ED, #59D5FE);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #2F80ED, #59D5FE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 #explore {
 	padding: 50px 0;
 	background-color: #fff;
+	border-bottom: 1px solid #f1f1f1;
 	.col-md-2 {
 		padding-top: 20px;
 	}
@@ -976,38 +1000,21 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		}
 	}
 	.fa {
-		color: #464BB0;
-		border: 3px solid #464BB0;
-	}
-	.fa.fa-ruby {
-		padding: 26px 0 0px 0px;
-		border-radius: 200px;
-		width: 100px;
-		height: 100px;
-		border: solid 3px #464BB0;
-		background-color: #e3e4ff;
-	}
-	.fa.fa-apple {
-		padding: 42px 0 30px 0;
-		border-radius: 200px;
-		width: 150px;
-		height: 150px;
-		border: solid 3px #464BB0;
-		background-color: #e3e4ff;
+		color: #fff;
 	}
 	h2 {
-		color: #2b31ad;
+		color: #5b5b5b;
 		margin-top: 10px;
 	}
 	h3 {
-		color: rgb(84, 90, 210);
+		color: #8e8e93;
 		font-size: 20px;
 	}
 	p {
 		line-height: 30px;
-		padding: 0px 30px;
-		color: rgb(84, 90, 210);
-		margin-top: 10px;
+		padding: 0px 50px;
+		color: #8e8e93;
+		margin-top: 30px;
 	}
 	.row {
 		margin-top: 80px;
@@ -1026,9 +1033,11 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 }
 
 #questions {
-	background-color: #f5f5f5;
+	background-color: #fff;
+	border-bottom: 1px solid #f1f1f1;
 	padding: 20px 0 80px 0;
 	h2 {
+		color: #5b5b5b;
 		padding-bottom: 20px;
 	}
 	button.accordion {
@@ -1108,9 +1117,9 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 //FOOTER
 footer {
-	position: absolute;
+	//position: absolute;
 	padding: 30px 0 40px 0;
-	background-color: #2e327b;
+	background-color: #2E3234;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -1212,19 +1221,24 @@ footer {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-	body {
-		padding-bottom: 600px;
-	}
 	.jumbotron {
 		padding-top: 60px;
 		img {
 			display: none;
 		}
 		h1 {
-			font-size: 30px;
+			text-align: right;
+			font-size: 25px;
 		}
 		h2 {
-			font-size: 20px;
+			text-align: right;
+			font-size: 18px;
+		}
+		a {
+		}
+		h1 > span {
+			font-size: 70px;
+			text-align: right;
 		}
 	}
 	div.hero-socials {
@@ -1258,6 +1272,9 @@ footer {
 			display: none;
 		}
 	}
+	#last-lessons {
+		padding-bottom: 200px;
+	}
 	#tutorial-index {
 		img {
 			vertical-align: middle;
@@ -1278,6 +1295,7 @@ footer {
 		}
 	}
 	#lesson-show {
+		padding-bottom: 200px;
 		h1 {
 			font-size: 25px;
 		}
@@ -1300,18 +1318,13 @@ footer {
 		padding: 0 20px 40px 20px;
 	}
 	.navbar {
-		position: relative;
 		img {
 			display: none;
 		}
-		.btn {
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			.btn:before {
-				position: absolute;
-				top: 10px;
-				left: 10px;
+		
+		.navbar-left {
+			li {
+				//margin-top: 30px;
 			}
 		}
 	}
@@ -1330,17 +1343,7 @@ footer {
 		}
 	}
 	.navbar {
-		position: relative;
-		.btn {
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			.btn:before {
-				position: absolute;
-				top: 10px;
-				left: 10px;
-			}
-		}
+		
 	}
 }
 
