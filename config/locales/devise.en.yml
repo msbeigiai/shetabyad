@@ -46,7 +46,7 @@ en:
       updated: "اکانت شما با موفقیت به روز رسانی شد."
     sessions:
       signed_in: "خوش آمدید."
-      signed_out: "شما با موفقیت خارج شدید."
+      signed_out: "شما با موفقیت خارج شدید. خیلی ممنونیم که از آموزش های ما استفاده کردید."
       already_signed_out: "شما با موفقیت خارج شدید."
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."

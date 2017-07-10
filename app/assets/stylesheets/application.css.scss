@@ -57,6 +57,13 @@ form#new_user.new_user {
 	}
 }
 
+form#edit_user.edit_user {
+	input {
+		padding: 28px 10px;
+		font-size: 16px;
+	}
+}
+
 .btn {
 	border-radius: 3px;
 }
