@@ -1,13 +1,22 @@
 <div class="panel panel-default panel-list">
   <div class="panel-heading">آخرین آموزش ها</div>
     <% lessons.each do |lesson| %>
-      <div class="panel-body">
+      <div class="panel-body list-lesson-body">
         <% if lesson.tutorial.sign == "R" %>
-          <%= content_tag :h3, lesson.tutorial.title, class: "new-title" %>
+          <%= content_tag :p, lesson.tutorial.title, class: "new-title" %>
         <% elsif lesson.tutorial.sign == "I" %>
-          <%= content_tag :h3, lesson.tutorial.title, class: "new-title" %>
+          <%= content_tag :p, lesson.tutorial.title, class: "new-title" %>
         <% end %>
         <%= link_to lesson.title, lesson %>
+      </div>
+  <% end %>
+</div>
+<div class="panel panel-default panel-list">
+  <div class="panel-heading">دسته های آموزشی</div>
+    <% lessons.each do |lesson| %>
+      <div class="panel-body list-lesson-body">
+        <%#= content_tag :h3, lesson.tutorial.title, class: "new-title" %>
+				<p><%= link_to lesson.tutorial.title, lesson.tutorial %></p>
       </div>
   <% end %>
 </div>

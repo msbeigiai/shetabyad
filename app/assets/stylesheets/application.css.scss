@@ -845,13 +845,17 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		}
 	}
 	.col-md-2 {
-		padding-right: 0;
+		padding: 0;
 	}
 	.panel-list {
 		margin-top: 20px;
 		.panel-heading {
 			background-color: #64B9FA;
 			color: #FDFFFC;
+			padding: 20px 8px;
+		}
+		.list-lesson-body {
+			background-color: #cce9ff;
 		}
 		.panel-body {
 			margin: 0;
@@ -860,15 +864,19 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 			transition: background-color 0.2s ease-in-out;
 			&:hover {
 				transition: background-color 0.2s ease-in-out;
-				background-color: #f2f2f2;
+				background-color: #9ad3fe;
+				a {
+					color: #777878;
+				}
 			}
 			.new-title {
-				font-size: 12px;
+				color: #6a6a6a;
+				font-size: 14px;
 				padding: 5px;
 				margin: 0;
 			}
 			a {
-				color: #333;
+				color: #777878;
 				text-align: right;
 				padding-right: 15px;
 				&:hover {
