@@ -1,7 +1,7 @@
 <footer>
 	<div class="container">
 		<div class="row first">
-			<div class="col-md-6 col-xs-12 col-sm-12 pull-right">
+			<div class="col-md-4 col-xs-12 col-sm-12 pull-right">
 				<%= image_tag 'logo.svg', size: "100x100", class: "logo-img" %>
 				<%= link_to 'شتابیاد', root_path, class: "footer-brand" %>
 				<!-- <p class="footer-brand">شتابیاد</p> -->
@@ -14,18 +14,23 @@
 					<%= link_to (image_tag 'aparat.png', size: "20x20"), "https://www.aparat.com/shetabyad" %>
 				</div>
 			</div>
-			<div class="col-md-6 col-xs-8 col-sm-8 pull-right">
-				<div class="col-md-4 col-xs-12 col-sm-12">
+			<div class="col-md-8 col-xs-8 col-sm-8 pull-right">
+				<div class="col-md-3 col-xs-12 col-sm-12">
 					<p class="title">دوره های شتابیاد</p>
 					<p><a href="http://courses-shetabyad.com">وبسایت دوره های شتابیاد</a> پایگاهی برای خرید دوره های تخصصی و کامل آموزش های روبی آن ریلز و آی او اس ما می باشد.<p>
 						<a class="btn btn-success" href="http://courses-shetabyad.com">ورود به دوره های شتابیاد</a>
 				</div>
-				<div class="col-md-4 col-xs-12 col-sm-12">
+				<div class="col-md-3 col-xs-12 col-sm-12">
+					<p class="title">انجمن شتابیاد</p>
+					<p><a href="http://forum.shetabyad.com">انجمن شتابیاد</a> محلی برای بحث و تبادل نظر و طرح سوالات بین کاربران شتابیاد و همه علاقه مندان روبی آن ریلز می باشد. <p>
+						<a class="btn btn-success" href="http://courses-shetabyad.com">ورود به انجمن شتابیاد</a>
+				</div>
+				<div class="col-md-3 col-xs-12 col-sm-12">
 					<p class="title">بیاموزید</p>
 					<p><%= link_to 'روبی آن ریلز', TutorialType.first if TutorialType.any? %></p>
-					<p><%= link_to 'آی او اس', TutorialType.last if TutorialType.any? %></p>
+					<p><%= link_to 'طراحی وب', TutorialType.last if TutorialType.any? %></p>
 				</div>
-				<div class="col-md-4 col-xs-12 col-sm-12">
+				<div class="col-md-3 col-xs-12 col-sm-12">
 					<p class="title">درباره</p>
 					<p><%= link_to 'وبلاگ', blogs_path %></p>
 					<p><%= link_to 'درباره ما', about_us_path %></p>

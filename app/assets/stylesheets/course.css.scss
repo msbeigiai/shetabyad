@@ -61,7 +61,9 @@ $navbar-default-bg: #DB504A;
 					padding: 15px 0;
 				}
 				.btn.btn-success {
-					background-color: #15377E;
+					background: #56CCF2;  /* fallback for old browsers */
+					background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 				}
 				.btn.btn-success:hover {
 					background-color: darken(#15377E, 5%);
@@ -91,8 +93,10 @@ $navbar-default-bg: #DB504A;
 	}
 	.well {
 		border: none;
-		border-radius: 0;
-		background-color: #15377E;
+		border-radius: 5px;
+		background: #56CCF2;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		color: #fff;
 		h3 {
 			margin-top: 0px;
@@ -103,16 +107,19 @@ $navbar-default-bg: #DB504A;
 		}
 		.img-signup {
 			background-color: #fff;
+			border-radius: 3px;
 			padding: 45px 0;
 			a {
 				width: 100px;
 				padding: 10px 45px;
 				font-size: 18px;
-				background-color: #15377E;
+				background: #56CCF2;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 				top: 0;
 				bottom: 0;
 				color: #fff;
-				border: solid 1px #15377E;
+				//border: solid 1px #15377E;
 				&:hover {
 					text-decoration: none;
 					background-color: darken(#15377E, 5%);
@@ -169,7 +176,9 @@ $navbar-default-bg: #DB504A;
 				padding: 15px 10px;
 			}
 			.btn.btn-success {
-				background-color: #15377E;
+				background: #56CCF2;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 			}
 			.btn.btn-success:hover {
 				background-color: darken(#15377E, 5%);
