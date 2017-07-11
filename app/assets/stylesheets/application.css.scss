@@ -40,7 +40,7 @@ html {
 
 body {
 	padding: 0px !important;
-//	position: relative;
+//	pointersition: relative;
 	font-family: BYekan, sans-serif;
 	min-height: 100%;
 	margin: 0;
@@ -107,10 +107,6 @@ button.btn-block.btn-success {
 	text-align: center;
 }
 
-//.gritter-close {
-//	display: block;
-//}
-
 .alert-info {
 	background-color: #5191f5;
 	color: #fff;
@@ -130,6 +126,11 @@ button.btn-block.btn-success {
 		font-size: 15px;
 		font-family: Menlo, Monaco, Consolas, "Courier New", monospace;	
 	}
+}
+
+code {
+	color: #7e8288;
+	direction: ltr !important;
 }
 
 input[type="text"] {
