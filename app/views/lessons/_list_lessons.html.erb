@@ -11,12 +11,3 @@
       </div>
   <% end %>
 </div>
-<div class="panel panel-default panel-list">
-  <div class="panel-heading">دسته های آموزشی</div>
-    <% lessons.each do |lesson| %>
-      <div class="panel-body list-lesson-body">
-        <%#= content_tag :h3, lesson.tutorial.title, class: "new-title" %>
-				<p><%= link_to lesson.tutorial.title, lesson.tutorial %></p>
-      </div>
-  <% end %>
-</div>
