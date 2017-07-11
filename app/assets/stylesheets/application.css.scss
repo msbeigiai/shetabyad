@@ -381,16 +381,20 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 //TOOLS
 #tools {
-	padding: 50px 0 0 0;
+	padding: 50px 0 80px 0;
 	background-color: #fff;
-	h3 {
-		line-height: 40px;
+	h2 {
+		color: #5b5b5b;
+		margin-top: 10px;
 	}
 	p {
-		color: #727272;
-		font-size: 16px;
-		line-height: 32px;
-		margin-bottom: 30px;
+		line-height: 30px;
+		padding: 0px 50px;
+		color: #8e8e93;
+		margin-top: 20px;
+	}
+	.row-pics {
+		padding-top: 40px;
 	}
 }
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="96px" viewBox="0 0 90 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>angular-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#78D7FD" offset="0%"></stop>
+            <stop stop-color="#43AEF8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="angular-logo" fill-rule="nonzero">
+            <polygon id="Shape" fill="url(#linearGradient-1)" points="0 16.0714286 44.5054945 0.247252747 90 15.8241758 82.5824176 74.1758242 44.5054945 95.1923077 6.92307692 74.4230769"></polygon>
+            <polygon id="Shape" fill="url(#linearGradient-1)" points="0 16.0714286 44.5054945 0.247252747 44.5054945 95.1923077 6.92307692 74.4230769"></polygon>
+            <polygon id="Shape" fill="#43AEF8" points="44.5054945 0.247252747 90 15.8241758 82.5824176 74.1758242 44.5054945 95.1923077"></polygon>
+            <polygon id="Shape" fill="#FFFFFF" points="44.5054945 10.8791209 73.4340659 72.6923077 63.543956 72.6923077 57.3626374 58.5989011 44.5054945 58.5989011 44.5054945 50.1923077 53.9010989 50.1923077 44.5054945 30.7582418 36.5934066 50.1923077 44.5054945 50.1923077 44.5054945 58.5989011 32.7362637 58.5989011 27.1978022 72.6923077 16.5659341 72.6923077"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="78px" viewBox="0 0 90 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>vuejs</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#78D7FD" offset="0%"></stop>
+            <stop stop-color="#43AEF8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="vuejs" fill-rule="nonzero">
+            <polygon id="Shape" fill="url(#linearGradient-1)" points="55.3733469 0.0732451679 44.9908444 18.0549339 34.6083418 0.0732451679 0.0457782299 0.0732451679 44.9908444 77.9328586 89.9359105 0.0732451679"></polygon>
+            <polygon id="Shape" fill="#43AEF8" points="55.3733469 0.0732451679 44.9908444 18.0549339 34.6083418 0.0732451679 18.0183113 0.0732451679 44.9908444 46.785351 71.9542218 0.0732451679"></polygon>
+        </g>
+    </g>
+</svg>
