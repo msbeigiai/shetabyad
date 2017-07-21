@@ -269,22 +269,24 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 .jumbotron {
 	//position: relative;
 //	z-index: 1001;
-	padding: 100px 0 120px 0;
+	padding: 100px 0 550px 0;
 	margin-bottom: 0;
 	background: #56CCF2;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	color: #fff;
+	position: relative;
 	//background-color: #464BB0;
 	img {
-		box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-		width: 800px;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+		position: absolute;
+		z-index: 100;
 	}
 	h1 {
 		font-size: 46px;
 		margin-bottom: 40px;
 		span {
-			font-size: 80px;
+			font-size: 90px;
 			font-weight: bold;
 			line-height: 100px;
 		}
@@ -295,7 +297,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	}
 	h2 {
 		margin: 0;
-		font-size: 18px;
+		font-size: 25px;
 	}
 	p.first {
 		color: #f1f1f1;
@@ -303,6 +305,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		font-size: 12px;
 	}
 	p {
+		color: #f7faff;
 		margin-top: 20px;
 		text-align: center;
 		font-size: 16px;
@@ -359,10 +362,12 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 .hero-socials {
 	background-color: #363A89;
-	padding: 16px 0;
-	.fa {
-		color: #fff;
-		position: relative;
+	padding: 30px 0;
+	color: #fff;
+	z-index: 1000;
+	position: relative;
+	p {
+		
 	}
 	a {
 		position: absolute;
@@ -403,6 +408,8 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	padding: 70px 0;
 	background-color: #fff;
 	border-bottom: solid 1px #f1f1f1;
+	position: relative;
+	z-index: 1000;
 	h2 {
 		color: #5b5b5b;
 		margin: 0;
@@ -1019,7 +1026,8 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	background: -webkit-linear-gradient(to top, #2F80ED, #59D5FE);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to top, #2F80ED, #59D5FE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	-webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+	z-index: 1000;
 }
 #explore {
 	padding: 50px 0;
@@ -1168,8 +1176,9 @@ footer {
 	.title {
 		padding-bottom: 6px;
 		width: 100%;
-		font-size: 14px !important;
-		border-bottom: dotted 1px #cecece;
+		font-size: 15px !important;
+		color: #fff;
+		//border-bottom: dotted 1px #cecece;
 	}
 	.inspect {
 		text-align: center;
@@ -1258,22 +1267,23 @@ footer {
 @media only screen and (max-width : 992px) {
 	.jumbotron {
 		padding-top: 60px;
+		padding-bottom: 40px;
 		img {
 			display: none;
 		}
 		h1 {
-			text-align: right;
+			text-align: center;
 			font-size: 25px;
 		}
 		h2 {
-			text-align: right;
+			text-align: center;
 			font-size: 18px;
 		}
 		a {
 		}
 		h1 > span {
 			font-size: 70px;
-			text-align: right;
+			text-align: center;
 		}
 	}
 	div.hero-socials {
