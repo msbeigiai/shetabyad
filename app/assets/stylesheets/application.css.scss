@@ -473,40 +473,36 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 #last-lessons {
 	padding: 0px 0 200px 0;
-	//background-color: #fff;
-	//background: #C9D6FF;  /* fallback for old browsers */
-//	background: -webkit-linear-gradient(to bottom, #fbfbfb, #FFFFFF);  /* Chrome 10-25, Safari 5.1-6 */
-//	background: linear-gradient(to bottom, #fbfbfb, #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 	background-image: image-url('nice.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	//background-attachment: fixed;
 		
 	.col-last {
-		padding: 5px;
+		//padding: 5px;
 		margin: 0;
 	}
 	.row > .col-md-4 > .well {
-		border-radius: 5px;
-		padding: 5px;
+    //padding-top: 80px;
 		position: relative;
-		border-radius: 0;
 		background-color: #fff;
-		box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-		transition: box-shadow 0.3s ease-in-out;
+		border: none;
+		border-radius: 0;
 		&:hover {
 			transition: box-shadow 0.3s ease-in-out;
-			box-shadow: 4px 4px 15px rgba(0,0,0,0.8);
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
 		}
 		&:after {
-			box-shadow: 4px 8px 15px rgba(0,0,0,0.8);
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
 			opacity: 0;
 			transition: opacity 0.3s ease-in-out;
 		}
 		&:hover::after {
 			opacity: 1;
 		}
+	}
+	.row.row-lesson {
+		//padding: 40px 0;
 	}
 	.row {
 		margin-top: 80px;
@@ -522,33 +518,24 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		padding: 0 20px;
 	}
 	img {
-		display: block;
-		transition: opacity 0.1s;
+  
 	}
 	a {
-		width: 100%;
 		position: absolute;
-		text-align: center;
-		font-size: 20px;
-		padding: 20px 5px;
-		bottom: 0px;
-		right: 0px;
-		color: #FDFFFC;
-		background-color: rgba(0, 0, 0, 0.2);
-		transition: all 0.3s;
+		width: 100%;
+		padding: 30px 15px;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+		color: #fff;
+		font-size: 16px;
 		&:hover {
 			text-decoration: none;
-			width: 100%;
-			height: 60%;
-			bottom: 0;
-			right: 0;
-			padding: 40px 5px;
-			background-color: rgba(0, 0, 0, 0.4);
-			transition: height 0.3s;
-			img {
-				transition: opacity 0.1s;
-				opacity: 0.3;
-			}
+			color: #F0F2F2;
+		}
+		&:focus {
+			text-decoration: none;
+			color: #F0F2F2;
 		}
 	}
 }
@@ -827,13 +814,14 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		color: #FDFFFC;
 		padding: 0;
 		border-bottom: 1px solid #e6e6e6;
+		border-top: none;
 		position: relative;
 		.well {
 			color: #333;
 			border-radius: 0;
-			border-bottom-right-radius: 5px;
-			border-bottom-left-radius: 5px;
 			border: none;
+			position: relative;
+			z-index: 1000;
 		}
 		h1 {
 			position: absolute;
@@ -881,12 +869,17 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 			padding: 20px 8px;
 		}
 		.list-lesson-body {
-			background-color: #cce9ff;
+			//background-color: #cce9ff;
+		}
+		.thumbnail {
+			padding: 0;
+			margin: 0;
+			border: none;
 		}
 		.panel-body {
 			margin: 0;
 			border-top: none;
-			padding: 5px 0;
+			padding: 0px 0;
 			transition: background-color 0.2s ease-in-out;
 			&:hover {
 				transition: background-color 0.2s ease-in-out;
@@ -901,10 +894,14 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 				padding: 5px;
 				margin: 0;
 			}
+			p {
+				padding: 10px;
+				line-height: 20px;
+			}
 			a {
 				color: #777878;
 				text-align: right;
-				padding-right: 15px;
+				box-sizing: border-box;
 				&:hover {
 					text-decoration: none;
 				}

@@ -10,6 +10,7 @@
 								<source type="video/mp4" src=<%= @lesson.lesson_video.url%> />
 							</video>
 						<% end %>
+						
 						<% unless @lesson.video.nil? %>
 							<% if !user_signed_in? && @lesson.lesson_video? %>
 								<div id="<%= @lesson.video.aparat_id %>"><script type="text/JavaScript" src="https://www.aparat.com/embed/<%= @lesson.video.aparat_embed %>?data[rnddiv]=<%= @lesson.video.aparat_id %>&data[responsive]=yes"></script></div>
@@ -24,9 +25,20 @@
 			<% if @lesson.video.nil? && !@lesson.lesson_video? %>
 				<div class="lesson-hero">
 					<%= image_tag @lesson.image_url, class: "img-responsive" if @lesson.image? %>
-					<h1 class="text-center"><%= @lesson.tutorial.title %></h1>
+					<h1 class="text-center"><%= @lesson.title %></h1>
 				</div>
 			<% end %>
+			
+			<% if !user_signed_in? && @lesson.lesson_video? && @lesson.image? %>
+				<h1 class="text-center"><%= @lesson.title %></h1>
+				<%= image_tag @lesson.image_url, class: "img-responsive" if @lesson.image? %>
+				<div class="row">
+					<div class="container">
+						<div class="well">برای دیدن ویدئو اصلی لطفا ثبت نام کنید و یا به سایت وارد شوید: <%= link_to 'ثبت نام', new_user_registration_path, class: "btn btn-info" %> <%= link_to 'ورود به سایت', new_user_session_path, class: "btn btn-success" %> </div>
+					</div>
+				</div>
+			<% end %>
+			
 		</div>
 		<div class="container">
 			<div class="row title">

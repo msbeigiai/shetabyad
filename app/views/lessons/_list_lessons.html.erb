@@ -2,12 +2,10 @@
   <div class="panel-heading">آخرین آموزش ها</div>
     <% lessons.each do |lesson| %>
       <div class="panel-body list-lesson-body">
-        <% if lesson.tutorial.sign == "R" %>
-          <%= content_tag :p, lesson.tutorial.title, class: "new-title" %>
-        <% elsif lesson.tutorial.sign == "I" %>
-          <%= content_tag :p, lesson.tutorial.title, class: "new-title" %>
-        <% end %>
-        <%= link_to lesson.title, lesson %>
+				<div class="thumbnail">
+					<%= image_tag lesson.thumbnail_image, class: "img-responsive" if lesson.thumbnail_image? %>
+	        <p><%= link_to lesson.title, lesson %></p>
+				</div>
       </div>
   <% end %>
 </div>

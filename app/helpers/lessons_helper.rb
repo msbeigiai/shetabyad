@@ -21,7 +21,7 @@ module LessonsHelper
 	private
 
 	def all_lessons
-		Lesson.last(4)
+		Lesson.last(3)
 	end
 	
 	def list_likers(votes)
