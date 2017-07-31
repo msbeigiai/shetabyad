@@ -29,14 +29,14 @@
         
       <ul class="nav navbar-nav navbar-left">
 				<% unless user_signed_in? %>
-          <li><%= link_to 'ورود', new_user_session_path, class: "btn btn-default" %></li>
+          <li><%= link_to "<i class='fa fa-sign-in'></i> ورود".html_safe, new_user_session_path, class: "btn btn-default" %></li>
 				<% end %>
-				<li><%= link_to 'دوره ها', courses_path %></li>
-				<li class="blog-navbar"><%= link_to 'وبلاگ', blogs_path %></li>
-				<li <li class="blog-navbar"><%= link_to 'انجمن شتابیاد', "http://forum.shetabyad.com", target: "_blank" %></li>
+				<li><%= link_to 'دوره ها', courses_path %><!-- <i class="fa fa-laptop"></i> --></li>
+				<li class="blog-navbar"><%= link_to 'وبلاگ', blogs_path %><!-- <i class="fa fa-rss"></i> --></li>
+				<li class="blog-navbar"><%= link_to 'انجمن شتابیاد', "http://forum.shetabyad.com", target: "_blank" %><!-- <i class="fa fa-users"></i> --></li>
         <% if TutorialType.any? %>
-          <li><%= link_to TutorialType.first.title, TutorialType.first %></li>            
-          <li><%= link_to TutorialType.last.title, TutorialType.last %></li> 
+          <li><%= link_to TutorialType.first.title, TutorialType.first %><!-- <i class="fa fa-diamond"></i> --></li>          
+					<li><%= link_to TutorialType.last.title, TutorialType.last %><!-- <i class="fa fa-globe"></i> --></li> 
         <% end %>
         
       </ul>

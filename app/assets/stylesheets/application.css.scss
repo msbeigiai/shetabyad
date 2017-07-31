@@ -21,7 +21,7 @@
 @import "gritter";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 //GLOBALS
 * {
@@ -33,6 +33,17 @@
 	src: asset-url("BYekan.ttf");
 }
 
+@font-face {
+	font-family: 'Yekan';
+	src: asset-url('Yekan.eot?-wwn5ej');
+	src: asset-url('Yekan.eot?#iefix-wwn5ej') format('embedded-opentype'),
+	asset-url('fonts/Yekan.woff?-wwn5ej') format('woff'),
+	asset-url('Yekan.ttf?-wwn5ej') format('truetype'),
+	asset-url('Yekan.svg?-wwn5ej#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 html {
 	height: 100%;
 	box-sizing: border-box;
@@ -41,9 +52,13 @@ html {
 body {
 	padding: 0px !important;
 //	pointersition: relative;
-	font-family: BYekan, sans-serif;
+	font-family: 'Yekan', 'Roboto';
 	min-height: 100%;
 	margin: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+	font-family: 'Yekan', 'Roboto' !important;
 }
 
 p {
@@ -128,13 +143,29 @@ button.btn-block.btn-success {
 	}
 }
 
+pre {
+	border: 1px solid #ededed;
+	border-radius: 1px;
+	padding: 15px 10px;
+}
+
+.err {
+	border: none;
+}
+
 code {
 	color: #7e8288;
 	direction: ltr !important;
+	background-color: #f5f5f5;
 }
 
 input[type="text"] {
 	padding: 10px 0px;
+}
+
+blockquote {
+	border-left: none;
+	border-right: 5px solid #fa7a64;
 }
 
 //LOCALS
@@ -143,25 +174,35 @@ input[type="text"] {
 .navbar {
 	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 	color: #7F7F7F;
-	font-size: 16px;
+	font-size: 17px;
 	padding: 20px 0;
 	margin-bottom: 0;
 	border-radius: 0;
 	border: none;
 	background-color: #fff;
+	.fa {
+		position: absolute;
+		top: 13px;
+		right: 0;
+	}
 	.navbar-left {
 		li > a {
 			color: #5b5b5b;
 			transition: color 0.3s;
 			&:hover {
 				transition: color 0.3s;
-				color: #3d3d3d;
+				color: #333;
 			}
 		}
 	}
 	a.btn.btn-default {
 		padding: 13px 25px;
 		margin-right: 40px;
+		.fa {
+			position: absolute;
+			right: 8px;
+			top: 17px;
+		}
 	}
 	.dropdown {
 		background-color: #fff;
@@ -234,7 +275,8 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 .navbar .navbar-left li > a {
 	padding-left: 11px;
-	padding-right: 11px;
+	//padding-right: 15px;
+	margin-right: 10px;
 }
 
 .navbar-header > .navbar-brand {
@@ -473,11 +515,11 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 #last-lessons {
 	padding: 0px 0 200px 0;
-	background-image: image-url('nice.jpg');
+	//background-image: image-url('nice.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	//background-attachment: fixed;
-		
+	background-color: #537C96;
 	.col-last {
 		//padding: 5px;
 		margin: 0;
@@ -509,7 +551,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		margin-top: 80px;
 	}
 	h2 {
-		color: #333;
+		color: #f2f2f2;
 		margin: 0;
 	}
 	h3 {
@@ -797,8 +839,8 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	}
 	.panel-body {
 		margin: 20px 0;
-		background-color: #fefefe;
-		box-shadow: 0 0 1px #E6E8E6;
+		//background-color: #fefefe;
+		//box-shadow: 0 0 1px #E6E8E6;
 		border-radius: 0;
 		border: none;
 		padding: 30px 60px;
