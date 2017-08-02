@@ -311,15 +311,25 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 .jumbotron {
 	//position: relative;
 //	z-index: 1001;
-	padding: 100px 0 550px 0;
+	padding: 100px 0 150px 0;
 	margin-bottom: 0;
-	background: #56CCF2;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	//background: #56CCF2;  /* fallback for old browsers */
+//	background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+//	background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), image-url('hero.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: #fff;
 	position: relative;
 	//background-color: #464BB0;
-	img {
+	.col-hero-icons {
+		margin-top: 40px;
+	}
+	.fa {
+		margin-top: 80px;
+	}
+	img.design {
 		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 		position: absolute;
 		z-index: 100;
@@ -336,6 +346,9 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 			font-size: 30px;
 			font-family: BYekan, sans-serif;
 		}
+	}
+	h4 {
+		padding: 20px 0;
 	}
 	h2 {
 		margin: 0;
@@ -1316,7 +1329,7 @@ footer {
 		padding-top: 60px;
 		padding-bottom: 40px;
 		img {
-			display: none;
+			//display: none;
 		}
 		h1 {
 			text-align: center;
