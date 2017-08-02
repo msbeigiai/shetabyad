@@ -118,7 +118,7 @@
 						<%= link_to (image_tag model.thumbnail_image, class: "img-responsive"), model %>
 						<p class="text-center"><%= model.title %></p>						
 						<span class="text-right">دسته: <%= model.tutorial.title %></span>
-						<% unless model.video.nil? && model.lesson_video? %>
+						<% if !model.video.nil? || model.lesson_video? %>
 							<div class="show-video">
 								<i class="fa fa-play fa-3x"></i><!-- <i class="fa fa-comment fa-2x"></i> -->
 							</div>
