@@ -115,9 +115,7 @@
 			<% models.each do |model| %>
 				<div class="col-md-4 col-xs-8 col-sm-10 col-xs-offset-2 col-sm-offset-1 col-md-offset-0 col-last" align="center">
 					<div class="well">
-						<figure class="tint">
-							<%= link_to (image_tag model.thumbnail_image, class: "img-responsive"), model %>
-						</figure>
+						<%= link_to (image_tag model.thumbnail_image, class: "img-responsive"), model %>
 						<p class="text-center"><%= model.title %></p>						
 						<span class="text-right">دسته: <%= model.tutorial.title %></span>
 						<% unless model.video.nil? && model.lesson_video? %>
