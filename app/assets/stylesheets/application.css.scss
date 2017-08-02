@@ -515,35 +515,46 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 #last-lessons {
 	padding: 0px 0 200px 0;
-	//background-image: image-url('nice.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	//background-attachment: fixed;
-	background-color: #537C96;
+	background-color: #f4f4f4;
 	.col-last {
-		//padding: 5px;
 		margin: 0;
 	}
 	.row > .col-md-4 > .well {
-    //padding-top: 80px;
-		padding: 0;
-		position: relative;
+    padding: 0 0 30px 0;
 		background-color: #fff;
 		border: none;
 		border-radius: 0;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 		&:hover {
-			transition: box-shadow 0.3s ease-in-out;
-			box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+			opacity: 1;
 		}
 		&:after {
 			box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
-			opacity: 0;
-			transition: opacity 0.3s ease-in-out;
 		}
-		&:hover::after {
-			opacity: 1;
+		p {
+			padding: 20px;
+			margin: 0;
+		}
+		span {
+			text-align: right;
+			color: #767676;
+		}
+		.fa-play, .fa-file-text {
+			text-align: left;
+			color: #54595f;
+			padding: 0 20px;
+			text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+		}
+		.fa-comment {
+			text-align: right;
+			color: #54595f;
+			padding: 0 20px;
+		}
+		div.show-video {
+			padding-top: 20px;
 		}
 	}
+	
 	.row.row-lesson {
 		//padding: 40px 0;
 	}
@@ -551,7 +562,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		margin-top: 80px;
 	}
 	h2 {
-		color: #f2f2f2;
+		color: #333;
 		margin: 0;
 	}
 	h3 {
@@ -560,27 +571,31 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		font-size: 20px;
 		padding: 0 20px;
 	}
-	img {
+	.tint {
+	    position: relative;
+	    margin-bottom: 20px;
+	    cursor: pointer;
+	  }
   
-	}
-	a {
-		position: absolute;
-		width: 100%;
-		padding: 30px 15px;
-		bottom: 0;
-		left: 0;
-		background-color: rgba(0, 0, 0, 0.8);
-		color: #fff;
-		font-size: 16px;
-		&:hover {
-			text-decoration: none;
-			color: #F0F2F2;
-		}
-		&:focus {
-			text-decoration: none;
-			color: #F0F2F2;
-		}
-	}
+	  .tint:before {
+	    content: "";
+	    display: block;
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    background: rgba(0, 0, 0, 0.5);
+	    -moz-transition: all .3s linear;
+	    -webkit-transition: all .3s linear;
+	    -ms-transition: all .3s linear;
+	    -o-transition: all .3s linear;
+	    transition: all .3s linear;
+	  }
+  
+	  .tint:hover:before {
+	    background: none;
+	  }
 }
 
 //LOGIN AND SIGNUP PAGES
@@ -1063,7 +1078,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 
 }
 
-//EXPPLORE
+//EXPLORE
 .fa.fa-ruby {
 	background: #56CCF2;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to top, #2F80ED, #59D5FE);  /* Chrome 10-25, Safari 5.1-6 */
@@ -1072,6 +1087,12 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	-webkit-text-fill-color: transparent;
 	z-index: 1000;
 }
+
+.fa.fa-start {
+	color: #f2f2f7;
+	z-index: 1000;
+}
+
 #explore {
 	padding: 50px 0;
 	background-color: #fff;

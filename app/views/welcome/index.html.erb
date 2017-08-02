@@ -10,7 +10,7 @@
 				<!--- <h1 class="text-center">مدرسه شتابیاد</h1> -->
 				<h2 class="text-center"> آموزش تخصصی برنامه نویسی </h2>
 				<h1 class="text-center"><span>روبی آن ریلز</span></h1>
-				<p class="text-center">ما به شما کمک می کنیم تا تکنولوژی های روز دنیا را بیاموزید، در کار خود پیشرفت کنید و استارت آپ خود را راه اندازی کنید.</p>
+				<!-- <p class="text-center">ما به شما کمک می کنیم تا تکنولوژی های روز دنیا را بیاموزید، در کار خود پیشرفت کنید و استارت آپ خود را راه اندازی کنید.</p> -->
 				<%#= link_to 'برای شروع ثبت نام کنید', new_user_registration_path, class: "btn btn-custom text-center" %>
 			</div>
 			<div class="col-md-10 col-xs-12 col-sm-12 col-md-offset-1" align="center">
@@ -115,9 +115,20 @@
 			<% models.each do |model| %>
 				<div class="col-md-4 col-xs-8 col-sm-10 col-xs-offset-2 col-sm-offset-1 col-md-offset-0 col-last" align="center">
 					<div class="well">
-						<!-- <h3>دسته: <%= model.tutorial.title %></h3> -->
-						<%= image_tag model.thumbnail_image, class: "img-responsive" %>
-						<%= link_to model.title, model, class: "model-title" %>
+						<figure class="tint">
+							<%= link_to (image_tag model.thumbnail_image, class: "img-responsive"), model %>
+						</figure>
+						<p class="text-center"><%= model.title %></p>						
+						<span class="text-right">دسته: <%= model.tutorial.title %></span>
+						<% unless model.video.nil? && model.lesson_video? %>
+							<div class="show-video">
+								<i class="fa fa-play fa-3x"></i><!-- <i class="fa fa-comment fa-2x"></i> -->
+							</div>
+						<% else %>
+							<div class="show-video">
+								<i class="fa fa-file-text fa-3x"></i><!-- <i class="fa fa-comment fa-2x"></i> -->
+							</div>
+						<% end %>
 					</div>
 				</div>
 				<% end %>
