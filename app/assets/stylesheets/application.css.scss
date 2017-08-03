@@ -311,7 +311,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 .jumbotron {
 	//position: relative;
 //	z-index: 1001;
-	padding: 100px 0 150px 0;
+	padding: 100px 0 100px 0;
 	margin-bottom: 0;
 	//background: #56CCF2;  /* fallback for old browsers */
 //	background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
@@ -361,24 +361,25 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	}
 	p {
 		color: #f7faff;
-		margin-top: 20px;
+		margin-top: 60px;
 		text-align: center;
-		font-size: 16px;
+		font-size: 17px;
 		line-height: 30px;
 	}
 	a {
-			color: #56CCF2;
+			color: #ececec;
 			font-size: 18px;
-			background-color: #fff;
-			border: 2px solid #fff;
-			margin-top: 14px;
+			background-color: #004069;;
+			border: 1px solid #f0f0f0;
+			margin-top: 40px;
 			padding: 14px 30px;
 			border-radius: 5px;
-			transition: all 0.3s ease-in-out;
+			transition: all 0.3s;
 			&:hover {
-				color: #56CCF2;
-				transition: all 0.3s ease-in-out;
-				background-color: #E2F2ED;
+				color: #004069;
+				transition: all 0.3s;
+				background-color: #f0f0f0;
+				border-color: #f0f0f0;
 			}
 			&:focus {
 				background-color: darken(#fff, 10%);
