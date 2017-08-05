@@ -175,7 +175,7 @@ blockquote {
 	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 	color: #7F7F7F;
 	font-size: 17px;
-	padding: 20px 0;
+	padding: 0;
 	margin-bottom: 0;
 	border-radius: 0;
 	border: none;
@@ -188,16 +188,26 @@ blockquote {
 	.navbar-left {
 		li > a {
 			color: #5b5b5b;
+			border-top: 4px solid transparent;
 			transition: color 0.3s;
+			transition: border-top 0.3s;
+			padding: 30px 10px;
 			&:hover {
 				transition: color 0.3s;
+				transition: border-top 0.3s;
 				color: #333;
+				border-top: 4px solid #004069;
 			}
 		}
 	}
 	a.btn.btn-default {
 		padding: 13px 25px;
 		margin-right: 40px;
+		margin-top: 20px;
+		border-top: 1px solid #ccc;
+		&:hover {
+			border-top: 1px solid #adadad;
+		}
 		.fa {
 			position: absolute;
 			right: 8px;
@@ -274,14 +284,13 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 }
 
 .navbar .navbar-left li > a {
-	padding-left: 11px;
+	//padding-left: 11px;
 	//padding-right: 15px;
-	margin-right: 10px;
 }
 
 .navbar-header > .navbar-brand {
 	color: #5b5b5b;
-	padding-top: 18px;
+	padding-top: 30px;
 	padding-right: 10px;
 	font-size: 30px;
 	transition: color 0.3s;
@@ -654,7 +663,8 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	padding: 40px 0 300px 0;
 	.well {
 		border: none;
-		background-color: #FDFFFC;
+		border-radius: 0px;
+		background-color: #fff;
 		box-shadow: 0 0px 3px rgba(0,0,0,0.15);
 		transition: box-shadow 0.3s ease-in-out;
 		a {
@@ -667,7 +677,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 			}
 		}
 		img {
-			margin-top: 20px;
+			margin: 0 auto;
 		}
 		&:hover {
 			box-shadow: 0 0px 15px rgba(0,0,0,0.3);
@@ -679,6 +689,14 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		}
 		&:hover::after {
 			opacity: 1;
+		}
+		
+		.lesson-count {
+			background-color: rgb;
+			padding: 10px 0;
+			span {
+				color: #bebdbd;
+			}
 		}
 	}
 }
@@ -719,12 +737,13 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		padding: 0;
 		margin: 0;
 		border: none;
-		box-shadow: 0 0px 3px rgba(0,0,0,0.15);
-		transition: box-shadow 0.3s ease-in-out;
-		transition: transform 0.3s ease-in-out;
+		border-radius: 0;
+		background-color: #fff;
+		box-shadow: 0 2px 3px rgba(0,0,0,0.8);
+		transition: box-shadow 0.3s;
+		
 		&:hover {
-			box-shadow: 0 0px 15px rgba(0,0,0,0.3);
-			transform: scale(1.01, 1.01)
+			box-shadow: 0 2px 3px rgba(0,0,0,0.3);
 		}
 		&:after {
 			box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -736,17 +755,18 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		}
 	}
 	.panel-footer {
-		background-color: #FDFFFC;
+		padding: 25px 0;
+		background-color: #dddddd;
 		border: none;
 		position: relative;
 		.fa-like {
-			color: #F71735;
+			color: #5f1d5a;
 			position: absolute;
 			bottom: 15px;
-			left: 15px;
+			left: 50px;
 		}
 		.fa-comment {
-			color: #F71735;
+			color: #995211;
 			position: absolute;
 			bottom: 15px;
 			right: 15px;
@@ -754,7 +774,7 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		.like-number {
 			position: absolute;
 			bottom: 10px;
-			left: 40px;
+			left: 15px;
 		}
 		.comment-number {
 			position: absolute;
@@ -1351,11 +1371,24 @@ footer {
 		display: none;
 	}
 	li.blog-navbar > a {
-		display: none;
+		//display: none;
 	}
 	.navbar-header img {
 		margin-right: 20px;
 	}
+	
+	.navbar-header > .navbar-brand {
+		padding-top: 20px;
+		padding-right: 10px;
+		margin-bottom: 20px;
+		font-size: 30px;
+		transition: color 0.3s;
+		&:hover {
+			transition: color 0.3s;
+			color: #3d3d3d;
+		}
+	}
+	
 	#lessons-index {
 		img.img-responsive {
 			//display: none;

@@ -1,13 +1,16 @@
 <% tutorials.each do |tutorial| %>
-  <div class="col-md-8 col-xs-10 col-sm-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-2 well">
-    <div class="col-md-3 col-xs-4 col-sm-4 pull-right">
-      <% if tutorial.images? %>
-        <%= image_tag tutorial.images_url(:thumb) %>
-      <% end %>
-    </div>
-    <div class="col-md-9 col-xs-8 col-sm-8">
+  <div class="col-md-4">
+    <!-- <div class="col-md-6 col-xs-4 col-sm-4 pull-right"> -->
+		<div class="well">
+      <%= image_tag tutorial.images.url, size: '100x100', class: 'img-responsive' if tutorial.images? %>
+    <!-- </div> -->
+    <!-- <div class="col-md-6 col-xs-8 col-sm-8"> -->
       <h2><%= link_to tutorial.title, tutorial_path(tutorial) %></h2>
       <p><%= markdown(tutorial.description) %></p>
-    </div>
+    <!-- </div> -->
+			<div class="lesson-count">
+				<span><i class="fa fa-leanpub" aria-hidden="true"></i> <%= tutorial.lessons.count %> درس</span>
+			</div>
+		</div>
   </div>
 <% end %>

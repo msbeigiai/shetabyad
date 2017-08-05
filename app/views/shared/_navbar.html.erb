@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-static-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header pull-right">
@@ -33,7 +33,7 @@
 				<% end %>
 				<li><%= link_to 'دوره ها', courses_path %><!-- <i class="fa fa-laptop"></i> --></li>
 				<li class="blog-navbar"><%= link_to 'وبلاگ', blogs_path %><!-- <i class="fa fa-rss"></i> --></li>
-				<li class="blog-navbar"><%= link_to 'انجمن شتابیاد', "http://forum.shetabyad.com", target: "_blank" %><!-- <i class="fa fa-users"></i> --></li>
+				<!-- <li class="blog-navbar"><%= link_to 'انجمن شتابیاد', "http://forum.shetabyad.com", target: "_blank" %> -->
         <% if TutorialType.any? %>
           <li><%= link_to TutorialType.first.title, TutorialType.first %><!-- <i class="fa fa-diamond"></i> --></li>          
 					<li><%= link_to TutorialType.last.title, TutorialType.last %><!-- <i class="fa fa-globe"></i> --></li> 
