@@ -30,8 +30,10 @@
 					</div>
 				</div>
 			<% elsif @tutorial.lessons.count > 1 %>
+			<div id="masonry-container" class="transitions-enabled infinite-scroll centered clearfix">
 				<% @tutorial.lessons.each do |tut_lesson| %>
-					<div class="col-md-4 col-xs-6 col-sm-6">
+					<!-- <div class="col-md-4"> -->
+					<div class="box col4">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<% if tut_lesson.thumbnail_image? %>
@@ -49,14 +51,24 @@
 						</div>
 					</div>
 				<% end %>
+				</div>
 			<% else %>
+		
 				<h3>هنوز درسی برای این دسته ارائه نشده است.</h3>
 			<% end %>
 		</div>
 	</div>		
 </section>
 
-
+<script>
+	$('#masonry-container').masonry({
+	  itemSelector: '.box',
+	  // set columnWidth a fraction of the container width
+	  columnWidth: 200,
+		isAnimated: !Modernizr.csstransitions,
+    isFitWidth: true
+	});
+</script>
 
 
 <!--*******************************************************-->

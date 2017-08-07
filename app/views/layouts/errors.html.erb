@@ -2,7 +2,13 @@
 <html>
 <head>
   
-    <title><%= content_for?(:title) ? yield(:title) : "شتابیاد: آموزش تخصصی برنامه نویسی" %></title>
+    <title>
+			<% if content_for?(:title) %>
+				<%=  yield(:title) + ' | شتابیاد: آموزش تخصصی برنامه نویسی وب و موبایل' %>
+			<% else %>
+				<%= content_for?(:title) ? yield(:title) : "شتابیاد: آموزش تخصصی برنامه نویسی وب و موبایل" %>
+			<% end %>
+    </title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>

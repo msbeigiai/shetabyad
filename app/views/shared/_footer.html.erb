@@ -19,15 +19,15 @@
 					<p><a href="http://courses.shetabyad.com">وبسایت دوره های شتابیاد</a> پایگاهی برای خرید دوره های تخصصی و کامل آموزش های روبی آن ریلز و آی او اس ما می باشد.<p>
 						<a class="btn btn-success" href="http://courses.shetabyad.com">ورود به دوره های شتابیاد</a>
 				</div>
-				<div class="col-md-3 col-xs-12 col-sm-12">
+				<!-- <div class="col-md-3 col-xs-12 col-sm-12">
 					<p class="title">انجمن شتابیاد</p>
 					<p><a href="http://forum.shetabyad.com">انجمن شتابیاد</a> محلی برای بحث و تبادل نظر و طرح سوالات بین کاربران شتابیاد و همه علاقه مندان روبی آن ریلز می باشد. <p>
 						<a class="btn btn-success" href="http://forum.shetabyad.com">ورود به انجمن شتابیاد</a>
-				</div>
+				</div> -->
 				<div class="col-md-3 col-xs-12 col-sm-12">
 					<p class="title">بیاموزید</p>
-					<p><%= link_to 'روبی آن ریلز', TutorialType.first if TutorialType.any? %></p>
-					<p><%= link_to 'طراحی وب', TutorialType.last if TutorialType.any? %></p>
+					<p><%= link_to TutorialType.first.title, TutorialType.first if TutorialType.any? %></p>
+					<p><%= link_to TutorialType.last.title, TutorialType.last if TutorialType.any? %></p>
 				</div>
 				<div class="col-md-3 col-xs-12 col-sm-12">
 					<p class="title">درباره</p>

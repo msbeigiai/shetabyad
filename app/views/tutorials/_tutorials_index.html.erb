@@ -1,16 +1,30 @@
-<% tutorials.each do |tutorial| %>
-  <div class="col-md-4">
-    <!-- <div class="col-md-6 col-xs-4 col-sm-4 pull-right"> -->
-		<div class="well">
-      <%= image_tag tutorial.images.url, size: '100x100', class: 'img-responsive' if tutorial.images? %>
-    <!-- </div> -->
-    <!-- <div class="col-md-6 col-xs-8 col-sm-8"> -->
-      <h2><%= link_to tutorial.title, tutorial_path(tutorial) %></h2>
-      <p><%= markdown(tutorial.description) %></p>
-    <!-- </div> -->
-			<div class="lesson-count">
-				<span><i class="fa fa-leanpub" aria-hidden="true"></i> <%= tutorial.lessons.count %> درس</span>
+<div id="masonry-container" class="transitions-enabled centered infinite-scroll clearfix">
+	<% tutorials.each do |tutorial| %>
+	  <div class="box col4">
+	    <!-- <div class="col-md-6 col-xs-4 col-sm-4 pull-right"> -->
+			<div class="well">
+	      <%= image_tag tutorial.images.url, size: '100x100', class: 'img-responsive' if tutorial.images? %>
+	    <!-- </div> -->
+	    <!-- <div class="col-md-6 col-xs-8 col-sm-8"> -->
+	      <h2><%= link_to tutorial.title, tutorial_path(tutorial) %></h2>
+	      <p><%= markdown(tutorial.description) %></p>
+	    <!-- </div> -->
+				<div class="lesson-count">
+					<span><i class="fa fa-leanpub" aria-hidden="true"></i> <%= tutorial.lessons.count %> درس</span>
+				</div>
 			</div>
-		</div>
-  </div>
-<% end %>
+	  </div>
+	<% end %>
+</div>
+
+<script>
+	$(function(){
+	  $('#masonry-container').masonry({
+	    itemSelector: '.box',
+	    columnWidth: 200,
+	    isAnimated: !Modernizr.csstransitions,
+	    isFitWidth: true
+	  });
+
+	});
+</script>

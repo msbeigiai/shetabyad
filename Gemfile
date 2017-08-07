@@ -39,6 +39,7 @@ gem 'mail_form'
 gem 'google-analytics-rails', '1.1.0'
 #gem "wysiwyg-rails"
 #gem 'tinymce-rails'
+gem 'masonry-rails'
 
 group :development do 
   gem 'capistrano', '~> 3.8', '>= 3.8.1'
