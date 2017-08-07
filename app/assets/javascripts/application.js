@@ -14,12 +14,6 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
-//= require_tree .
-//= require gritter
-//= require turbolinks
 //= require masonry/jquery.masonry
-//= require isotope/jquery.isotope
-//= require masonry/jquery.event-drag
-//= require masonry/jquery.imagesloaded.min
-//= require masonry/jquery.infinitescroll.min
-//= require masonry/modernizr-transitions
+//= require_tree .
+//= require turbolinks

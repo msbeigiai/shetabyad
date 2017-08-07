@@ -13,6 +13,13 @@
  *= require_tree .
  *= require_self
  *= require commontator/application
+ *= require 'masonry/basic'
+ *= require 'masonry/centered'
+ *= require 'masonry/fluid'
+ *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/right-to-left'
+ *= require 'masonry/transitions'
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -21,13 +28,6 @@
 @import "gritter";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import 'masonry/basic';
-@import 'masonry/centered';
-@import 'masonry/fluid';
-@import 'masonry/gutters';
-@import 'masonry/infinitescroll';
-@import 'masonry/right-to-left';
-@import 'masonry/transitions';
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 //GLOBALS
@@ -58,7 +58,7 @@ html {
 
 body {
 	padding: 0px !important;
-//	pointersition: relative;
+//	position: relative;
 	font-family: 'Yekan', 'Roboto';
 	min-height: 100%;
 	margin: 0;
@@ -438,8 +438,11 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 	overflow: hidden;
 	background-attachment: fixed;
 	background-color: #363A89;
-	padding: 150px 0;
+	padding: 120px 0;
 	color: #fff;
+	h2 {
+		line-height: 40px;
+	}
 	a {
 		color: #ececec;
 		font-size: 18px;
@@ -699,8 +702,6 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 		}
 		img {
 			margin: 0 auto;
-			width: 100px;
-			height: 100px;
 		}
 		&:hover {
 			box-shadow: 0 0px 15px rgba(0,0,0,0.3);
@@ -815,15 +816,15 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 			bottom: 20px;
 			left: 15px;
 		}
+	}
+	.panel-body {
 		a {
 			padding: 15px;
 			margin: 0;
 			width: 100%;
-			background-color: rgba(0,0,0,.3);
-			color: #FDFFFC;
-			position: absolute;
+			color: #333;
 			z-index: 1000;
-			bottom: 15px;
+			cursor: pointer;
 			&:hover {
 				text-decoration: none;
 			}
@@ -831,8 +832,6 @@ ul.nav.navbar-nav .dropdown .dropdown-toggle {
 				text-decoration: none;
 			}
 		}
-	}
-	.panel-body {
 		h3 {
 			font-size: 20px;
 			line-height: 30px;
@@ -1520,6 +1519,7 @@ footer {
 }
 
 ///////////////////////////////////////////////
+.centered { margin: 0 auto; }
 .transitions-enabled.masonry,
 .transitions-enabled.masonry .masonry-brick {
   -webkit-transition-duration: 0.7s;
@@ -1580,7 +1580,6 @@ div.box {
 	font-size: 14px;
 	line-height: 25px;
 }
-
 
 
 
