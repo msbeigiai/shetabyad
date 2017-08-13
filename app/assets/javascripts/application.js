@@ -16,4 +16,5 @@
 //= require bootstrap
 //= require masonry/jquery.masonry
 //= require_tree .
+//= require particles.min
 //= require turbolinks

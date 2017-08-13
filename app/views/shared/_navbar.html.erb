@@ -2,23 +2,41 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header pull-right">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= image_tag 'logo.svg', size:'40x40' %><%= link_to "شتابیاد <span style='font-size:18px;'><em>بتا</em></span>".html_safe, root_path, class: "navbar-brand" %>
-			<%#= link_to (image_tag 'new-logo.png', size: "140x40" ), root_path %>
+      <%= link_to "شتابیاد <span style='font-size:18px;'><em>بتا</em></span>".html_safe, root_path, class: "navbar-brand" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		 <ul class="nav navbar-nav">
+       <li>
+				 <a href="#" class="dropdown-toggle" data-toggle="dropdown">دسته ها<b class="caret"></b></a>
+				 <ul class="dropdown-menu multi-level">
+						 <% TutorialType.all.each do |tutorial_type| %>
+						 	<li class="dropdown-submenu">
+	 						 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= tutorial_type.title %></a>
+							 <%#= link_to tutorial_type.title, tutorial_type, class: "dropdown-toggle", data: {toggle: "dropdown"} %>
+	 						 <ul class="dropdown-menu">
+	 							 <% tutorial_type.tutorials.each do |tutorial| %>
+										<li><%= link_to tutorial.title, tutorial %></li>
+								 <% end %>
+	 						 </ul>
+							 </li>
+						 <% end %>
+				 </ul>
+			 </li>
+		 </ul>
+		 	 
 			<% if user_signed_in? %>
-				<ul class="nav navbar-nav">
-					<li class="dropdown">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown pull-right">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span><i class="fa fa-user-circle-o"></i>  <%= current_user.username %> </a>
-						<ul class="dropdown-menu">
+						<ul class="dropdown-menu pull-right">
 							<li><%= link_to "<i class='fa fa-user'></i> حساب کاربری".html_safe, edit_user_registration_path %></li>
 							<li role="separator" class="divider"></li>
 							<li><%= link_to "<i class='fa fa-sign-out'></i> خروج".html_safe, destroy_user_session_path, method: :delete %></li>
@@ -26,19 +44,18 @@
 					</li>
 				</ul>
 			<% end %>
+			
+			<% unless user_signed_in? %>
+				<ul class="nav navbar-nav navbar-right">
+	        <li><%= link_to "ورود", new_user_session_path, class: "login-user" %></li>
+				</ul>
+			<% end %>
         
       <ul class="nav navbar-nav navbar-left">
-				<% unless user_signed_in? %>
-          <li><%= link_to "<i class='fa fa-sign-in'></i> ورود".html_safe, new_user_session_path, class: "btn btn-default" %></li>
-				<% end %>
 				<li><%= link_to 'دوره ها', courses_path %><!-- <i class="fa fa-laptop"></i> --></li>
-				<li class="blog-navbar"><%= link_to 'وبلاگ', blogs_path %><!-- <i class="fa fa-rss"></i> --></li>
+				<li><%= link_to 'درباره ما', about_us_path %><!-- <i class="fa fa-laptop"></i> --></li>
+				<li><%= link_to 'وبلاگ', blogs_path %><!-- <i class="fa fa-rss"></i> --></li>
 				<!-- <li class="blog-navbar"><%= link_to 'انجمن شتابیاد', "http://forum.shetabyad.com", target: "_blank" %> -->
-        <% if TutorialType.any? %>
-          <li><%= link_to TutorialType.first.title, TutorialType.first %><!-- <i class="fa fa-diamond"></i> --></li>          
-					<li><%= link_to TutorialType.last.title, TutorialType.last %><!-- <i class="fa fa-globe"></i> --></li> 
-        <% end %>
-        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

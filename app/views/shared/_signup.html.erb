@@ -1,0 +1,34 @@
+
+<div class="well" align="center">
+		<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+			<%= devise_error_messages! %>
+		
+			<% unless resource_name == :admin %>
+				<div class="form-group">
+					<i class="fa fa-user  fauser"></i><%= f.text_field :username, autofocus: true, placeholder: "نام و نام خانوادگی" , required: true, class: "form-control" %>
+				</div>
+			<% end %>
+		
+			<div class="form-group">
+				<i class="fa fa-envelope-o  faemail"></i><%= f.email_field :email, autofocus: true, placeholder: "ایمیل" , required: true, class: "form-control" %>
+			</div>
+
+			<div class="form-group">
+				<i class="fa fa-lock  fapassword"></i><%= f.password_field :password, autocomplete: "off", placeholder: "رمز عبور", required: true, class: "form-control" %>
+			</div>
+
+			<div class="form-group">
+				<i class="fa fa-lock  fapassword-confirm"></i><%= f.password_field :password_confirmation, placeholder: "تکرار رمز عبور", required: true, autocomplete: "off", class: "form-control" %>
+			</div>
+
+			<div class="actions form-group">
+				<%= f.button "<i class='fa fa-user-plus'></i> ثبت نام".html_safe, class: "btn btn-block btn-success", data: { disable_with: "<i class='fa fa-spinner fa-spin'></i> ساخت حساب کاربری" } %>
+			</div>
+		<% end %>
+	<!-- </div> -->
+	<!-- <div class="panel-footer"> -->
+		<% unless resource_name == :admin %>
+			<%#= render "devise/shared/links" %>
+		<% end %>
+	<!-- </div> -->
+</div>

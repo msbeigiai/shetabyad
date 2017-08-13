@@ -15,9 +15,9 @@
 		<!-- <title> --><%#= content_for?(:title) ? yield(:title) : "شتابیاد: آموزش تخصصی برنامه نویسی روبی آن ریلز و آی او اس" %><!-- </title> -->
 		<title>
 			<% if content_for?(:title) %>
-				<%=  yield(:title) + ' | شتابیاد: آموزش تخصصی برنامه نویسی وب و موبایل' %>
+				<%=  yield(:title) + ' | شتابیاد: آموزش آنلاین، تخصصی و رایگان' %>
 			<% else %>
-				<%= content_for?(:title) ? yield(:title) : "شتابیاد: آموزش تخصصی برنامه نویسی وب و موبایل" %>
+				<%= content_for?(:title) ? yield(:title) : "شتابیاد: آموزش آنلاین، تخصصی و رایگان" %>
 			<% end %>
 
 		</title>
@@ -46,56 +46,11 @@
           <div class="container"><%= alert %></div>
         </div>
       <% end %>
-		  <%# if notice %>
-<!--		  	<p class="notice"><%#= notice %></p>-->
-				<%#= js add_gritter(flash[:notice], title: "پیام شما", time: "4000") %>
-		  <%# end %>
-		  <%# if alert %>
-<!--		  	<p class="alert"><%#= alert %></p>-->
-		  	<%#= js add_gritter(flash[:alert], title: "پیام شما", time: "4000") %>
-		  <%# end %>
-				
-				<!-- <% if notice %>
-					<script>
-						$.gritter.add({
-
-						  title: 'پیام شما',
-
-							text: "<%= flash[:notice] %>",
-
-							//image: 'assets-url/confirm.png',
-
-							time: 5000
-						});
-					</script>
-				<% end %>
-				<% if alert %>
-					<script>
-						$.gritter.add({
-
-						  title: 'پیام شما',
-
-							text: "<%= flash[:alert] %>",
-
-							time: 5000
-						});
-					</script>
-				<% end %> -->
+		  
 			
 	 <%= yield %>
 	 
-	 <!-- Start of LiveChat (www.livechatinc.com) code -->
-	<script type="text/javascript">
-	// window.__lc = window.__lc || {};
-// 	window.__lc.license = 8898389;
-// 	(function() {
-// 	  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
-// 	  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-// 	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
-// 	})();
-	</script>
-<!-- End of LiveChat code -->
-	 
+		
 	 <%= render 'shared/footer' %>
   </body>
 </html>
