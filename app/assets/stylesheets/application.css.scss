@@ -738,23 +738,26 @@ blockquote {
 	padding-bottom: 100px;
 	.lessons-index-hero {
 		padding: 100px 0;
-		background-color: #f3f2f3;
+		background-color: #696786;
 		img {
 			border: none;
+			filter: grayscale(100%);
 		}
 		h1 {
-			color: #2F302F;
+			font-size: 40px;
+			color: #fff;
 			margin-right: 30px;
+			.fa {
+				color: #fff;
+				margin-left: 20px;
+				font-size: 30px;
+			}
 		}
 		p {
 			margin-top: 30px;
 			color: #FDFFFC;
 			font-size: 20px;
 			margin-right: 10px;
-		}
-		.fa {
-			color: #F71735;
-			margin-left: 10px;
 		}
 	}
 	.row {
@@ -766,19 +769,22 @@ blockquote {
 	.panel {
 		padding: 0;
 		margin: 0;
-		border: none;
-		border-radius: 0;
+		border: solid 1px #eaeaea;
+		border-top: solid 6px #f4b342;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
 		background-color: #fff;
-		box-shadow: 0 2px 3px rgba(0,0,0,0.8);
+//		box-shadow: 0 2px 3px rgba(0,0,0,0.8);
 		transition: box-shadow 0.3s;
 		
 		&:hover {
-			box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+			transition: box-shadow 0.3s;
+			box-shadow: 0 0px 10px rgba(0,0,0,0.3);
 		}
 		&:after {
-			box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-			opacity: 0;
-			transition: opacity 0.3s ease-in-out;
+			//box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+//			opacity: 0;
+//			transition: opacity 0.3s ease-in-out;
 		}
 		&:hover::after {
 			opacity: 1;
@@ -786,17 +792,17 @@ blockquote {
 	}
 	.panel-footer {
 		padding: 25px 0;
-		background-color: #dddddd;
-		border: none;
+		background-color: #fff;
+		border-top: 1px solid #ddd;
 		position: relative;
 		.fa-like {
 			color: #5f1d5a;
 			position: absolute;
 			bottom: 15px;
-			left: 50px;
+			left: 60px;
 		}
 		.fa-comment {
-			color: #995211;
+			color: #5f1d5a;
 			position: absolute;
 			bottom: 15px;
 			right: 15px;
