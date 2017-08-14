@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170617111830) do
+ActiveRecord::Schema.define(version: 20170814042957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,12 @@ ActiveRecord::Schema.define(version: 20170617111830) do
     t.integer  "admin_id"
     t.index ["slug"], name: "index_blogs_on_slug", unique: true, using: :btree
     t.index ["title_url"], name: "index_blogs_on_title_url", using: :btree
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "commontator_comments", force: :cascade do |t|
@@ -129,10 +135,11 @@ ActiveRecord::Schema.define(version: 20170617111830) do
 
   create_table "tutorial_types", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "title_url"
     t.string   "slug"
+    t.integer  "category_id"
     t.index ["slug"], name: "index_tutorial_types_on_slug", using: :btree
     t.index ["title_url"], name: "index_tutorial_types_on_title_url", unique: true, using: :btree
   end

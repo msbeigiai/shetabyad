@@ -4,6 +4,7 @@ class TutorialType < ApplicationRecord
   friendly_id :title_url, use: :slugged
 
   has_many :tutorials
+  belongs_to :category
 
   def slug=(value)
     if value.present?

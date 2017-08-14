@@ -17,13 +17,13 @@
        <li>
 				 <a href="#" class="dropdown-toggle" data-toggle="dropdown">دسته ها<b class="caret"></b></a>
 				 <ul class="dropdown-menu multi-level">
-						 <% TutorialType.all.each do |tutorial_type| %>
+						 <% Category.all.each do |category| %>
 						 	<li class="dropdown-submenu">
-	 						 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= tutorial_type.title %></a>
+	 						 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= category.title %></a>
 							 <%#= link_to tutorial_type.title, tutorial_type, class: "dropdown-toggle", data: {toggle: "dropdown"} %>
 	 						 <ul class="dropdown-menu">
-	 							 <% tutorial_type.tutorials.each do |tutorial| %>
-										<li><%= link_to tutorial.title, tutorial %></li>
+	 							 <% category.tutorial_types.each do |tutorial_type| %>
+										<li><%= link_to tutorial_type.title, tutorial_type %></li>
 								 <% end %>
 	 						 </ul>
 							 </li>

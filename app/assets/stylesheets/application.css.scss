@@ -689,7 +689,7 @@ blockquote {
 //TUTORIAL INDEX
 #tutorial-index {
 	padding: 40px 0 300px 0;
-	background-color: #f2f2f7;
+	background-color: #ebebeb;
 	.well {
 		border-top: solid 5px #1D5DB8;
 		border-radius: 5px;
@@ -697,6 +697,9 @@ blockquote {
 		box-shadow: 0 0px 3px rgba(0,0,0,0.15);
 		transition: box-shadow 0.3s ease-in-out;
 		padding: 50px;
+		h2 {
+			font-size: 25px;
+		}
 		a {
 			color: #011627;
 			&:hover {

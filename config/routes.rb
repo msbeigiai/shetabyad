@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #resources :categories, only: [:index]
   root 'welcome#index'
   resources :courses, only: [:show, :index]
 	devise_for :users, controllers: { registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords", confirmations: "users/confirmations" }
