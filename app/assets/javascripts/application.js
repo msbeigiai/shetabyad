@@ -11,10 +11,32 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
 //= require masonry/jquery.masonry
+//= require semantic-ui
 //= require_tree .
 //= require particles.min
+//= require jquery.raty
+//= require ratyrate
 //= require turbolinks
+//= require jquery.turbolinks
+
+
+document.addEventListener("turbolinks:load", function() {
+	// $('.ui.modal')
+// 		.modal('show');
+		
+	$('.button')
+	  .popup({
+	    inline: true
+	  });
+	
+	$('.card')
+	  .popup({
+	    inline: true
+	  });
+		
+	$('.ui.accordion')
+	.accordion();
+});

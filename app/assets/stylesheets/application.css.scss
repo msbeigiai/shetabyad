@@ -28,6 +28,7 @@
 @import "gritter";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "semantic-ui";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 //GLOBALS
@@ -127,7 +128,7 @@ body {
 	margin: 0;
 }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, .ui.styled.accordion .title, .ui.styled.accordion .accordion .title {
 	font-family: IRANSans, 'Roboto' !important;
 }
 
@@ -139,6 +140,7 @@ form#new_user.new_user {
 	input {
 		padding: 23px 10px;
 		font-size: 16px;
+		font-family: IRANSans, 'Roboto' !important;
 	}
 }
 
@@ -146,6 +148,7 @@ form#edit_user.edit_user {
 	input {
 		padding: 23px 10px;
 		font-size: 16px;
+		font-family: IRANSans, 'Roboto' !important;
 	}
 }
 
@@ -157,6 +160,7 @@ button.btn-block.btn-success {
 	background-color: #0cb863;
 	border-color: #0cb863;
 	padding: 15px 0;
+	font-family: IRANSans, 'Roboto' !important;
 	&:hover {
 		background-color: #128b4b;
 		border-color: #128b4b;
@@ -567,10 +571,10 @@ blockquote {
 		border-radius: 0;
 		box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 		border-top: 5px solid #1a5cb7;
-		transition: transform 0.3s;
+		//transition: transform 0.3s;
 		&:hover {
-			transition: transform 0.3s;
-			transform: scale(1.05, 1.05);
+			//transition: transform 0.3s;
+			//transform: scale(1.05, 1.05);
 		}
 		&:after {
 			box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
@@ -579,6 +583,9 @@ blockquote {
 			padding: 20px;
 			margin: 0;
 			background-color: #fff;
+		}
+		img {
+			margin-top: 20px;
 		}
 		span {
 			text-align: right;
@@ -601,7 +608,7 @@ blockquote {
 			padding-top: 20px;
 		}
 		.content {
-			background-color: #fcfcfc;
+			background-color: #fff;
 		}
 	}
 	
@@ -1652,8 +1659,9 @@ div.welcome-signup {
 
 
 
-
-
+img.raty-cancel {
+	display: none;
+}
 
 
 /* --------------------------------------------------- */

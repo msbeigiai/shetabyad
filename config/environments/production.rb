@@ -88,13 +88,13 @@ Rails.application.configure do
   GA.script_source = :doubleclick
 	
 	config.action_mailer.default_url_options = { host: 'shetabyad.com' }
-	
+	  
 	ActionMailer::Base.smtp_settings = {
-		:user_name => 'apikey',
-		:password => Rails.application.secrets.sendgrid_api_key_production,
+		:user_name => 'mohsen.sadegh62@gmail.com',
+		:password => Rails.application.secrets.elastic_email_api_key_production,
 		:domain => 'shetabyad.com',
-		:address => 'smtp.sendgrid.net',
-		:port => 587,
+		:address => 'smtp.elasticemail.com',
+		:port => 2525,
 		:authentication => :plain,
 		:enable_starttls_auto => true
 	}

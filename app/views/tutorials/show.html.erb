@@ -1,74 +1,49 @@
 <% title @tutorial.title %>
 <section id="lessons-index">
-	<div class="lessons-index-hero">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-xs-12 col-sm-12">
-					<h1><i class="fa fa-chevron-left" aria-hidden="true"></i><%= @tutorial.title %></h1>
-				</div>
+	
+	<div class="ui grid container">
+		<!-- <div class="row"> -->
+			
+			<div class="fourteen wide column row">
+				<h1 class="ui header"><%= @tutorial.title %></h1>
+				<h4 class="ui horizontal divider header"><i class="angle down icon"></i></h4>
 			</div>
+			
+			<div class="fourteen wide column row">
+				<%= @tutorial.description %>
+			</div>
+			
+			<% if user_signed_in? %>
+				<div class="eight wide column">
+					<div class="ui relaxed list">
+						<% @tutorial.sections.each do |section| %>
+							<div class="item">
+								<div class="ui styled accordion">
+								  <div class="title">
+								    <i class="dropdown icon"></i>
+								    <%= section.title %>
+								  </div>
+								  <div class="content">
+										<% section.lessons.each do |lesson| %>
+								    	<%= link_to lesson.title, lesson %>
+										<% end %>
+								  </div>
+								</div>
+							</div>
+						<% end %>
+					</div>
+				</div>
+			<% end %>
+			
+		<!-- </div> -->
+	</div>
+	<div class="ui grid container">
+		<div class="sixteen wide column">
+			<%= commontator_thread(@tutorial) %>
 		</div>
 	</div>
-	<div class="container">
-		<div class="row">
-			<% if @tutorial.lessons.count == 1 %>
-				<div class="col-md-4 col-xs-12 col-sm-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<% if find_first.thumbnail_image? %>
-								<%= image_tag find_first.thumbnail_image.url(:thumbnail), class: "img-responsive" %>
-							<% end %>
-						</div>
-						<div class="panel-body">
-							<h3><%= link_to find_first.title, find_first %></h3>
-							<%#= markdown(sanitize(find_first.description[0, 200] + '...')).html_safe %>
-						</div>
-						<div class="panel-footer">
-							<i class="fa fa-heart fa-lg fa-like"></i><span class="like-number"><%= find_first.get_upvotes.size %> لایک</span>
-							<i class="fa fa-comments fa-lg fa-comment"></i><span class="comment-number"><%= find_first.thread.comments.count %> نظر</span>
-						</div>
-					</div>
-				</div>
-			<% elsif @tutorial.lessons.count > 1 %>
-			<!-- <div id="masonry-container" class="transitions-enabled infinite-scroll centered clearfix"> -->
-				<% @tutorial.lessons.each do |tut_lesson| %>
-					<div class="col-md-4">
-					<!-- <div class="box col4"> -->
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<% if tut_lesson.thumbnail_image? %>
-									<%= image_tag tut_lesson.thumbnail_image.url(:thumbnail), class: "img-responsive" %>
-								<% end %>
-							</div>
-							<div class="panel-body">
-								<h3><%= link_to tut_lesson.title, tut_lesson %></h3>
-								<%#= markdown(sanitize(tut_lesson.description[0, 200] + '...')).html_safe %>
-							</div>
-							<div class="panel-footer">
-								<i class="fa fa-heart fa-lg fa-like"></i><span class="like-number"><%= tut_lesson.get_upvotes.size %> لایک</span>
-								<i class="fa fa-comments fa-lg fa-comment"></i><span class="comment-number"><%= tut_lesson.thread.comments.count %> نظر</span>
-							</div>
-						</div>
-					</div>
-				<% end %>
-			<% else %>
-		
-				<h3>هنوز درسی برای این دسته ارائه نشده است.</h3>
-			<% end %>
-		</div>
-	</div>		
 </section>
-
-<script>
-	$('#masonry-container').masonry({
-		itemSelector: '.box',
-    columnWidth: 100,
-    gutterWidth: 40,
-		// isAnimated: !Modernizr.csstransitions,
-    isFitWidth: true
-	});
-</script>
-
 
 <!--*******************************************************-->
 
+	

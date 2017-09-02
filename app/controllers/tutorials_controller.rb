@@ -11,6 +11,7 @@ class TutorialsController < ApplicationController
   # GET /tutorials/1
   # GET /tutorials/1.json
   def show
+    commontator_thread_show(@tutorial)
   end
 
   # GET /tutorials/new

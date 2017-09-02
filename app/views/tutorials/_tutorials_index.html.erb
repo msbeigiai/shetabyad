@@ -7,7 +7,7 @@
 	      <h2><%= link_to tutorial.title, tutorial_path(tutorial) %></h2>
 	      <p><%= markdown(tutorial.description) %></p>
 				<div class="lesson-count">
-					<span><i class="fa fa-leanpub" aria-hidden="true"></i> <%= tutorial.lessons.count %> درس</span>
+					<span><i class="fa fa-leanpub" aria-hidden="true"></i> <%#= tutorial.count %> درس</span>
 				</div>
 	    </div>
 		</div>

@@ -11,7 +11,10 @@ class LessonsController < ApplicationController
   # GET /lessons/1
   # GET /lessons/1.json
   def show
-		commontator_thread_show(@lesson)
+    respond_to do |format|
+      format.html
+      format.js 
+    end
   end
 
   # GET /lessons/new

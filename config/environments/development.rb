@@ -52,13 +52,14 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 	ActionMailer::Base.smtp_settings = {
-		:user_name => 'apikey',
-		:password => Rails.application.secrets.sendgrid_api_key_development,
+		:user_name => 'mohsen.sadegh62@gmail.com',
+		:password => Rails.application.secrets.elastic_email_api_key_development,
 		:domain => 'shetabyad.com',
-		:address => 'smtp.sendgrid.net',
-		:port => 587,
+		:address => 'smtp25.elasticemail.com',
+		:port => 25,
 		:authentication => :plain,
 		:enable_starttls_auto => true
 	}

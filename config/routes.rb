@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   #resources :categories, only: [:index]
   root 'welcome#index'
   resources :courses, only: [:show, :index]

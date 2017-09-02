@@ -30,7 +30,12 @@
 					<div class="well">
 						<%= link_to (image_tag tutorial.images, size: "100x100", class: "img-responsive"), tutorial %>
 						<div class="content">
-							<p class="text-center"><%= tutorial.title %></p>						
+							<p class="text-center"><%= tutorial.title %></p>
+							<div class="ui icon button" data-content="<%= tutorial.description %>">
+							  <i class="zoom icon"></i>
+							</div>
+							<%= rating_for tutorial, 'rate', half_show: true, disable_after_rate: true %>
+							<!-- <div id="myPopover" class="btn btn-primary">Description</div>				 -->
 							<!-- <span class="text-right">دسته: <%#= tutorial.title %></span> -->
 							<%# if !model.video.nil? || model.lesson_video? %>
 								<!-- <div class="show-video">
@@ -50,56 +55,6 @@
 	</div>
 </section>
 
-<script>
-	function openLesson(skillName,elmnt,color,fontColor) {
-		var i, tabcontent, tablinks;
-			tabcontent = document.getElementsByClassName("tabcontent");
-			for (i = 0; i < tabcontent.length; i++) {
-					tabcontent[i].style.display = "none";
-			}
-			tablinks = document.getElementsByClassName("tablink");
-			for (i = 0; i < tablinks.length; i++) {
-					tablinks[i].style.backgroundColor = "";
-					tablinks[i].style.color = "#A2AAB0";
-			}
-			document.getElementById(skillName).style.display = "block";
-			elmnt.style.backgroundColor = color;
-			elmnt.style.color = fontColor;
-	}
-	// Get the element with id="defaultOpen" and click on it
-	document.getElementById("defaultOpen").click();
-	
-	var acc = document.getElementsByClassName("accordion");
-		var i;
-		for (i = 0; i < acc.length; i++) {
-			acc[i].onclick = function() {
-				this.classList.toggle("active");
-				var panel = this.nextElementSibling;
-				if (panel.style.maxHeight) {
-					panel.style.maxHeight = null;
-				} else {
-					panel.style.maxHeight = panel.scrollHeight + "px";
-				}
-			}
-		}
-	
-	var slideIndex = 0;
-	showSlides();
-	
-	function showSlides() {
-		var i;
-		var slides = document.getElementsByClassName("mySlides");
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";
-		}
-		slideIndex++;
-		if(slideIndex > slides.length) {
-			slideIndex = 1;
-		}
-		slides[slideIndex - 1].style.display = "block";
-		setTimeout(showSlides, 3000);
-	}
-</script>
 
 
 
